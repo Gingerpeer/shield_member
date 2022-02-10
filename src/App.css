@@ -4,13 +4,17 @@
   font-family: 'Fira Sans', sans-serif;
   color: #1B1B1B;
 }
-.Home{
+.page{
   padding-left: 15px;
   padding-right: 15px;
 }
-.Home p, li, h6{
+.page p, li{
   font-size: 14px;
   color: #797979;
+  text-align: left;
+}
+.page h6{
+  color:#1B1B1B;
   text-align: left;
 }
 
