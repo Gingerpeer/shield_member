@@ -2,6 +2,19 @@
   @import url('https://fonts.googleapis.com/css2?family=Fira+Sans&display=swap');
   text-align: center;
   font-family: 'Fira Sans', sans-serif;
+  color: #1B1B1B;
+
 }
+.Home{
+  padding-left: 15px;
+  padding-right: 15px;
+  text-align: left;
+}
+.Home p, li{
+  font-size: 14px;
+  color: #797979;
+}
+
+
 
 
