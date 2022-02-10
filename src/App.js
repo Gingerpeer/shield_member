@@ -1,13 +1,12 @@
 // Imports
-import { useState } from 'react'
 import { Routes, Route } from 'react-router';
 // Components
 import Header from './components/Header';
 // Pages
 import Home from './pages/Home'
+import No from './pages/No';
 // Styles
 import './App.css';
-import Continue from './components/Continue';
 
 function App() {
   return (
@@ -15,6 +14,7 @@ function App() {
       <Header/>
       <Routes>
         <Route path='/' element={<Home/>} />
+        <Route path='/no' element={<No />} />
       </Routes>
     </div>
   );
