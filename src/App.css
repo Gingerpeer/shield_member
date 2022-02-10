@@ -17,7 +17,17 @@
   color:#1B1B1B;
   text-align: left;
 }
-
-
+.Label{
+  font-weight: 600;
+  text-align: left;
+  float: left;
+  max-width: 40vw;
+  margin-top: 5px;
+}
+.Control{
+  max-width: fit-content;
+  float: right;
+  max-width: 55vw;
+}
 
 
