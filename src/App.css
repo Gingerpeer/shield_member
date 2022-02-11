@@ -22,12 +22,22 @@
   text-align: left;
   float: left;
   max-width: 40vw;
-  margin-top: 5px;
+  min-width: 90px;
+  margin-top: 6px;
 }
 .Control{
   max-width: fit-content;
   float: right;
   max-width: 55vw;
 }
+.text-muted{
+  font-weight: 600;
+  text-align: left;
+  float: left;
+  max-width: 40vw;
+  margin-top: 1px;
+}
+
+
 
 
