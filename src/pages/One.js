@@ -49,10 +49,10 @@ const One = ({
       </Form>
       <div style={{textAlign: 'center'}}>
         <Link to='/instructions'>
-          <Button variant='secondary w-25' style={{ fontWeight: '600', background: '#D0D0D0', border: 'none', float:'left', marginTop: '20vw', marginLeft: '20vw' }}>BACK</Button>
+          <Button variant='secondary w-25' style={{ fontWeight: '600', background: '#D0D0D0', border: 'none', float:'left', marginTop: '10vw', marginLeft: '20vw' }}>BACK</Button>
         </Link>
         <Link to='/2'>
-          <Button variant='danger w-25' style={{ fontWeight: '600', background: '#BB1A1B', border: 'none', float:'right', marginTop: '20vw', marginRight: '20vw' }} >NEXT</Button>
+          <Button variant='danger w-25' style={{ fontWeight: '600', background: '#BB1A1B', border: 'none', float:'right', marginTop: '10vw', marginRight: '20vw' }} >NEXT</Button>
         </Link>
       </div>
     </div>
