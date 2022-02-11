@@ -92,8 +92,8 @@ function App() {
   const [paymentMethod,setPaymentMethod] = useState('')
 
   useEffect(()=>{
-    console.log(forceNumber)
-  },[forceNumber])
+    console.log(childrenAmount)
+  },[childrenAmount,setChildrenAmount])
   return (
     <div className="App">
       <Header/>
@@ -158,7 +158,56 @@ function App() {
           setSpouseID={setSpouseID}
           />} />
         <Route path='/4' element={<Four
-          
+          childrenAmount={childrenAmount}
+          setChildrenAmount={setChildrenAmount}
+          childTitle={childTitle}
+          setChildTitle={setChildTitle}
+          childFullNames={childFullNames}
+          setChildFullNames={setChildFullNames}
+          childSurname={childSurname}
+          setChildSurname={setChildSurname}
+          childID={childID}
+          setChildID={setChildID}
+          childTitle={childTitle}
+          setChildTitle2={setChildTitle2}
+          childFullNames2={childFullNames2}
+          setChildFullNames2={setChildFullNames2}
+          childSurname2={childSurname2}
+          setChildSurname2={setChildSurname2}
+          childID2={childID2}
+          setChildID2={setChildID2}
+          childTitle3={childTitle3}
+          setChildTitle3={setChildTitle3}
+          childFullNames3={childFullNames3}
+          setChildFullNames3={setChildFullNames3}
+          childSurname3={childSurname3}
+          setChildSurname3={setChildSurname3}
+          childID3={childID3}
+          setChildID3={setChildID3}
+          childTitle4={childTitle4}
+          setChildTitle4={setChildTitle4}
+          childFullNames4={childFullNames4}
+          setChildFullNames4={setChildFullNames4}
+          childSurname4={childSurname4}
+          setChildSurname4={setChildSurname4}
+          childID4={childID4}
+          setChildID4={setChildID4}
+          childTitle5={childTitle5}
+          setChildTitle5={setChildTitle5}
+          childFullNames5={childFullNames5}
+          setChildFullNames5={setChildFullNames5}
+          childSurname5={childSurname5}
+          setChildSurname5={setChildSurname5}
+          childID5={childID5}
+          setChildID5={setChildID5}
+          childTitle6={childTitle6}
+          setChildTitle6={setChildTitle6}
+          childFullNames6={childFullNames6}
+          setChildFullNames6={setChildFullNames6}
+          childSurname6={childSurname6}
+          setChildSurname6={setChildSurname6}
+          childID6={childID6}
+          setChildID6={setChildID6}
           />} />
         <Route path='/5' element={<Five
           

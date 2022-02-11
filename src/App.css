@@ -20,23 +20,27 @@
 .Label{
   font-weight: 600;
   text-align: left;
-  float: left;
+  /* float: left;
   max-width: 40vw;
   min-width: 90px;
-  margin-top: 6px;
+  padding-top: 6px; */
 }
-.Control{
+/* .Control{
   max-width: fit-content;
   float: right;
   max-width: 55vw;
-}
-.text-muted{
+} */
+/* .text-muted{
   font-weight: 600;
   text-align: left;
   float: left;
   max-width: 40vw;
   margin-top: 1px;
 }
+.Form {
+  margin-bottom: 15vh;
+} */
+
 
 
 
