@@ -210,7 +210,26 @@ function App() {
           setChildID6={setChildID6}
           />} />
         <Route path='/5' element={<Five
-          
+          pbTitle={pbTitle}
+          setPbTitle={setPbTitle}
+          pbFullNames={pbFullNames}
+          setPbFullNames={setPbFullNames}
+          pbSurname={pbSurname}
+          setPbSurname={setPbSurname}
+          pbID={pbID}
+          setPbID={setPbID}
+          pbCellNumber={pbCellNumber}
+          setPbCellNumber={setPbCellNumber}
+          nlTitle={nlTitle}
+          setNlTitle={setNlTitle}
+          nlFullNames={nlFullNames}
+          setNlFullNames={setNlFullNames}
+          nlSurname={nlSurname}
+          setNlSurname={setNlSurname}
+          nlIDNumber={nlIDNumber}
+          setNlIDNumber={setNlIDNumber}
+          nlCellNumber={nlCellNumber}
+          setNlCellNumber={setNlCellNumber}
           />} />
         <Route path='/6' element={<Six
           
