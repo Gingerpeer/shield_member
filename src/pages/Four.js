@@ -73,22 +73,22 @@ const Four = ({
           <div style={{marginTop: '10vh'}}>
             <Form className='Form'>
               <Form.Group as={Row} className='mb-3' controlId='childTitle'>
-                <Form.Label className='Label' sm='2' >*Title </Form.Label>
+                <Form.Label className='Label' sm='2' >*Child Title </Form.Label>
                 <Col sm='10'>
                   <Form.Control className='Control' type='text' placeholder={childTitle} onChange={(e)=>setChildTitle(e.target.value)} />
                 </Col>
                 
               </Form.Group>
               <Form.Group className='mb-3' controlId='childFullNames'>
-                <Form.Label className='Label'>*Full Names</Form.Label>
+                <Form.Label className='Label'>*Child Full Names</Form.Label>
                 <Form.Control className='Control' type='text' placeholder={childFullNames} onChange={(e)=>setChildFullNames(e.target.value)} />
               </Form.Group>
               <Form.Group className='mb-3' controlId='childSurname'>
-                <Form.Label className='Label'>*Surname</Form.Label>
+                <Form.Label className='Label'>*Child Surname</Form.Label>
                 <Form.Control className='Control' type='text' placeholder={childSurname} onChange={(e)=>setChildSurname(e.target.value)} />
               </Form.Group>
               <Form.Group className='mb-3' controlId='childID'>
-                <Form.Label className='Label'>*ID</Form.Label>
+                <Form.Label className='Label'>*Child ID</Form.Label>
                 <Form.Control className='Control' type='text' placeholder={childID} onChange={(e)=>setChildID(e.target.value)} />
               </Form.Group>
             </Form>
@@ -98,45 +98,358 @@ const Four = ({
           <div style={{marginTop: '10vh'}}>
             <Form className='Form'>
               <Form.Group className='mb-3' controlId='childTitle'>
-                <Form.Label className='Label'>*Title</Form.Label>
+                <Form.Label className='Label'>*Title First Child</Form.Label>
                 <Form.Control className='Control' type='text' placeholder={childTitle} onChange={(e)=>setChildTitle(e.target.value)} style={{marginTop:'10px'}} />
               </Form.Group>
               <Form.Group className='mb-3' controlId='childFullNames'>
-                <Form.Label className='Label'>*Full Names</Form.Label>
+                <Form.Label className='Label'>*Full Names First Child</Form.Label>
                 <Form.Control className='Control' type='text' placeholder={childFullNames} onChange={(e)=>setChildFullNames(e.target.value)} style={{marginTop:'10px'}} />
               </Form.Group>
               <Form.Group className='mb-3' controlId='childSurname'>
-                <Form.Label className='Label'>*Surname</Form.Label>
+                <Form.Label className='Label'>*Surname First Child</Form.Label>
                 <Form.Control className='Control' type='text' placeholder={childSurname} onChange={(e)=>setChildSurname(e.target.value)} style={{marginTop:'10px'}} />
               </Form.Group>
               <Form.Group className='mb-3' controlId='childID'>
-                <Form.Label className='Label'>*ID</Form.Label>
+                <Form.Label className='Label'>*ID First Child</Form.Label>
                 <Form.Control className='Control' type='text' placeholder={childID} onChange={(e)=>setChildID(e.target.value)} style={{marginTop:'10px'}} />
               </Form.Group>
               <Form.Group className='mb-3' controlId='childTitle2'>
-                <Form.Label className='Label'>*Title</Form.Label>
+                <Form.Label className='Label'>*Title Second Child</Form.Label>
                 <Form.Control className='Control' type='text' placeholder={childTitle2} onChange={(e)=>setChildTitle2(e.target.value)} style={{marginTop:'10px'}} />
               </Form.Group>
               <Form.Group className='mb-3' controlId='childFullNames2'>
-                <Form.Label className='Label'>*Full Names</Form.Label>
+                <Form.Label className='Label'>*Full Names Second Child</Form.Label>
                 <Form.Control className='Control' type='text' placeholder={childFullNames2} onChange={(e)=>setChildFullNames2(e.target.value)} style={{marginTop:'10px'}} />
               </Form.Group>
               <Form.Group className='mb-3' controlId='childSurname2'>
-                <Form.Label className='Label'>*Surname</Form.Label>
+                <Form.Label className='Label'>*Surname Second Child</Form.Label>
                 <Form.Control className='Control' type='text' placeholder={childSurname2} onChange={(e)=>setChildSurname2(e.target.value)} style={{marginTop:'10px'}} />
               </Form.Group>
               <Form.Group className='mb-3' controlId='childID2'>
-                <Form.Label className='Label'>*ID</Form.Label>
+                <Form.Label className='Label'>*ID Second Child</Form.Label>
                 <Form.Control className='Control' type='text' placeholder={childID2} onChange={(e)=>setChildID2(e.target.value)} style={{marginTop:'10px'}} />
               </Form.Group>
             </Form>
             </div>
         }
+        {childrenAmount == 3 && 
+          <div style={{marginTop: '10vh'}}>
+            <Form className='Form'>
+              <Form.Group className='mb-3' controlId='childTitle'>
+                <Form.Label className='Label'>*Title First Child</Form.Label>
+                <Form.Control className='Control' type='text' placeholder={childTitle} onChange={(e)=>setChildTitle(e.target.value)} style={{marginTop:'10px'}} />
+              </Form.Group>
+              <Form.Group className='mb-3' controlId='childFullNames'>
+                <Form.Label className='Label'>*Full Names First Child</Form.Label>
+                <Form.Control className='Control' type='text' placeholder={childFullNames} onChange={(e)=>setChildFullNames(e.target.value)} style={{marginTop:'10px'}} />
+              </Form.Group>
+              <Form.Group className='mb-3' controlId='childSurname'>
+                <Form.Label className='Label'>*Surname First Child</Form.Label>
+                <Form.Control className='Control' type='text' placeholder={childSurname} onChange={(e)=>setChildSurname(e.target.value)} style={{marginTop:'10px'}} />
+              </Form.Group>
+              <Form.Group className='mb-3' controlId='childID'>
+                <Form.Label className='Label'>*ID First Child</Form.Label>
+                <Form.Control className='Control' type='text' placeholder={childID} onChange={(e)=>setChildID(e.target.value)} style={{marginTop:'10px'}} />
+              </Form.Group>
+              <Form.Group className='mb-3' controlId='childTitle2'>
+                <Form.Label className='Label'>*Title Second Child</Form.Label>
+                <Form.Control className='Control' type='text' placeholder={childTitle2} onChange={(e)=>setChildTitle2(e.target.value)} style={{marginTop:'10px'}} />
+              </Form.Group>
+              <Form.Group className='mb-3' controlId='childFullNames2'>
+                <Form.Label className='Label'>*Full Names Second Child</Form.Label>
+                <Form.Control className='Control' type='text' placeholder={childFullNames2} onChange={(e)=>setChildFullNames2(e.target.value)} style={{marginTop:'10px'}} />
+              </Form.Group>
+              <Form.Group className='mb-3' controlId='childSurname2'>
+                <Form.Label className='Label'>*Surname Second Child</Form.Label>
+                <Form.Control className='Control' type='text' placeholder={childSurname2} onChange={(e)=>setChildSurname2(e.target.value)} style={{marginTop:'10px'}} />
+              </Form.Group>
+              <Form.Group className='mb-3' controlId='childID2'>
+                <Form.Label className='Label'>*ID Second Child</Form.Label>
+                <Form.Control className='Control' type='text' placeholder={childID2} onChange={(e)=>setChildID2(e.target.value)} style={{marginTop:'10px'}} />
+              </Form.Group>
+              <Form.Group className='mb-3' controlId='childTitle3'>
+              <Form.Label className='Label'>*Title Third Child</Form.Label>
+              <Form.Control className='Control' type='text' placeholder={childTitle2} onChange={(e)=>setChildTitle3(e.target.value)} style={{marginTop:'10px'}} />
+            </Form.Group>
+            <Form.Group className='mb-3' controlId='childFullNames3'>
+              <Form.Label className='Label'>*Full Names Third Child</Form.Label>
+              <Form.Control className='Control' type='text' placeholder={childFullNames2} onChange={(e)=>setChildFullNames3(e.target.value)} style={{marginTop:'10px'}} />
+            </Form.Group>
+            <Form.Group className='mb-3' controlId='childSurname3'>
+              <Form.Label className='Label'>*Surname Third Child</Form.Label>
+              <Form.Control className='Control' type='text' placeholder={childSurname2} onChange={(e)=>setChildSurname3(e.target.value)} style={{marginTop:'10px'}} />
+            </Form.Group>
+            <Form.Group className='mb-3' controlId='childID3'>
+              <Form.Label className='Label'>*ID Third Child</Form.Label>
+              <Form.Control className='Control' type='text' placeholder={childID2} onChange={(e)=>setChildID3(e.target.value)} style={{marginTop:'10px'}} />
+            </Form.Group>
+            </Form>
+            </div>
+        }
+        {childrenAmount == 4 && 
+          <div style={{marginTop: '10vh'}}>
+            <Form className='Form'>
+              <Form.Group className='mb-3' controlId='childTitle'>
+                <Form.Label className='Label'>*Title First Child</Form.Label>
+                <Form.Control className='Control' type='text' placeholder={childTitle} onChange={(e)=>setChildTitle(e.target.value)} style={{marginTop:'10px'}} />
+              </Form.Group>
+              <Form.Group className='mb-3' controlId='childFullNames'>
+                <Form.Label className='Label'>*Full Names First Child</Form.Label>
+                <Form.Control className='Control' type='text' placeholder={childFullNames} onChange={(e)=>setChildFullNames(e.target.value)} style={{marginTop:'10px'}} />
+              </Form.Group>
+              <Form.Group className='mb-3' controlId='childSurname'>
+                <Form.Label className='Label'>*Surname First Child</Form.Label>
+                <Form.Control className='Control' type='text' placeholder={childSurname} onChange={(e)=>setChildSurname(e.target.value)} style={{marginTop:'10px'}} />
+              </Form.Group>
+              <Form.Group className='mb-3' controlId='childID'>
+                <Form.Label className='Label'>*ID First Child</Form.Label>
+                <Form.Control className='Control' type='text' placeholder={childID} onChange={(e)=>setChildID(e.target.value)} style={{marginTop:'10px'}} />
+              </Form.Group>
+              <Form.Group className='mb-3' controlId='childTitle2'>
+                <Form.Label className='Label'>*Title Second Child</Form.Label>
+                <Form.Control className='Control' type='text' placeholder={childTitle2} onChange={(e)=>setChildTitle2(e.target.value)} style={{marginTop:'10px'}} />
+              </Form.Group>
+              <Form.Group className='mb-3' controlId='childFullNames2'>
+                <Form.Label className='Label'>*Full Names Second Child</Form.Label>
+                <Form.Control className='Control' type='text' placeholder={childFullNames2} onChange={(e)=>setChildFullNames2(e.target.value)} style={{marginTop:'10px'}} />
+              </Form.Group>
+              <Form.Group className='mb-3' controlId='childSurname2'>
+                <Form.Label className='Label'>*Surname Second Child</Form.Label>
+                <Form.Control className='Control' type='text' placeholder={childSurname2} onChange={(e)=>setChildSurname2(e.target.value)} style={{marginTop:'10px'}} />
+              </Form.Group>
+              <Form.Group className='mb-3' controlId='childID2'>
+                <Form.Label className='Label'>*ID Second Child</Form.Label>
+                <Form.Control className='Control' type='text' placeholder={childID2} onChange={(e)=>setChildID2(e.target.value)} style={{marginTop:'10px'}} />
+              </Form.Group>
+              <Form.Group className='mb-3' controlId='childTitle3'>
+              <Form.Label className='Label'>*Title Third Child</Form.Label>
+              <Form.Control className='Control' type='text' placeholder={childTitle2} onChange={(e)=>setChildTitle3(e.target.value)} style={{marginTop:'10px'}} />
+            </Form.Group>
+            <Form.Group className='mb-3' controlId='childFullNames3'>
+              <Form.Label className='Label'>*Full Names Third Child</Form.Label>
+              <Form.Control className='Control' type='text' placeholder={childFullNames2} onChange={(e)=>setChildFullNames3(e.target.value)} style={{marginTop:'10px'}} />
+            </Form.Group>
+            <Form.Group className='mb-3' controlId='childSurname3'>
+              <Form.Label className='Label'>*Surname Third Child</Form.Label>
+              <Form.Control className='Control' type='text' placeholder={childSurname2} onChange={(e)=>setChildSurname3(e.target.value)} style={{marginTop:'10px'}} />
+            </Form.Group>
+            <Form.Group className='mb-3' controlId='childID3'>
+              <Form.Label className='Label'>*ID Third Child</Form.Label>
+              <Form.Control className='Control' type='text' placeholder={childID2} onChange={(e)=>setChildID3(e.target.value)} style={{marginTop:'10px'}} />
+            </Form.Group>
+            <Form.Group className='mb-3' controlId='childTitle4'>
+              <Form.Label className='Label'>*Title Fourth Child</Form.Label>
+              <Form.Control className='Control' type='text' placeholder={childTitle2} onChange={(e)=>setChildTitle4(e.target.value)} style={{marginTop:'10px'}} />
+            </Form.Group>
+            <Form.Group className='mb-3' controlId='childFullNames4'>
+              <Form.Label className='Label'>*Full Names Fourth Child</Form.Label>
+              <Form.Control className='Control' type='text' placeholder={childFullNames2} onChange={(e)=>setChildFullNames4(e.target.value)} style={{marginTop:'10px'}} />
+            </Form.Group>
+            <Form.Group className='mb-3' controlId='childSurname4'>
+              <Form.Label className='Label'>*Surname Fourth Child</Form.Label>
+              <Form.Control className='Control' type='text' placeholder={childSurname2} onChange={(e)=>setChildSurname4(e.target.value)} style={{marginTop:'10px'}} />
+            </Form.Group>
+            <Form.Group className='mb-3' controlId='childID4'>
+              <Form.Label className='Label'>*ID Fourth Child</Form.Label>
+              <Form.Control className='Control' type='text' placeholder={childID2} onChange={(e)=>setChildID4(e.target.value)} style={{marginTop:'10px'}} />
+            </Form.Group>
+            </Form>
+            </div>
+        }
+        {childrenAmount == 5 && 
+          <div style={{marginTop: '10vh'}}>
+            <Form className='Form'>
+              <Form.Group className='mb-3' controlId='childTitle'>
+                <Form.Label className='Label'>*Title First Child</Form.Label>
+                <Form.Control className='Control' type='text' placeholder={childTitle} onChange={(e)=>setChildTitle(e.target.value)} style={{marginTop:'10px'}} />
+              </Form.Group>
+              <Form.Group className='mb-3' controlId='childFullNames'>
+                <Form.Label className='Label'>*Full Names First Child</Form.Label>
+                <Form.Control className='Control' type='text' placeholder={childFullNames} onChange={(e)=>setChildFullNames(e.target.value)} style={{marginTop:'10px'}} />
+              </Form.Group>
+              <Form.Group className='mb-3' controlId='childSurname'>
+                <Form.Label className='Label'>*Surname First Child</Form.Label>
+                <Form.Control className='Control' type='text' placeholder={childSurname} onChange={(e)=>setChildSurname(e.target.value)} style={{marginTop:'10px'}} />
+              </Form.Group>
+              <Form.Group className='mb-3' controlId='childID'>
+                <Form.Label className='Label'>*ID First Child</Form.Label>
+                <Form.Control className='Control' type='text' placeholder={childID} onChange={(e)=>setChildID(e.target.value)} style={{marginTop:'10px'}} />
+              </Form.Group>
+              <Form.Group className='mb-3' controlId='childTitle2'>
+                <Form.Label className='Label'>*Title Second Child</Form.Label>
+                <Form.Control className='Control' type='text' placeholder={childTitle2} onChange={(e)=>setChildTitle2(e.target.value)} style={{marginTop:'10px'}} />
+              </Form.Group>
+              <Form.Group className='mb-3' controlId='childFullNames2'>
+                <Form.Label className='Label'>*Full Names Second Child</Form.Label>
+                <Form.Control className='Control' type='text' placeholder={childFullNames2} onChange={(e)=>setChildFullNames2(e.target.value)} style={{marginTop:'10px'}} />
+              </Form.Group>
+              <Form.Group className='mb-3' controlId='childSurname2'>
+                <Form.Label className='Label'>*Surname Second Child</Form.Label>
+                <Form.Control className='Control' type='text' placeholder={childSurname2} onChange={(e)=>setChildSurname2(e.target.value)} style={{marginTop:'10px'}} />
+              </Form.Group>
+              <Form.Group className='mb-3' controlId='childID2'>
+                <Form.Label className='Label'>*ID Second Child</Form.Label>
+                <Form.Control className='Control' type='text' placeholder={childID2} onChange={(e)=>setChildID2(e.target.value)} style={{marginTop:'10px'}} />
+              </Form.Group>
+              <Form.Group className='mb-3' controlId='childTitle3'>
+              <Form.Label className='Label'>*Title Third Child</Form.Label>
+              <Form.Control className='Control' type='text' placeholder={childTitle2} onChange={(e)=>setChildTitle3(e.target.value)} style={{marginTop:'10px'}} />
+            </Form.Group>
+            <Form.Group className='mb-3' controlId='childFullNames3'>
+              <Form.Label className='Label'>*Full Names Third Child</Form.Label>
+              <Form.Control className='Control' type='text' placeholder={childFullNames2} onChange={(e)=>setChildFullNames3(e.target.value)} style={{marginTop:'10px'}} />
+            </Form.Group>
+            <Form.Group className='mb-3' controlId='childSurname3'>
+              <Form.Label className='Label'>*Surname Third Child</Form.Label>
+              <Form.Control className='Control' type='text' placeholder={childSurname2} onChange={(e)=>setChildSurname3(e.target.value)} style={{marginTop:'10px'}} />
+            </Form.Group>
+            <Form.Group className='mb-3' controlId='childID3'>
+              <Form.Label className='Label'>*ID Third Child</Form.Label>
+              <Form.Control className='Control' type='text' placeholder={childID2} onChange={(e)=>setChildID3(e.target.value)} style={{marginTop:'10px'}} />
+            </Form.Group>
+            <Form.Group className='mb-3' controlId='childTitle4'>
+              <Form.Label className='Label'>*Title Fourth Child</Form.Label>
+              <Form.Control className='Control' type='text' placeholder={childTitle2} onChange={(e)=>setChildTitle4(e.target.value)} style={{marginTop:'10px'}} />
+            </Form.Group>
+            <Form.Group className='mb-3' controlId='childFullNames4'>
+              <Form.Label className='Label'>*Full Names Fourth Child</Form.Label>
+              <Form.Control className='Control' type='text' placeholder={childFullNames2} onChange={(e)=>setChildFullNames4(e.target.value)} style={{marginTop:'10px'}} />
+            </Form.Group>
+            <Form.Group className='mb-3' controlId='childSurname4'>
+              <Form.Label className='Label'>*Surname Fourth Child</Form.Label>
+              <Form.Control className='Control' type='text' placeholder={childSurname2} onChange={(e)=>setChildSurname4(e.target.value)} style={{marginTop:'10px'}} />
+            </Form.Group>
+            <Form.Group className='mb-3' controlId='childID4'>
+              <Form.Label className='Label'>*ID Fourth Child</Form.Label>
+              <Form.Control className='Control' type='text' placeholder={childID2} onChange={(e)=>setChildID4(e.target.value)} style={{marginTop:'10px'}} />
+            </Form.Group>
+            <Form.Group className='mb-3' controlId='childTitle5'>
+              <Form.Label className='Label'>*Title Fifth Child</Form.Label>
+              <Form.Control className='Control' type='text' placeholder={childTitle2} onChange={(e)=>setChildTitle5(e.target.value)} style={{marginTop:'10px'}} />
+            </Form.Group>
+            <Form.Group className='mb-3' controlId='childFullNames5'>
+              <Form.Label className='Label'>*Full Names Fifth Child</Form.Label>
+              <Form.Control className='Control' type='text' placeholder={childFullNames2} onChange={(e)=>setChildFullNames5(e.target.value)} style={{marginTop:'10px'}} />
+            </Form.Group>
+            <Form.Group className='mb-3' controlId='childSurname5'>
+              <Form.Label className='Label'>*Surname Fifth Child</Form.Label>
+              <Form.Control className='Control' type='text' placeholder={childSurname2} onChange={(e)=>setChildSurname5(e.target.value)} style={{marginTop:'10px'}} />
+            </Form.Group>
+            <Form.Group className='mb-3' controlId='childID5'>
+              <Form.Label className='Label'>*ID Fifth Child</Form.Label>
+              <Form.Control className='Control' type='text' placeholder={childID2} onChange={(e)=>setChildID5(e.target.value)} style={{marginTop:'10px'}} />
+            </Form.Group>
+            </Form>
+            </div>
+        }
+        {childrenAmount == 6 && 
+          <div style={{marginTop: '10vh'}}>
+            <Form className='Form'>
+              <Form.Group className='mb-3' controlId='childTitle'>
+                <Form.Label className='Label'>*Title First Child</Form.Label>
+                <Form.Control className='Control' type='text' placeholder={childTitle} onChange={(e)=>setChildTitle(e.target.value)} style={{marginTop:'10px'}} />
+              </Form.Group>
+              <Form.Group className='mb-3' controlId='childFullNames'>
+                <Form.Label className='Label'>*Full Names First Child</Form.Label>
+                <Form.Control className='Control' type='text' placeholder={childFullNames} onChange={(e)=>setChildFullNames(e.target.value)} style={{marginTop:'10px'}} />
+              </Form.Group>
+              <Form.Group className='mb-3' controlId='childSurname'>
+                <Form.Label className='Label'>*Surname First Child</Form.Label>
+                <Form.Control className='Control' type='text' placeholder={childSurname} onChange={(e)=>setChildSurname(e.target.value)} style={{marginTop:'10px'}} />
+              </Form.Group>
+              <Form.Group className='mb-3' controlId='childID'>
+                <Form.Label className='Label'>*ID First Child</Form.Label>
+                <Form.Control className='Control' type='text' placeholder={childID} onChange={(e)=>setChildID(e.target.value)} style={{marginTop:'10px'}} />
+              </Form.Group>
+              <Form.Group className='mb-3' controlId='childTitle2'>
+                <Form.Label className='Label'>*Title Second Child</Form.Label>
+                <Form.Control className='Control' type='text' placeholder={childTitle2} onChange={(e)=>setChildTitle2(e.target.value)} style={{marginTop:'10px'}} />
+              </Form.Group>
+              <Form.Group className='mb-3' controlId='childFullNames2'>
+                <Form.Label className='Label'>*Full Names Second Child</Form.Label>
+                <Form.Control className='Control' type='text' placeholder={childFullNames2} onChange={(e)=>setChildFullNames2(e.target.value)} style={{marginTop:'10px'}} />
+              </Form.Group>
+              <Form.Group className='mb-3' controlId='childSurname2'>
+                <Form.Label className='Label'>*Surname Second Child</Form.Label>
+                <Form.Control className='Control' type='text' placeholder={childSurname2} onChange={(e)=>setChildSurname2(e.target.value)} style={{marginTop:'10px'}} />
+              </Form.Group>
+              <Form.Group className='mb-3' controlId='childID2'>
+                <Form.Label className='Label'>*ID Second Child</Form.Label>
+                <Form.Control className='Control' type='text' placeholder={childID2} onChange={(e)=>setChildID2(e.target.value)} style={{marginTop:'10px'}} />
+              </Form.Group>
+              <Form.Group className='mb-3' controlId='childTitle3'>
+              <Form.Label className='Label'>*Title Third Child</Form.Label>
+              <Form.Control className='Control' type='text' placeholder={childTitle2} onChange={(e)=>setChildTitle3(e.target.value)} style={{marginTop:'10px'}} />
+            </Form.Group>
+            <Form.Group className='mb-3' controlId='childFullNames3'>
+              <Form.Label className='Label'>*Full Names Third Child</Form.Label>
+              <Form.Control className='Control' type='text' placeholder={childFullNames2} onChange={(e)=>setChildFullNames3(e.target.value)} style={{marginTop:'10px'}} />
+            </Form.Group>
+            <Form.Group className='mb-3' controlId='childSurname3'>
+              <Form.Label className='Label'>*Surname Third Child</Form.Label>
+              <Form.Control className='Control' type='text' placeholder={childSurname2} onChange={(e)=>setChildSurname3(e.target.value)} style={{marginTop:'10px'}} />
+            </Form.Group>
+            <Form.Group className='mb-3' controlId='childID3'>
+              <Form.Label className='Label'>*ID Third Child</Form.Label>
+              <Form.Control className='Control' type='text' placeholder={childID2} onChange={(e)=>setChildID3(e.target.value)} style={{marginTop:'10px'}} />
+            </Form.Group>
+            <Form.Group className='mb-3' controlId='childTitle4'>
+              <Form.Label className='Label'>*Title Fourth Child</Form.Label>
+              <Form.Control className='Control' type='text' placeholder={childTitle2} onChange={(e)=>setChildTitle4(e.target.value)} style={{marginTop:'10px'}} />
+            </Form.Group>
+            <Form.Group className='mb-3' controlId='childFullNames4'>
+              <Form.Label className='Label'>*Full Names Fourth Child</Form.Label>
+              <Form.Control className='Control' type='text' placeholder={childFullNames2} onChange={(e)=>setChildFullNames4(e.target.value)} style={{marginTop:'10px'}} />
+            </Form.Group>
+            <Form.Group className='mb-3' controlId='childSurname4'>
+              <Form.Label className='Label'>*Surname Fourth Child</Form.Label>
+              <Form.Control className='Control' type='text' placeholder={childSurname2} onChange={(e)=>setChildSurname4(e.target.value)} style={{marginTop:'10px'}} />
+            </Form.Group>
+            <Form.Group className='mb-3' controlId='childID4'>
+              <Form.Label className='Label'>*ID Fourth Child</Form.Label>
+              <Form.Control className='Control' type='text' placeholder={childID2} onChange={(e)=>setChildID4(e.target.value)} style={{marginTop:'10px'}} />
+            </Form.Group>
+            <Form.Group className='mb-3' controlId='childTitle5'>
+              <Form.Label className='Label'>*Title Fifth Child</Form.Label>
+              <Form.Control className='Control' type='text' placeholder={childTitle2} onChange={(e)=>setChildTitle5(e.target.value)} style={{marginTop:'10px'}} />
+            </Form.Group>
+            <Form.Group className='mb-3' controlId='childFullNames5'>
+              <Form.Label className='Label'>*Full Names Fifth Child</Form.Label>
+              <Form.Control className='Control' type='text' placeholder={childFullNames2} onChange={(e)=>setChildFullNames5(e.target.value)} style={{marginTop:'10px'}} />
+            </Form.Group>
+            <Form.Group className='mb-3' controlId='childSurname5'>
+              <Form.Label className='Label'>*Surname Fifth Child</Form.Label>
+              <Form.Control className='Control' type='text' placeholder={childSurname2} onChange={(e)=>setChildSurname5(e.target.value)} style={{marginTop:'10px'}} />
+            </Form.Group>
+            <Form.Group className='mb-3' controlId='childID5'>
+              <Form.Label className='Label'>*ID Fifth Child</Form.Label>
+              <Form.Control className='Control' type='text' placeholder={childID2} onChange={(e)=>setChildID5(e.target.value)} style={{marginTop:'10px'}} />
+            </Form.Group>
+            <Form.Group className='mb-3' controlId='childTitle6'>
+              <Form.Label className='Label'>*Title Sixth Child</Form.Label>
+              <Form.Control className='Control' type='text' placeholder={childTitle2} onChange={(e)=>setChildTitle6(e.target.value)} style={{marginTop:'10px'}} />
+            </Form.Group>
+            <Form.Group className='mb-3' controlId='childFullNames6'>
+              <Form.Label className='Label'>*Full Names Sixth Child</Form.Label>
+              <Form.Control className='Control' type='text' placeholder={childFullNames2} onChange={(e)=>setChildFullNames6(e.target.value)} style={{marginTop:'10px'}} />
+            </Form.Group>
+            <Form.Group className='mb-3' controlId='childSurname6'>
+              <Form.Label className='Label'>*Surname Sixth Child</Form.Label>
+              <Form.Control className='Control' type='text' placeholder={childSurname2} onChange={(e)=>setChildSurname6(e.target.value)} style={{marginTop:'10px'}} />
+            </Form.Group>
+            <Form.Group className='mb-3' controlId='childID6'>
+              <Form.Label className='Label'>*ID Sixth Child</Form.Label>
+              <Form.Control className='Control' type='text' placeholder={childID2} onChange={(e)=>setChildID6(e.target.value)} style={{marginTop:'10px'}} />
+            </Form.Group>
+            </Form>
+            </div>
+        }
+        
       
       
       <div style={{textAlign: 'center'}}>
         <Link to='/3'>
-          <Button variant='secondary w-25' style={{ fontWeight: '600', background: '#D0D0D0', border: 'none', float:'left', marginTop: '10vw' }}>BACK</Button>
+          <Button variant='secondary w-25' style={{ fontWeight: '600', background: '#D0D0D0', border: 'none', float:'left', marginTop: '10vw', marginLeft: '20vw' }}>BACK</Button>
         </Link>
         <Link to='/5'>
           <Button variant='danger w-25' style={{ fontWeight: '600', background: '#BB1A1B', border: 'none', float:'right', marginTop: '10vw', marginRight: '20vw' }} >NEXT</Button>
