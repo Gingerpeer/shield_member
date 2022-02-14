@@ -90,6 +90,8 @@ function App() {
   const [nlCellNumber,setNlCellNumber] = useState('')
   // payment method
   const [paymentMethod,setPaymentMethod] = useState('')
+  // signature
+  const [signature,setSignature] = useState('')
 
   useEffect(()=>{
     console.log(childrenAmount)
@@ -236,7 +238,8 @@ function App() {
           setPaymentMethod={setPaymentMethod}
           />} />
         <Route path='/7' element={<Seven
-          
+          signature={signature}
+          setSignature={setSignature}
           />} />
       </Routes>
     </div>
