@@ -102,9 +102,19 @@ function App() {
   // Monthly Premium logic
   
 
-  // useEffect(()=>{
-  //   console.log(mainId)
-  // },[mainId,setChildrenAmount])
+  useEffect(()=>{
+    if(maritalStatus != ''){
+      setMonthlyPremium(153 + 111)
+      if(childrenAmount != 0){
+        let amount = childrenAmount * 28
+        setMonthlyPremium(153 + 111 + amount)
+      }
+    }
+    if(childrenAmount != 0 && maritalStatus == ''){
+      let amount = childrenAmount * 28
+      setMonthlyPremium(153 + amount)
+    }
+  },[monthlyPremium,setMonthlyPremium,setChildrenAmount,childrenAmount,maritalStatus,setMaritalStatus])
   return (
     <div className="App">
       <Header/>
