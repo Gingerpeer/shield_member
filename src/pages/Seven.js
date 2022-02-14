@@ -2,21 +2,22 @@ import { useEffect, useRef } from 'react';
 import Button from 'react-bootstrap/Button';
 import SignaturePad from 'react-signature-pad-wrapper';
 import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router';
 
 const Seven = ({signature, setSignature}) =>{
-  var submitted = false
+  const history = useNavigate()
   // Forms to be signed here
   const myRef = useRef(null)
   const saveCanvasToState = async ()=>{
     await setSignature(myRef.current.toDataURL()) 
-    submitted = true
+    history('/document')
   }
   const clearSignature = async () => {
     await myRef.current.clear()
   }
   useEffect( () => {
     // signature = myRef.current.toDataURL()
-    // console.log(signature)
+    console.log(signature)
   }, [myRef, saveCanvasToState,  setSignature, signature, clearSignature])
   
   
