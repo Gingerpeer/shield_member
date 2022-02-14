@@ -26,6 +26,10 @@
   min-width: 90px;
   padding-top: 6px; */
 }
+Table{
+  font-size: 14px;
+  color: #797979;
+}
 /* .Control{
   max-width: fit-content;
   float: right;
