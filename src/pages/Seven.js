@@ -1,7 +1,6 @@
 import { useEffect, useRef } from 'react';
 import Button from 'react-bootstrap/Button';
 import SignaturePad from 'react-signature-pad-wrapper';
-import Signature_Pad from 'signature_pad';
 import { Link } from 'react-router-dom';
 
 const Seven = ({signature, setSignature}) =>{
@@ -19,7 +18,6 @@ const Seven = ({signature, setSignature}) =>{
   }, [myRef, saveCanvasToState,  setSignature, signature, clearSignature])
   
   
- 
   return(
     <div className="page">
       <SignaturePad ref={myRef} />
