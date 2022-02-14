@@ -40,6 +40,12 @@ const Five = ({
           <Form.Label className='Label' >*Primary Beneficiary Surname</Form.Label>
           <Form.Control className='Control' type='text' placeholder={pbSurname} onChange={(e)=>setPbSurname(e.target.value)} style={{ marginTop: '20px' }} />
       </Form.Group>
+
+      <Form.Group className='mb-2' controlId='pbCellNumber'>
+          <Form.Label className='Label' >*Primary Beneficiary Cell Number</Form.Label>
+          <Form.Control className='Control' type='text' placeholder={pbCellNumber} onChange={(e)=>setPbCellNumber(e.target.value)} style={{ marginTop: '20px' }} />
+      </Form.Group>
+
       <Form.Group className='mb-2' controlId='pbID'>
           <Form.Label className='Label' >*Primary Beneficiary ID</Form.Label>
           <Form.Control className='Control' type='text' placeholder={pbID} onChange={(e)=>setPbID(e.target.value)} style={{ marginTop: '20px' }} />

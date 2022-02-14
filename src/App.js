@@ -168,7 +168,7 @@ function App() {
           setChildSurname={setChildSurname}
           childID={childID}
           setChildID={setChildID}
-          childTitle={childTitle}
+          childTitle2={childTitle2}
           setChildTitle2={setChildTitle2}
           childFullNames2={childFullNames2}
           setChildFullNames2={setChildFullNames2}
@@ -232,7 +232,8 @@ function App() {
           setNlCellNumber={setNlCellNumber}
           />} />
         <Route path='/6' element={<Six
-          
+          paymentMethod={paymentMethod}
+          setPaymentMethod={setPaymentMethod}
           />} />
         <Route path='/7' element={<Seven
           
