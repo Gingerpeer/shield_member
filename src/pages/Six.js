@@ -2,11 +2,16 @@ import Button from 'react-bootstrap/Button';
 import Form  from 'react-bootstrap/Form'
 import { Link } from 'react-router-dom';
 
-const Six = ({paymentMethod,setPaymentMethod}) =>{
+const Six = ({setPaymentMethod,monthlyPremium,setMonthlyPremium,maritalStatus,childrenAmount,armsOfService}) =>{
   return(
     <div className="page">
 
       <div style={{textAlign: 'center'}}>
+          <h6 style={{fontWeight: '600', marginTop: '25px', textAlign: 'center', color: '#BB1A1B', marginBottom: '25px'}}>Membership Type</h6>
+            <p style={{
+              textAlign: 'center',
+              fontWeight: '600'
+            }}>*Monthly Premium: R{monthlyPremium}</p>
         <Form>
           <Form.Group className='mb-2' controlId='paymentMethod'>
             <Form.Label className='Label'>
@@ -14,7 +19,7 @@ const Six = ({paymentMethod,setPaymentMethod}) =>{
             </Form.Label>
             <Form.Select onChange={(e)=>setPaymentMethod(e.target.value)} >
               <option>*Choose Payment Method</option>
-              <option value='Payroll'>Payroll</option>
+              {armsOfService !== 'Reserve Force' &&<option value='Payroll'>Payroll</option>}
               <option value='DebitOrder'>Debit Order</option>
             </Form.Select>
           </Form.Group>

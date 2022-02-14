@@ -25,6 +25,7 @@ function App() {
   const [fullNames, setFullNames] = useState('')
   const [surname, setSurname] = useState('')
   const [IDNumber, setIDNumber] = useState('')
+  const [mainId, setMainId] = useState([])
   // Page Two
   const [cellNumber, setCellNumber] = useState('0712345678')
   const [altCellNumber, setAltCellNumber] = useState('')
@@ -42,14 +43,15 @@ function App() {
   const [unitSwitchBoardNumber, setUnitSwitchBoardNumber] = useState('')
   // Membership Type / Marital Status
   const [maritalStatus,setMaritalStatus] = useState('')
-  const [monthlyPremium,setMonthlyPremium] = useState(0)
+  const [monthlyPremium,setMonthlyPremium] = useState(153)
   // Spouse's Details
   const [spouseTitle,setSpouseTitle] = useState('')
   const [spouseFullNames,setSpouseFullNames] = useState('')
   const [spouseSurname,setSpouseSurname] = useState('')
   const [spouseID,setSpouseID] = useState('')
+  const [spouseIdFile,setSpouseIdFile] = useState([])
   // Dependents under 21
-  const [childrenAmount,setChildrenAmount] = useState(1)
+  const [childrenAmount,setChildrenAmount] = useState(0)
         // needs to loop over the amount of children and add to state
         const [childTitle,setChildTitle] = useState('')
         const [childFullNames,setChildFullNames] = useState('')
@@ -75,6 +77,7 @@ function App() {
     const [childFullNames6,setChildFullNames6] = useState('')
     const [childSurname6,setChildSurname6] = useState('')
     const [childID6,setChildID6] = useState('')
+    const [childrenIds,setChildrenIds] = useState([])
   
   // Primary Beneficiary;s Details
   const [pbTitle,setPbTitle] = useState('')
@@ -82,20 +85,26 @@ function App() {
   const [pbSurname,setPbSurname] = useState('')
   const [pbID,setPbID] = useState('')
   const [pbCellNumber,setPbCellNumber] = useState('')
+  const [pbIdData,setPbIdData] = ([])
   // next in Line to beneficiary's details
   const [nlTitle,setNlTitle] = useState('')
   const [nlFullNames,setNlFullNames] = useState('')
   const [nlSurname,setNlSurname] = useState('')
   const [nlIDNumber,setNlIDNumber] = useState('')
   const [nlCellNumber,setNlCellNumber] = useState('')
+  const [nlIdData,setNlIdData] = ([])
   // payment method
   const [paymentMethod,setPaymentMethod] = useState('')
   // signature
   const [signature,setSignature] = useState('')
 
-  useEffect(()=>{
-    console.log(childrenAmount)
-  },[childrenAmount,setChildrenAmount])
+
+  // Monthly Premium logic
+  
+
+  // useEffect(()=>{
+  //   console.log(mainId)
+  // },[mainId,setChildrenAmount])
   return (
     <div className="App">
       <Header/>
@@ -116,6 +125,8 @@ function App() {
           setSurname={setSurname}
           IDNumber={IDNumber}
           setIDNumber={setIDNumber}
+          mainID={mainId}
+          setMainId={setMainId}
            />} />
         <Route path='/2' element={<Two
           cellNumber={cellNumber}
@@ -158,6 +169,8 @@ function App() {
           setSpouseSurname={setSpouseSurname}
           spouseID={spouseID}
           setSpouseID={setSpouseID}
+          spouseIdFile={spouseIdFile}
+          setSpouseIdFile={setSpouseIdFile}
           />} />
         <Route path='/4' element={<Four
           childrenAmount={childrenAmount}
@@ -210,6 +223,8 @@ function App() {
           setChildSurname6={setChildSurname6}
           childID6={childID6}
           setChildID6={setChildID6}
+          childrenIds={childrenIds}
+          setChildrenIds={setChildrenIds}
           />} />
         <Route path='/5' element={<Five
           pbTitle={pbTitle}
@@ -222,6 +237,9 @@ function App() {
           setPbID={setPbID}
           pbCellNumber={pbCellNumber}
           setPbCellNumber={setPbCellNumber}
+          pbIdData={pbIdData}
+          setPbIdData={setPbIdData}
+
           nlTitle={nlTitle}
           setNlTitle={setNlTitle}
           nlFullNames={nlFullNames}
@@ -232,10 +250,17 @@ function App() {
           setNlIDNumber={setNlIDNumber}
           nlCellNumber={nlCellNumber}
           setNlCellNumber={setNlCellNumber}
+          nlIdData={nlIdData}
+          setNlIdData={setNlIdData}
           />} />
         <Route path='/6' element={<Six
           paymentMethod={paymentMethod}
           setPaymentMethod={setPaymentMethod}
+          monthlyPremium={monthlyPremium}
+          setMonthlyPremium={setMonthlyPremium}
+          armsOfService={armsOfService}
+          maritalStatus={maritalStatus}
+          childrenAmount={childrenAmount}
           />} />
         <Route path='/7' element={<Seven
           signature={signature}

@@ -1,6 +1,7 @@
 import Button from 'react-bootstrap/Button';
 import Form  from 'react-bootstrap/Form'
 import { Link } from 'react-router-dom';
+import FileInputComponent from 'react-file-input-previews-base64'
 
 const Five = ({
           pbTitle,
@@ -13,6 +14,8 @@ const Five = ({
           setPbID,
           pbCellNumber,
           setPbCellNumber,
+          pbIdData,
+          setPbIdData,
           nlTitle,
           setNlTitle,
           nlFullNames,
@@ -22,7 +25,9 @@ const Five = ({
           nlIDNumber,
           setNlIDNumber,
           nlCellNumber,
-          setNlCellNumber
+          setNlCellNumber,
+          nlIdData,
+          setNlIdData
 }) =>{
   return(
     <div className="page">
@@ -50,7 +55,17 @@ const Five = ({
           <Form.Label className='Label' >*Primary Beneficiary ID</Form.Label>
           <Form.Control className='Control' type='text' placeholder={pbID} onChange={(e)=>setPbID(e.target.value)} style={{ marginTop: '20px' }} />
       </Form.Group>
-      
+      <FileInputComponent
+                labelText="Upload ID"
+                labelStyle={{fontSize:14, marginRight: '14px', fontWeight: '600'}}
+                multiple={true}
+                callbackFunction={(file_arr)=>{setPbIdData(file_arr[0].base64)}}
+                accept="image/*" 
+                imagePreview={true}
+                buttonComponent={<Button variant='info w-50'><span style={{ color: 'white', fontWeight: 600}}> Click to Select</span></Button>}
+                imageContainerStyle={{textAlign: 'center'}}
+             />
+
       <h6 style={{fontWeight: '600', marginTop: '25px', textAlign: 'center', color: '#BB1A1B', marginBottom: '25px'}}>6. Next in Line Beneficiary Details</h6>
 
         <Form.Group className='mb-2' controlId='nlTitle'>
@@ -74,6 +89,16 @@ const Five = ({
           <Form.Label className='Label' >*Next in Line Beneficiary Cell Number</Form.Label>
           <Form.Control className='Control' type='text' placeholder={nlCellNumber} onChange={(e)=>setNlCellNumber(e.target.value)} style={{ marginTop: '20px' }} />
       </Form.Group>
+      <FileInputComponent
+                labelText="Upload ID"
+                labelStyle={{fontSize:14, marginRight: '14px', fontWeight: '600'}}
+                multiple={true}
+                callbackFunction={(file_arr)=>{setNlIdData(file_arr[0].base64)}}
+                accept="image/*" 
+                imagePreview={true}
+                buttonComponent={<Button variant='info w-50'><span style={{ color: 'white', fontWeight: 600}}> Click to Select</span></Button>}
+                imageContainerStyle={{textAlign: 'center'}}
+             />
       </Form>
 
 

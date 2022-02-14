@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import Button from 'react-bootstrap/Button';
 import {Form, Row, Col}  from 'react-bootstrap'
+import FileInputComponent from 'react-file-input-previews-base64'
 
 
 const Four = ({
@@ -54,6 +55,7 @@ const Four = ({
   setChildSurname6,
   childID6,
   setChildID6,
+  setChildrenIds
 }) =>{
   return(
     <div className="page">
@@ -62,7 +64,15 @@ const Four = ({
         <Form.Group as={Row} className='mb-3' controlId='childrenAmount'>
           <Form.Label className='Label' column sm='2'>*Amount of Children</Form.Label>
           <Col sm='10'>
-            <Form.Control className='Control' type='text' placeholder={childrenAmount} onChange={(e)=>setChildrenAmount(e.target.value)}  />
+            <Form.Select className='Control' onChange={(e)=>setChildrenAmount(e.target.value)}>
+              <option>0</option>
+              <option>1</option>
+              <option>2</option>
+              <option>3</option>
+              <option>4</option>
+              <option>5</option>
+              <option>6</option>
+            </Form.Select>
           </Col>
         </Form.Group>
         </Form>
@@ -91,6 +101,16 @@ const Four = ({
                 <Form.Label className='Label'>*Child ID</Form.Label>
                 <Form.Control className='Control' type='text' placeholder={childID} onChange={(e)=>setChildID(e.target.value)} />
               </Form.Group>
+              <FileInputComponent
+                labelText="Upload IDs"
+                labelStyle={{fontSize:14, marginRight: '14px', fontWeight: '600'}}
+                multiple={true}
+                callbackFunction={(file_arr)=>{setChildrenIds(file_arr[0].base64)}}
+                accept="image/*" 
+                imagePreview={true}
+                buttonComponent={<Button variant='info w-50'><span style={{ color: 'white', fontWeight: 600}}> Click to Select</span></Button>}
+                imageContainerStyle={{textAlign: 'center'}}
+             />
             </Form>
           </div>
         }
@@ -129,6 +149,16 @@ const Four = ({
                 <Form.Label className='Label'>*ID Second Child</Form.Label>
                 <Form.Control className='Control' type='text' placeholder={childID2} onChange={(e)=>setChildID2(e.target.value)} style={{marginTop:'10px'}} />
               </Form.Group>
+              <FileInputComponent
+                labelText="Upload IDs"
+                labelStyle={{fontSize:14, marginRight: '14px', fontWeight: '600'}}
+                multiple={true}
+                callbackFunction={(file_arr)=>{setChildrenIds(file_arr[0].base64)}}
+                accept="image/*" 
+                imagePreview={true}
+                buttonComponent={<Button variant='info w-50'><span style={{ color: 'white', fontWeight: 600}}> Click to Select</span></Button>}
+                imageContainerStyle={{textAlign: 'center'}}
+             />
             </Form>
             </div>
         }
@@ -183,6 +213,16 @@ const Four = ({
               <Form.Label className='Label'>*ID Third Child</Form.Label>
               <Form.Control className='Control' type='text' placeholder={childID3} onChange={(e)=>setChildID3(e.target.value)} style={{marginTop:'10px'}} />
             </Form.Group>
+            <FileInputComponent
+                labelText="Upload IDs"
+                labelStyle={{fontSize:14, marginRight: '14px', fontWeight: '600'}}
+                multiple={true}
+                callbackFunction={(file_arr)=>{setChildrenIds(file_arr[0].base64)}}
+                accept="image/*" 
+                imagePreview={true}
+                buttonComponent={<Button variant='info w-50'><span style={{ color: 'white', fontWeight: 600}}> Click to Select</span></Button>}
+                imageContainerStyle={{textAlign: 'center'}}
+             />
             </Form>
             </div>
         }
@@ -253,6 +293,16 @@ const Four = ({
               <Form.Label className='Label'>*ID Fourth Child</Form.Label>
               <Form.Control className='Control' type='text' placeholder={childID4} onChange={(e)=>setChildID4(e.target.value)} style={{marginTop:'10px'}} />
             </Form.Group>
+            <FileInputComponent
+                labelText="Upload IDs"
+                labelStyle={{fontSize:14, marginRight: '14px', fontWeight: '600'}}
+                multiple={true}
+                callbackFunction={(file_arr)=>{setChildrenIds(file_arr[0].base64)}}
+                accept="image/*" 
+                imagePreview={true}
+                buttonComponent={<Button variant='info w-50'><span style={{ color: 'white', fontWeight: 600}}> Click to Select</span></Button>}
+                imageContainerStyle={{textAlign: 'center'}}
+             />
             </Form>
             </div>
         }
@@ -339,6 +389,16 @@ const Four = ({
               <Form.Label className='Label'>*ID Fifth Child</Form.Label>
               <Form.Control className='Control' type='text' placeholder={childID5} onChange={(e)=>setChildID5(e.target.value)} style={{marginTop:'10px'}} />
             </Form.Group>
+            <FileInputComponent
+                labelText="Upload IDs"
+                labelStyle={{fontSize:14, marginRight: '14px', fontWeight: '600'}}
+                multiple={true}
+                callbackFunction={(file_arr)=>{setChildrenIds(file_arr[0].base64)}}
+                accept="image/*" 
+                imagePreview={true}
+                buttonComponent={<Button variant='info w-50'><span style={{ color: 'white', fontWeight: 600}}> Click to Select</span></Button>}
+                imageContainerStyle={{textAlign: 'center'}}
+             />
             </Form>
             </div>
         }
@@ -441,6 +501,16 @@ const Four = ({
               <Form.Label className='Label'>*ID Sixth Child</Form.Label>
               <Form.Control className='Control' type='text' placeholder={childID6} onChange={(e)=>setChildID6(e.target.value)} style={{marginTop:'10px'}} />
             </Form.Group>
+            <FileInputComponent
+                labelText="Upload IDs"
+                labelStyle={{fontSize:14, marginRight: '14px', fontWeight: '600'}}
+                multiple={true}
+                callbackFunction={(file_arr)=>{setChildrenIds(file_arr[0].base64)}}
+                accept="image/*" 
+                imagePreview={true}
+                buttonComponent={<Button variant='info w-50'><span style={{ color: 'white', fontWeight: 600}}> Click to Select</span></Button>}
+                imageContainerStyle={{textAlign: 'center'}}
+             />
             </Form>
             </div>
         }

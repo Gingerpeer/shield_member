@@ -1,6 +1,7 @@
 import Button from 'react-bootstrap/Button';
 import Form  from 'react-bootstrap/Form'
 import { Link } from 'react-router-dom';
+import FileInputComponent from 'react-file-input-previews-base64'
 
 // still need to work out monthly premium 
 
@@ -12,8 +13,6 @@ const Three = ({
   setUnitSwitchBoardNumber,
   maritalStatus,
   setMaritalStatus,
-  monthlyPremium,
-  setMonthlyPremium,
   spouseTitle,
   setSpouseTitle,
   spouseFullNames,
@@ -21,12 +20,13 @@ const Three = ({
   spouseSurname,
   setSpouseSurname,
   spouseID,
-  setSpouseID
+  setSpouseID,
+  setSpouseIdFile
   })=>{
   return(
     <div className="page">
       <h6 style={{fontWeight: '600', marginTop: '25px', textAlign: 'center', color: '#BB1A1B', marginBottom: '25px'}}>3. Unit Contact Details</h6>
-      <Form style={{marginBottom: '30vh'}}>
+      <Form style={{marginBottom: '10vh'}}>
         <Form.Group className='mb-2' controlId='unitName'>
           <Form.Label className='Label' >*Unit Name</Form.Label>
           <Form.Control className='Control' type='text' placeholder={unitName} onChange={(e)=>setUnitName(e.target.value)} />
@@ -36,34 +36,45 @@ const Three = ({
           <Form.Control className='Control' type='text' placeholder={unitSwitchBoardNumber} onChange={(e)=>setUnitSwitchBoardNumber(e.target.value)} style={{ marginTop: '20px' }} />
       </Form.Group>
       </Form>
-      <h6 style={{fontWeight: '600', marginTop: '25px', textAlign: 'center', color: '#BB1A1B', marginBottom: '25px'}}>Membership Type</h6>
-        <p style={{
-          textAlign: 'center',
-          fontWeight: '600'
-        }}>*Monthly Premium: R{monthlyPremium}</p>
+      
         <h6 style={{fontWeight: '600', marginTop: '25px', textAlign: 'center', color: '#BB1A1B', marginBottom: '25px'}}>Marital Status</h6>
       <Form>
       <Form.Group className='mb-2' controlId='maritalStatus'>
         <Form.Label className='Label' >*Marital Status</Form.Label>
-        <Form.Control className='Control' type='text' placeholder={maritalStatus} onChange={(e)=>setMaritalStatus(e.target.value)} />
+        <Form.Select onChange={(e)=>setMaritalStatus(e.target.value)} >
+          <option>Single</option>
+          <option>Married</option>
+        </Form.Select>
       </Form.Group>
       
-      <Form.Group className='mb-2' controlId='spouseTitle'>
-        <Form.Label className='Label' >*Title</Form.Label>
+      {maritalStatus == 'Married' &&<><Form.Group className='mb-2' controlId='spouseTitle'>
+        <Form.Label className='Label' >*Spouse Title</Form.Label>
         <Form.Control className='Control' type='text' placeholder={spouseTitle} onChange={(e)=>setSpouseTitle(e.target.value)} />
       </Form.Group>
       <Form.Group className='mb-2' controlId='spouseFullNames'>
-        <Form.Label className='Label' >*Full Names</Form.Label>
+        <Form.Label className='Label' >*Spouse Full Names</Form.Label>
         <Form.Control className='Control' type='text' placeholder={spouseFullNames} onChange={(e)=>setSpouseFullNames(e.target.value)} />
       </Form.Group>
       <Form.Group className='mb-2' controlId='spouseSurname'>
-        <Form.Label className='Label' >*Surname</Form.Label>
+        <Form.Label className='Label' >*Spouse Surname</Form.Label>
         <Form.Control className='Control' type='text' placeholder={spouseSurname} onChange={(e)=>setSpouseSurname(e.target.value)} />
       </Form.Group>
       <Form.Group className='mb-2' controlId='spouseID'>
-        <Form.Label className='Label' >*ID Number</Form.Label>
+        <Form.Label className='Label' >*Spouse ID Number</Form.Label>
         <Form.Control className='Control' type='text' placeholder={spouseID} onChange={(e)=>setSpouseID(e.target.value)} />
       </Form.Group>
+
+          <FileInputComponent
+              labelText="Upload ID"
+              labelStyle={{fontSize:14, marginRight: '14px', fontWeight: '600'}}
+              multiple={true}
+              callbackFunction={(file_arr)=>{setSpouseIdFile(file_arr[0].base64)}}
+              accept="image/*" 
+              imagePreview={true}
+              buttonComponent={<Button variant='info w-50'><span style={{ color: 'white', fontWeight: 600}}> Click to Select</span></Button>}
+              imageContainerStyle={{textAlign: 'center'}}
+             />
+      </>}
       </Form>
       <div style={{textAlign: 'center'}}>
         <Link to='/2'>

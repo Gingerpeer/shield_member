@@ -4,12 +4,12 @@ import SignaturePad from 'react-signature-pad-wrapper';
 import { Link } from 'react-router-dom';
 
 const Seven = ({signature, setSignature}) =>{
+  // Forms to be signed here
   const myRef = useRef(null)
   const saveCanvasToState = async ()=>{
     await setSignature(myRef.current.toDataURL()) 
   }
   const clearSignature = async () => {
-    console.log('Trying to clear signature')
     await myRef.current.clear()
   }
   useEffect( () => {
