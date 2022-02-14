@@ -4,10 +4,12 @@ import SignaturePad from 'react-signature-pad-wrapper';
 import { Link } from 'react-router-dom';
 
 const Seven = ({signature, setSignature}) =>{
+  var submitted = false
   // Forms to be signed here
   const myRef = useRef(null)
   const saveCanvasToState = async ()=>{
     await setSignature(myRef.current.toDataURL()) 
+    submitted = true
   }
   const clearSignature = async () => {
     await myRef.current.clear()
@@ -28,8 +30,9 @@ const Seven = ({signature, setSignature}) =>{
         </Link>
         
           <Button variant='danger w-25' onClick={saveCanvasToState} style={{ fontWeight: '600', background: '#BB1A1B', border: 'none', float:'right', marginTop: '10vw', marginRight: '20vw' }} >Submit</Button>
+          </div>
+          
         
-    </div>
     </div>
   )
 }
