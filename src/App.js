@@ -15,8 +15,10 @@ import Five from './pages/Five';
 import Six from './pages/Six';
 import Seven from './pages/Seven';
 import Document from './pages/Document';
+import CheckInfo from './pages/CheckInfo';
 // Styles
 import './App.css';
+
 
 function App() {
   // Page One
@@ -274,9 +276,11 @@ function App() {
           childrenAmount={childrenAmount}
           />} />
         <Route path='/7' element={<Seven
+          monthlyPremium={monthlyPremium}
           signature={signature}
           setSignature={setSignature}
           />} />
+        <Route path='/checkInfo' element={<CheckInfo />} />
         <Route path='/document' element={<Document 
           forceNumber={forceNumber} 
           armsOfService={armsOfService}

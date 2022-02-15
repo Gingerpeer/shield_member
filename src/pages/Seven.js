@@ -4,7 +4,7 @@ import SignaturePad from 'react-signature-pad-wrapper';
 import { Link } from 'react-router-dom';
 import { useNavigate } from 'react-router';
 
-const Seven = ({signature, setSignature}) =>{
+const Seven = ({signature, setSignature, monthlyPremium}) =>{
   const history = useNavigate()
   // Forms to be signed here
   const myRef = useRef(null)
@@ -17,13 +17,15 @@ const Seven = ({signature, setSignature}) =>{
   }
   useEffect( () => {
     // signature = myRef.current.toDataURL()
-    console.log(signature)
+    
   }, [myRef, saveCanvasToState,  setSignature, signature, clearSignature])
   
   
   return(
     <div className="page">
-      <SignaturePad ref={myRef} />
+    <h6 style={{fontWeight: '600', marginTop: '25px', textAlign: 'center', color: '#BB1A1B', marginBottom: '25px'}}>Your Monthly Premium is R{monthlyPremium}</h6>
+    <h6 style={{fontWeight: '600', marginTop: '25px', textAlign: 'center', color: '#BB1A1B', marginBottom: '25px'}}>Do you agree? Sign below in agreement</h6>
+      <SignaturePad ref={myRef}  />
       <Button variant='danger' onClick={clearSignature} >Clear</Button>
       <div style={{textAlign: 'center'}}>
         <Link to='/6'>
