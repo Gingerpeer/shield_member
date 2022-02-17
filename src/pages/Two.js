@@ -1,7 +1,7 @@
 import Button from 'react-bootstrap/Button';
 import Form  from 'react-bootstrap/Form'
 import { Link } from 'react-router-dom';
-
+import { useState } from 'react';
 
 
 const Two = ({
@@ -28,6 +28,36 @@ const Two = ({
   postalCode,
   setPostalCode
   })=>{
+    const [showNext,setShowNext] = useState(false)
+    const [error, setError] = useState('')
+    const requiredSubmitted = () =>{
+      if(cellNumber != ''){
+        if(streetNumber != ''){
+          if(streetName != ''){
+            if(suburb != ''){
+              if(town != ''){
+                if(postalCode != ''){
+                  setShowNext(true)
+                  setError('Please Check that all info is correct then click next')
+                }else{
+                  setError('You have not submitted your Postal Code')
+                }
+              }else{
+                setError('You have not submitted your Town')
+              }
+            }else{
+              setError('You have not submitted your Suburb')
+            }
+          }else{
+            setError('You have not submitted your Street Name')
+          }
+        }else{
+          setError('You have not submitted your Street Number')
+        }
+      }else{
+        setError('You have not submitted your Cell Number')
+      }
+    }
   return(
     <div className="page">
       <h6 style={{fontWeight: '600', marginTop: '25px', textAlign: 'center', color: '#BB1A1B', marginBottom: '25px'}}>2. Main Member Contact Details</h6>
@@ -79,13 +109,15 @@ const Two = ({
         <Form.Control className='Control' type='text' placeholder={postalCode} onChange={(e)=>setPostalCode(e.target.value)} />
       </Form.Group>
       </Form>
+      <h6 style={{color: 'red', fontWeight: 'bold',float: 'left'}}>{error}</h6>
       <div style={{textAlign: 'center'}}>
         <Link to='/1'>
           <Button variant='secondary w-25' style={{ fontWeight: '600', background: '#D0D0D0', border: 'none', float:'left', marginTop: '10vw', marginLeft: '20vw', marginBottom: '5vw' }}>BACK</Button>
         </Link>
-        <Link to='/3'>
+        {showNext &&  <Link to='/3'>
           <Button variant='danger w-25' style={{ fontWeight: '600', background: '#BB1A1B', border: 'none', float:'right', marginTop: '10vw', marginRight: '20vw', marginBottom: '5vw' }} >NEXT</Button>
-        </Link>
+        </Link>}
+        {!showNext && <Button variant='danger w-25' style={{ fontWeight: '600', background: '#BB1A1B', border: 'none', float:'right', marginTop: '10vw', marginRight: '20vw', marginBottom: '10vh' }} onClick={requiredSubmitted} >Submit</Button>}
       </div>
     </div>
   )

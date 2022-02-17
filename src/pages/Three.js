@@ -2,6 +2,7 @@ import Button from 'react-bootstrap/Button';
 import Form  from 'react-bootstrap/Form'
 import { Link } from 'react-router-dom';
 import FileInputComponent from 'react-file-input-previews-base64'
+import { useState } from 'react';
 
 // still need to work out monthly premium 
 
@@ -23,6 +24,24 @@ const Three = ({
   setSpouseID,
   setSpouseIdFile
   })=>{
+    const [showNext,setShowNext] = useState(false)
+    const [error, setError] = useState('')
+    const requiredSubmitted = () =>{
+            if(unitName != ''){
+              if(unitSwitchBoardNumber != ''){
+                if(maritalStatus != ''){
+                  setShowNext(true)
+                  setError('Please Check that all info is correct then click next')
+                }else{
+                  setError('You have not submitted your Marital Status')
+                }
+              }else{
+                setError('You have not submitted your Unit Switchboard Number')
+              }
+            }else{
+              setError('You have not submitted your Unit Name')
+            }
+          }
   return(
     <div className="page">
       <h6 style={{fontWeight: '600', marginTop: '25px', textAlign: 'center', color: '#BB1A1B', marginBottom: '25px'}}>3. Unit Contact Details</h6>
@@ -76,13 +95,15 @@ const Three = ({
              />
       </>}
       </Form>
+      <h6 style={{color: 'red', fontWeight: 'bold',float: 'left'}}>{error}</h6>
       <div style={{textAlign: 'center'}}>
         <Link to='/2'>
           <Button variant='secondary w-25' style={{ fontWeight: '600', background: '#D0D0D0', border: 'none', float:'left', marginTop: '10vw', marginLeft: '20vw' }}>BACK</Button>
         </Link>
-        <Link to='/4'>
+        {showNext && <Link to='/4'>
           <Button variant='danger w-25' style={{ fontWeight: '600', background: '#BB1A1B', border: 'none', float:'right', marginTop: '10vw', marginRight: '20vw' }} >NEXT</Button>
-        </Link>
+        </Link>}
+        {!showNext && <Button variant='danger w-25' style={{ fontWeight: '600', background: '#BB1A1B', border: 'none', float:'right', marginTop: '10vw', marginRight: '20vw', marginBottom: '10vh' }} onClick={requiredSubmitted} >Submit</Button>}
       </div>
     </div>
   )

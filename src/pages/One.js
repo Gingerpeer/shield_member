@@ -2,7 +2,7 @@ import Button from 'react-bootstrap/Button';
 import Form  from 'react-bootstrap/Form'
 import { Link } from 'react-router-dom';
 import FileInputComponent from 'react-file-input-previews-base64'
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 
 
 
@@ -39,7 +39,7 @@ const One = ({
               if(surname != ''){
                 if(IDNumber != ''){
                   setShowNext(true)
-                  setError('')
+                  setError('Please Check that all info is correct then click next')
                 }else{
                   setError('You have not submitted your ID number')
                 }
