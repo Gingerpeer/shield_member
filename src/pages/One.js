@@ -2,7 +2,7 @@ import Button from 'react-bootstrap/Button';
 import Form  from 'react-bootstrap/Form'
 import { Link } from 'react-router-dom';
 import FileInputComponent from 'react-file-input-previews-base64'
-// import { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 
 
 
@@ -29,7 +29,37 @@ const One = ({
       'Reserve Force',
       'Civilian Force'
     ]
-    // const [showNext,setShowNext] = useState(false)
+    const [showNext,setShowNext] = useState(false)
+    const [error, setError] = useState('')
+    const requiredSubmitted = () =>{
+      if(forceNumber != ''){
+        if(armsOfService != ''){
+          if(rankTitle != ''){
+            if(fullNames != ''){
+              if(surname != ''){
+                if(IDNumber != ''){
+                  setShowNext(true)
+                  setError('')
+                }else{
+                  setError('You have not submitted your ID number')
+                }
+              }else{
+                setError('You have not submitted your Surname')
+              }
+            }else{
+              setError('You have not submitted your Full Names')
+            }
+          }else{
+            setError('You have not submitted your Rank or Title')
+          }
+        }else{
+          setError('You have not submitted your Arms of Service')
+        }
+      }else{
+        setError('You have not submitted your force number')
+      }
+    }
+   
   return(
     <div className="page">
       <h6 style={{fontWeight: '600', marginTop: '25px', textAlign: 'center', color: '#BB1A1B', marginBottom: '25px'}}>1. Compulsory Personal Information</h6>
@@ -173,13 +203,16 @@ const One = ({
             imageContainerStyle={{textAlign: 'center'}}
              />
       </Form>
+      <h6 style={{color: 'red', fontWeight: 'bold',float: 'left'}}>{error}</h6>
       <div style={{textAlign: 'center'}}>
         <Link to='/instructions'>
-          <Button variant='secondary w-25' style={{ fontWeight: '600', background: '#D0D0D0', border: 'none', float:'left', marginTop: '10vw', marginLeft: '20vw' }}>BACK</Button>
+          <Button variant='secondary w-25' style={{ fontWeight: '600', background: '#D0D0D0', border: 'none', float:'left', marginTop: '10vw', marginLeft: '20vw', marginBottom: '10vh' }}>BACK</Button>
         </Link>
-        <Link to='/2'>
-          <Button variant='danger w-25' style={{ fontWeight: '600', background: '#BB1A1B', border: 'none', float:'right', marginTop: '10vw', marginRight: '20vw' }}>NEXT</Button>
-        </Link>
+        
+        {showNext &&<Link to='/2'>
+          <Button variant='danger w-25' style={{ fontWeight: '600', background: '#BB1A1B', border: 'none', float:'right', marginTop: '10vw', marginRight: '20vw', marginBottom: '10vh' }}>NEXT</Button>
+        </Link>}
+        {!showNext && <Button variant='danger w-25' style={{ fontWeight: '600', background: '#BB1A1B', border: 'none', float:'right', marginTop: '10vw', marginRight: '20vw', marginBottom: '10vh' }} onClick={requiredSubmitted} >Submit</Button>}
       </div>
     </div>
   )

@@ -22,7 +22,7 @@ import './App.css';
 
 function App() {
   // Page One
-  const [forceNumber, setForceNumber] = useState('12345678')
+  const [forceNumber, setForceNumber] = useState('')
   const [armsOfService, setArmsOfService] = useState('')
   const [rankTitle, setRankTitle] = useState('')
   const [fullNames, setFullNames] = useState('')
@@ -30,7 +30,7 @@ function App() {
   const [IDNumber, setIDNumber] = useState('')
   const [mainId, setMainId] = useState([])
   // Page Two
-  const [cellNumber, setCellNumber] = useState('0712345678')
+  const [cellNumber, setCellNumber] = useState('')
   const [altCellNumber, setAltCellNumber] = useState('')
   const [landlineNumber, setLandlineNumber] = useState('')
   const [emailAddress, setEmailAddress] = useState('')
