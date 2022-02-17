@@ -2,6 +2,7 @@ import Button from 'react-bootstrap/Button';
 import Form  from 'react-bootstrap/Form'
 import { Link } from 'react-router-dom';
 import FileInputComponent from 'react-file-input-previews-base64'
+import { useState } from 'react';
 
 const Five = ({
           pbTitle,
@@ -29,6 +30,36 @@ const Five = ({
           nlIdData,
           setNlIdData
 }) =>{
+  const [showNext,setShowNext] = useState(false)
+    const [error, setError] = useState('')
+    const requiredSubmitted = () =>{
+  if(pbFullNames != ''){
+    if(pbSurname != ''){
+      if(pbID != ''){
+        if(nlFullNames != ''){
+          if(nlSurname != ''){
+            if(nlIDNumber != ''){
+              setShowNext(true)
+              setError('Please Check that all info is correct then click next')
+            }else{
+              setError('You have not submitted your Next in Line Beneficiary ID Number')
+            }
+          }else{
+            setError('You have not submitted your Next in Line Beneficiary Surname')
+          }
+        }else{
+          setError('You have not submitted your Next in Line Beneficiary Names')
+        }
+      }else{
+        setError('You have not submitted your Beneficiary ID Number')
+      }
+    }else{
+      setError('You have not submitted your Beneficiary Surname')
+    }
+  }else{
+    setError('You have not submitted your Primary Beneficiary Names')
+  }
+    }
   return(
     <div className="page">
     <h6 style={{fontWeight: '600', marginTop: '25px', textAlign: 'center', color: '#BB1A1B', marginBottom: '25px'}}>5. Primary Beneficiary Details</h6>
@@ -101,14 +132,15 @@ const Five = ({
              />
       </Form>
 
-
+      <h6 style={{color: 'red', fontWeight: 'bold',float: 'left'}}>{error}</h6>
       <div style={{textAlign: 'center'}}>
         <Link to='/4'>
           <Button variant='secondary w-25' style={{ fontWeight: '600', background: '#D0D0D0', border: 'none', float:'left', marginTop: '10vw', marginLeft: '20vw' }}>BACK</Button>
         </Link>
-        <Link to='/6'>
+        {showNext && <Link to='/6'>
           <Button variant='danger w-25' style={{ fontWeight: '600', background: '#BB1A1B', border: 'none', float:'right', marginTop: '10vw', marginRight: '20vw' }} >NEXT</Button>
-        </Link>
+        </Link>}
+        {!showNext && <Button variant='danger w-25' style={{ fontWeight: '600', background: '#BB1A1B', border: 'none', float:'right', marginTop: '10vw', marginRight: '20vw', marginBottom: '10vh' }} onClick={requiredSubmitted} >Submit</Button>}
     </div>
     </div>
   )
