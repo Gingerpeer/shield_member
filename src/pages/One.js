@@ -2,6 +2,7 @@ import Button from 'react-bootstrap/Button';
 import Form  from 'react-bootstrap/Form'
 import { Link } from 'react-router-dom';
 import FileInputComponent from 'react-file-input-previews-base64'
+// import { useState, useEffect } from 'react';
 
 
 
@@ -28,6 +29,7 @@ const One = ({
       'Reserve Force',
       'Civilian Force'
     ]
+    // const [showNext,setShowNext] = useState(false)
   return(
     <div className="page">
       <h6 style={{fontWeight: '600', marginTop: '25px', textAlign: 'center', color: '#BB1A1B', marginBottom: '25px'}}>1. Compulsory Personal Information</h6>

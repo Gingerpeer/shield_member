@@ -411,7 +411,7 @@ signature
     doc.text(suburb,129,164)
     doc.rect(90,160,24,5,'S')
     doc.rect(15,165,166,5,'S')
-    doc.text('Postal Code:',17.5,169)
+    doc.text(`Postal Code: ${postalCode}`,17.5,169)
     // 3. Compulsory Beneficiary Information
     doc.setFont('Helvetica','bold')
     doc.setFontSize(11)
@@ -509,8 +509,8 @@ signature
     doc.text('ID Number:',17.5,249)
     doc.text('Contact Number',17.5,254)
     doc.text(`${spouseFullNames} ${spouseSurname}`,55,244)
-    doc.text(spouseID,17.5,249)
-    doc.text(altCellNumber,17.5,254)
+    doc.text(spouseID,55,249)
+    doc.text(altCellNumber,55,254)
     doc.text('Name & Surname:',93,244)
     doc.text('ID Number:',93,249)
     doc.text('Contact Number',93,254)
@@ -1410,39 +1410,10 @@ signature
      doc.text('____________________________',20,60)
      doc.text('Signature of Main Member',25,65)
      doc.text(`Date: ${timeStamp}`,72,65)
-     /* 
-                		
-                
-                
-               		
-                 		
-                 
-                  		
-               		
-    		
-        		
-          		
-    		
-    	
-    		
-    		
-    		
-        
-        	
-         		
-      		
-  	 */
-    /*
-      		
-      		
-      		
-      	
-      		
-        		
-    */
+     
     // to download pdf
     if(type == 'download'){
-      doc.save('test.pdf')
+      doc.save('Membership_Application.pdf')
     }else{
         // send pdf in base64
     var output = doc.output()
