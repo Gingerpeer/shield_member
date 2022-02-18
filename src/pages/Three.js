@@ -95,7 +95,7 @@ const Three = ({
              />
       </>}
       </Form>
-      <h6 style={{color: 'red', fontWeight: 'bold',float: 'left'}}>{error}</h6>
+      <div style={{textAlign: 'center', padding: '5vw'}}><h6 style={{color: 'red', fontWeight: 'bold',textAlign: 'center'}}>{error}</h6></div>
       <div style={{textAlign: 'center'}}>
         <Link to='/2'>
           <Button variant='secondary w-25' style={{ fontWeight: '600', background: '#D0D0D0', border: 'none', float:'left', marginTop: '10vw', marginLeft: '20vw' }}>BACK</Button>

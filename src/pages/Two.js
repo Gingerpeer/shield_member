@@ -109,7 +109,7 @@ const Two = ({
         <Form.Control className='Control' type='text' placeholder={postalCode} onChange={(e)=>setPostalCode(e.target.value)} />
       </Form.Group>
       </Form>
-      <h6 style={{color: 'red', fontWeight: 'bold',float: 'left'}}>{error}</h6>
+      <div style={{textAlign: 'center', padding: '5vw'}}><h6 style={{color: 'red', fontWeight: 'bold',textAlign: 'center'}}>{error}</h6></div>
       <div style={{textAlign: 'center'}}>
         <Link to='/1'>
           <Button variant='secondary w-25' style={{ fontWeight: '600', background: '#D0D0D0', border: 'none', float:'left', marginTop: '10vw', marginLeft: '20vw', marginBottom: '5vw' }}>BACK</Button>

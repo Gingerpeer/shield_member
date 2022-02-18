@@ -35,7 +35,7 @@ const Six = ({paymentMethod, setPaymentMethod,monthlyPremium,armsOfService}) =>{
             </Form.Select>
           </Form.Group>
         </Form>
-        <h6 style={{color: 'red', fontWeight: 'bold',float: 'left'}}>{error}</h6>
+        <div style={{textAlign: 'center', padding: '5vw'}}><h6 style={{color: 'red', fontWeight: 'bold',textAlign: 'center'}}>{error}</h6></div>
         <Link to='/5'>
           <Button variant='secondary w-25' style={{ fontWeight: '600', background: '#D0D0D0', border: 'none', float:'left', marginTop: '10vw', marginLeft: '20vw' }}>BACK</Button>
         </Link>
