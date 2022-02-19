@@ -1,10 +1,11 @@
 import { useState, useEffect } from 'react'
 import axios from 'axios'
 import  jsPdf  from 'jspdf'
+import { Document,Page } from 'react-pdf'
 // styles
 import Button from 'react-bootstrap/Button'
 
-const Document = ({
+const Document1 = ({
 forceNumber,
 armsOfService,
 rankTitle,
@@ -73,24 +74,19 @@ nlCellNumber,
 nlIdData,
 setNlIdData,
 paymentMethod,
-signature
+signature,
+base64Data,
+setBase64Data
 }) =>{
   const date = Date.now()
   const d = new Date(parseInt(date,10))
   const timeStamp = d.toString('MM/dd/yy HH:mm:ss')
   const [memberType,setMemberType] = useState('Single')
+  const [approved,setApproved] = useState(false)
+  const [numPages, setNumPages] = useState(null);
+  const [pageNumber, setPageNumber] = useState(1);
   const representativeName = 'Dave Macdonald'
-  useEffect(()=>{
-    if(maritalStatus == 'Married'){
-      setMemberType('Married')
-      if(childrenAmount > 0){
-        setMemberType('Married + Children')
-      }
-    }
-    else if(childrenAmount > 0){
-      setMemberType('Single + Children')
-    }
-  },[memberType,setMemberType,maritalStatus])
+  
   
   // type here can either be download or post
   const pdfPayrollDeductionScript = async (type) =>{
@@ -1414,6 +1410,11 @@ signature
     // to download pdf
     if(type == 'download'){
       doc.save('Membership_Application.pdf')
+    }else if(type == 'view'){
+      var output = doc.output()
+      var base64 = btoa(output)
+      setBase64Data(base64)
+      
     }else{
         // send pdf in base64
     var output = doc.output()
@@ -1447,11 +1448,32 @@ signature
     axios.post('localhost:5000/').then(res => console.log(res))
   }
 //timeStamp
+
+function onDocumentLoadSuccess({ numPages }) {
+  setNumPages(numPages);
+}
+useEffect(()=>{
+  if(maritalStatus == 'Married'){
+    setMemberType('Married')
+    if(childrenAmount > 0){
+      setMemberType('Married + Children')
+    }
+  }
+  else if(childrenAmount > 0){
+    setMemberType('Single + Children')
+  }
+  if(base64Data == ''){
+    pdfPayrollDeductionScript('view')
+    
+  }else if(base64Data != ''){
+    console.log(base64Data)
+  }
   
+},[memberType,setMemberType,maritalStatus, base64Data, setBase64Data,approved,setApproved])
   return(
     <div className="page">
-      
-    <h6 style={{fontWeight: '600', marginTop: '25px', textAlign: 'center', color: '#BB1A1B', marginBottom: '25px'}}>Thank you very much. We will be in contact shortly</h6>
+      {approved &&<div className='page'>
+        <h6 style={{fontWeight: '600', marginTop: '25px', textAlign: 'center', color: '#BB1A1B', marginBottom: '25px'}}>Thank you very much. We will be in contact shortly</h6>
 
         <div style={{textAlign: 'center'}}>
         <p>While you wait you are welcome to download the agreements</p>
@@ -1459,7 +1481,12 @@ signature
                 Download Agreement
             </Button>
         </div>
+      </div>}
+      {!approved && <Document
+        file={`URL:application/pdf;base64,${base64Data}`}
+      ></Document>}
+      
     </div>
   ) 
 }
-export default Document
+export default Document1

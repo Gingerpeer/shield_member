@@ -14,7 +14,7 @@ import Four from './pages/Four';
 import Five from './pages/Five';
 import Six from './pages/Six';
 import Seven from './pages/Seven';
-import Document from './pages/Document';
+import Document1 from './pages/Document1';
 import CheckInfo from './pages/CheckInfo';
 // Styles
 import './App.css';
@@ -102,7 +102,8 @@ function App() {
   const [signature,setSignature] = useState('')
 
 
-  // Monthly Premium logic
+  // base64data
+  const [base64Data,setBase64Data] = useState('')
   
 
   useEffect(()=>{
@@ -281,7 +282,7 @@ function App() {
           setSignature={setSignature}
           />} />
         <Route path='/checkInfo' element={<CheckInfo />} />
-        <Route path='/document' element={<Document 
+        <Route path='/document' element={<Document1 
           forceNumber={forceNumber} 
           armsOfService={armsOfService}
           rankTitle={rankTitle}
@@ -355,7 +356,8 @@ function App() {
           maritalStatus={maritalStatus}
           childrenAmount={childrenAmount}
           signature={signature}
-          
+          base64Data={base64Data}
+          setBase64Data={setBase64Data}
           />} />
       </Routes>
     </div>
