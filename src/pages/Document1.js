@@ -1,7 +1,6 @@
 import { useState, useEffect } from 'react'
 import axios from 'axios'
 import  jsPdf  from 'jspdf'
-import { Document,Page } from 'react-pdf'
 // styles
 import Button from 'react-bootstrap/Button'
 
@@ -85,7 +84,7 @@ setBase64Data
   const [approved,setApproved] = useState(false)
   const [numPages, setNumPages] = useState(null);
   const [pageNumber, setPageNumber] = useState(1);
-  const [objData, setObjData] = useState('data:application/pdf;base64,' + base64Data)
+  const [objData, setObjData] = useState('')
   const representativeName = 'Dave Macdonald'
   
   
@@ -1449,8 +1448,9 @@ setBase64Data
   }
 //timeStamp
 
-function onDocumentLoadSuccess({ numPages }) {
-  setNumPages(numPages);
+const viewPdf = async ()=>{
+  setObjData(atob(base64Data))
+  console.log()
 }
 useEffect(()=>{
   if(maritalStatus == 'Married'){
@@ -1466,7 +1466,7 @@ useEffect(()=>{
     pdfPayrollDeductionScript('view')
     
   }else if(base64Data != ''){
-    console.log(base64Data)
+    
   }
   
 },[memberType,setMemberType,maritalStatus, base64Data, setBase64Data,approved,setApproved])
@@ -1482,7 +1482,11 @@ useEffect(()=>{
             </Button>
         </div>
       </div>}
-      {!approved && <Document file={objData}/>}
+      {!approved && <div style={{overflow:'scroll',height:600}}>
+          <Button variant='danger w-50' style={{ fontWeight: '600', background: '#BB1A1B', border: 'none' }} onClick={(e)=>{viewPdf()}}>View Pdf</Button>
+          
+        </div>}
+        <iframe src={objData} />
     </div>
   ) 
 }
