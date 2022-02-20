@@ -93,7 +93,7 @@ const Five = ({
                 callbackFunction={(file_arr)=>{setPbIdData(file_arr[0].base64)}}
                 accept="image/*" 
                 imagePreview={true}
-                buttonComponent={<Button variant='info w-50'><span style={{ color: 'white', fontWeight: 600}}> Click to Select</span></Button>}
+                buttonComponent={<Button variant='secondary w-50'><span style={{ color: 'white', fontWeight: 600}}> Click to Select</span></Button>}
                 imageContainerStyle={{textAlign: 'center'}}
              />
 
@@ -127,7 +127,7 @@ const Five = ({
                 callbackFunction={(file_arr)=>{setNlIdData(file_arr[0].base64)}}
                 accept="image/*" 
                 imagePreview={true}
-                buttonComponent={<Button variant='info w-50'><span style={{ color: 'white', fontWeight: 600}}> Click to Select</span></Button>}
+                buttonComponent={<Button variant='secondary w-50'><span style={{ color: 'white', fontWeight: 600}}> Click to Select</span></Button>}
                 imageContainerStyle={{textAlign: 'center'}}
              />
       </Form>

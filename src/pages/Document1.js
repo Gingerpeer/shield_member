@@ -85,6 +85,7 @@ setBase64Data
   const [approved,setApproved] = useState(false)
   const [numPages, setNumPages] = useState(null);
   const [pageNumber, setPageNumber] = useState(1);
+  const [objData, setObjData] = useState('data:application/pdf;base64,' + base64Data)
   const representativeName = 'Dave Macdonald'
   
   
@@ -1414,7 +1415,6 @@ setBase64Data
       var output = doc.output()
       var base64 = btoa(output)
       setBase64Data(base64)
-      
     }else{
         // send pdf in base64
     var output = doc.output()
@@ -1482,10 +1482,7 @@ useEffect(()=>{
             </Button>
         </div>
       </div>}
-      {!approved && <Document
-        file={`URL:application/pdf;base64,${base64Data}`}
-      ></Document>}
-      
+      {!approved && <Document file={objData}/>}
     </div>
   ) 
 }
