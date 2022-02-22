@@ -3,7 +3,6 @@ import Form  from 'react-bootstrap/Form'
 import { Link } from 'react-router-dom';
 import { useState } from 'react';
 
-
 const Two = ({
   cellNumber, 
   setCellNumber,
@@ -94,16 +93,19 @@ const Two = ({
         <Form.Label className='Label' >Unit Number</Form.Label>
         <Form.Control className='Control' type='text' placeholder={unitNumber} onChange={(e)=>setUnitNumber(e.target.value)} />
       </Form.Group>
-      <Form.Group className='mb-2' controlId='suburb'>
-        <Form.Label className='Label' >*Suburb</Form.Label>
-        <Form.Control className='Control' type='text' placeholder={suburb} onChange={(e)=>setSuburb(e.target.value)} />
-      </Form.Group>
+
       <Form.Group className='mb-2' controlId='town'>
         <Form.Label className='Label' style={{
           
         }} >*Town</Form.Label>
         <Form.Control className='Control' type='text' placeholder={town} onChange={(e)=>setTown(e.target.value)} />
       </Form.Group>
+
+      <Form.Group className='mb-2' controlId='suburb'>
+        <Form.Label className='Label' >*Suburb</Form.Label>
+        <Form.Control className='Control' type='text' placeholder={suburb} onChange={(e)=>setSuburb(e.target.value)} />
+      </Form.Group>
+      
       <Form.Group className='mb-2' controlId='postalCode'>
         <Form.Label className='Label' >*Postal Code</Form.Label>
         <Form.Control className='Control' type='text' placeholder={postalCode} onChange={(e)=>setPostalCode(e.target.value)} />
