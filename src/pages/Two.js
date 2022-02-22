@@ -2,7 +2,8 @@ import Button from 'react-bootstrap/Button';
 import Form  from 'react-bootstrap/Form'
 import { Link } from 'react-router-dom';
 import { useState } from 'react';
-
+import Suburbs from '../components/Suburbs.json'
+import TownsProvinces from '../components/TownsProvinces.json'
 const Two = ({
   cellNumber, 
   setCellNumber,
@@ -29,6 +30,56 @@ const Two = ({
   })=>{
     const [showNext,setShowNext] = useState(false)
     const [error, setError] = useState('')
+    const [towns, setTowns] = useState([])
+    // logic to make towns and suburbs collaborate with provinces
+    const townsArray = []
+    // towns in provided data
+    for(let i = 0; i < Suburbs.length; i++){
+      townsArray.push(Suburbs[i].Town)
+    }
+    const uniqueTowns = Array.from(new Set(townsArray))
+    // towns with provinces from https://raw.githubusercontent.com/dirkstrauss/SouthAfrica/master/SouthAfricanCities.json
+    // function to see only towns in province
+    // provinces
+    const wc = []
+    const ec = []
+    const nc = []
+    const nw = []
+    const fs = []
+    const gp = []
+    const lp = []
+    const kzn = []
+    const mp = []
+      for(let i = 0;i<TownsProvinces.length;i++){
+        if(TownsProvinces[i].ProvinceName == "Western Cape"){
+          wc.push(TownsProvinces[i].AccentCity)
+        }
+        if(TownsProvinces[i].ProvinceName == "Eastern Cape"){
+          ec.push(TownsProvinces[i].AccentCity)
+        }
+        if(TownsProvinces[i].ProvinceName == "Northern Cape"){
+          nc.push(TownsProvinces[i].AccentCity)
+        }
+        if(TownsProvinces[i].ProvinceName == "North West"){
+          nw.push(TownsProvinces[i].AccentCity)
+        }
+        if(TownsProvinces[i].ProvinceName == "Free State"){
+          fs.push(TownsProvinces[i].AccentCity)
+        }
+        if(TownsProvinces[i].ProvinceName == "Mpumalanga"){
+          mp.push(TownsProvinces[i].AccentCity)
+        }
+        if(TownsProvinces[i].ProvinceName == "Gauteng"){
+          gp.push(TownsProvinces[i].AccentCity)
+        }
+        if(TownsProvinces[i].ProvinceName == "KwaZulu Natal"){
+          kzn.push(TownsProvinces[i].AccentCity)
+        }
+        if(TownsProvinces[i].ProvinceName == "Limpopo"){
+          lp.push(TownsProvinces[i].AccentCity)
+        }
+      }
+    console.log(fs)
     const requiredSubmitted = () =>{
       if(cellNumber != ''){
         if(streetNumber != ''){
