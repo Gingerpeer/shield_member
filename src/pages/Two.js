@@ -1,7 +1,7 @@
 import Button from 'react-bootstrap/Button';
 import Form  from 'react-bootstrap/Form'
 import { Link } from 'react-router-dom';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import Suburbs from '../components/Suburbs.json'
 import TownsProvinces from '../components/TownsProvinces.json'
 const Two = ({
@@ -30,7 +30,9 @@ const Two = ({
   })=>{
     const [showNext,setShowNext] = useState(false)
     const [error, setError] = useState('')
-    const [towns, setTowns] = useState([])
+    const [province, setProvince] = useState('')
+    const [TownsInProvince,setTownsInProvince] = useState('')
+
     // logic to make towns and suburbs collaborate with provinces
     const townsArray = []
     // towns in provided data
@@ -52,31 +54,31 @@ const Two = ({
     const mp = []
       for(let i = 0;i<TownsProvinces.length;i++){
         if(TownsProvinces[i].ProvinceName == "Western Cape"){
-          wc.push(TownsProvinces[i].AccentCity)
+          wc.push(<option key={i}>{TownsProvinces[i].AccentCity}</option>)
         }
         if(TownsProvinces[i].ProvinceName == "Eastern Cape"){
-          ec.push(TownsProvinces[i].AccentCity)
+          ec.push(<option key={i}>{TownsProvinces[i].AccentCity}</option>)
         }
         if(TownsProvinces[i].ProvinceName == "Northern Cape"){
-          nc.push(TownsProvinces[i].AccentCity)
+          nc.push(<option key={i}>{TownsProvinces[i].AccentCity}</option>)
         }
         if(TownsProvinces[i].ProvinceName == "North West"){
-          nw.push(TownsProvinces[i].AccentCity)
+          nw.push(<option key={i}>{TownsProvinces[i].AccentCity}</option>)
         }
         if(TownsProvinces[i].ProvinceName == "Free State"){
-          fs.push(TownsProvinces[i].AccentCity)
+          fs.push(<option key={i}>{TownsProvinces[i].AccentCity}</option>)
         }
         if(TownsProvinces[i].ProvinceName == "Mpumalanga"){
-          mp.push(TownsProvinces[i].AccentCity)
+          mp.push(<option key={i}>{TownsProvinces[i].AccentCity}</option>)
         }
         if(TownsProvinces[i].ProvinceName == "Gauteng"){
-          gp.push(TownsProvinces[i].AccentCity)
+          gp.push(<option key={i}>{TownsProvinces[i].AccentCity}</option>)
         }
         if(TownsProvinces[i].ProvinceName == "KwaZulu Natal"){
-          kzn.push(TownsProvinces[i].AccentCity)
+          kzn.push(<option key={i}>{TownsProvinces[i].AccentCity}</option>)
         }
         if(TownsProvinces[i].ProvinceName == "Limpopo"){
-          lp.push(TownsProvinces[i].AccentCity)
+          lp.push(<option key={i}>{TownsProvinces[i].AccentCity}</option>)
         }
       }
     console.log(fs)
@@ -108,6 +110,35 @@ const Two = ({
         setError('You have not submitted your Cell Number')
       }
     }
+    useEffect(()=>{
+      if(province == 'Western Cape'){
+        setTownsInProvince(wc)
+      }
+      if(province == 'Eastern Cape'){
+        setTownsInProvince(ec)
+      }
+      if(province == 'Northern Cape'){
+        setTownsInProvince(nc)
+      }
+      if(province == 'North West'){
+        setTownsInProvince(nw)
+      }
+      if(province == 'Free State'){
+        setTownsInProvince(fs)
+      }
+      if(province == 'Mpumalanga'){
+        setTownsInProvince(mp)
+      }
+      if(province == 'Gauteng'){
+        setTownsInProvince(gp)
+      }
+      if(province == 'KwaZulu Natal'){
+        setTownsInProvince(kzn)
+      }
+      if(province == 'Limpopo'){
+        setTownsInProvince(lp)
+      }
+    },[province])
   return(
     <div className="page">
       <h6 style={{fontWeight: '600', marginTop: '25px', textAlign: 'center', color: '#BB1A1B', marginBottom: '25px'}}>2. Main Member Contact Details</h6>
@@ -144,12 +175,32 @@ const Two = ({
         <Form.Label className='Label' >Unit Number</Form.Label>
         <Form.Control className='Control' type='text' placeholder={unitNumber} onChange={(e)=>setUnitNumber(e.target.value)} />
       </Form.Group>
+      <Form.Group className='mb-2' controlId='province'>
+      <Form.Label className='Label' style={{
+        
+      }} >*Province</Form.Label>
+      <Form.Select onChange={(e)=>setProvince(e.target.value)}>
+        <option>Choose Province</option>
+        <option>Western Cape</option>
+        <option>Eastern Cape</option>
+        <option>Northern Cape</option>
+        <option>North West</option>
+        <option>Free State</option>
+        <option>Mpumalanga</option>
+        <option>Gauteng</option>
+        <option>KwaZulu Natal</option>
+        <option>Limpopo</option>
+      </Form.Select>
+    </Form.Group>
 
       <Form.Group className='mb-2' controlId='town'>
         <Form.Label className='Label' style={{
           
         }} >*Town</Form.Label>
-        <Form.Control className='Control' type='text' placeholder={town} onChange={(e)=>setTown(e.target.value)} />
+        <Form.Select onChange={(e)=>setTown(e.target.value)}>
+          <option>Choose Town</option>
+          {TownsInProvince}
+        </Form.Select>
       </Form.Group>
 
       <Form.Group className='mb-2' controlId='suburb'>
