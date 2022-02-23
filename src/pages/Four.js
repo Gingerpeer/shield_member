@@ -65,6 +65,7 @@ const Four = ({
           <Form.Label className='Label' column sm='2'>*Amount of Children</Form.Label>
           <Col sm='10'>
             <Form.Select className='Control' onChange={(e)=>setChildrenAmount(e.target.value)}>
+              <option>Choose amount of Children</option>
               <option>0</option>
               <option>1</option>
               <option>2</option>

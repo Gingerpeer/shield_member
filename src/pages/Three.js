@@ -53,6 +53,7 @@ const Three = ({
       <Form.Group className='mb-2' controlId='maritalStatus'>
         <Form.Label className='Label' >*Marital Status</Form.Label>
         <Form.Select onChange={(e)=>setMaritalStatus(e.target.value)} >
+          <option>Choose Marital Status</option>
           <option>Single</option>
           <option>Married</option>
         </Form.Select>

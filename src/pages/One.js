@@ -71,6 +71,7 @@ const One = ({
         <Form.Group className='mb-2' controlId='formForceNumber'>
           <Form.Label className='Label' >*Arms of Service</Form.Label>
           <Form.Select onChange={(e)=>setArmsOfService(e.target.value)}>
+            <option>Choose Arms of Service</option>
             <option>{armsOfServiceType[0]}</option>
             <option>{armsOfServiceType[1]}</option>
             <option>{armsOfServiceType[2]}</option>
@@ -83,6 +84,7 @@ const One = ({
         <Form.Label className='Label' >*Rank Title</Form.Label>
         <Form.Select onChange={(e)=>setRankTitle(e.target.value)}>
           {armsOfService == 'SA Army' && <>
+            <option>Choose Rank Title</option>
             <option>2Lt</option>
             <option>Brig Gen</option>
             <option>Capt</option>
@@ -112,6 +114,7 @@ const One = ({
           </>
           }
           {armsOfService == 'SA Navy' && <>
+            <option>Choose Rank Title</option>
             <option>2Lt</option>
             <option>AB</option>
             <option>ADM</option>
@@ -142,6 +145,7 @@ const One = ({
           </>
           }{
             armsOfService == 'Civilian Force' ? <>
+            <option>Choose Rank Title</option>
               <option>Mr</option>
               <option>Dr</option>
               <option>Ms</option>
@@ -149,6 +153,7 @@ const One = ({
               <option>Rev</option>
             </>
           : <>
+          <option>Choose Rank Title</option>
             <option>2Lt</option>
             <option>Brig Gen</option>
             <option>Capt</option>

@@ -97,7 +97,8 @@ function App() {
   const [nlCellNumber,setNlCellNumber] = useState('')
   const [nlIdData,setNlIdData] = ([])
   // payment method
-  const [paymentMethod,setPaymentMethod] = useState('')
+  const [paymentMethod,setPaymentMethod] = useState('Payroll')
+  const [bankingDetailsDO,setBankingDetailsDO] = useState([])
   // signature
   const [signature,setSignature] = useState('')
 
@@ -275,6 +276,8 @@ function App() {
           armsOfService={armsOfService}
           maritalStatus={maritalStatus}
           childrenAmount={childrenAmount}
+          bankingDetailsDO={bankingDetailsDO}
+          setBankingDetailsDO={setBankingDetailsDO}
           />} />
         <Route path='/7' element={<Seven
           monthlyPremium={monthlyPremium}
