@@ -51,7 +51,7 @@ const Five = ({
   return(
     <div className="page">
     <h6 style={{fontWeight: '600', marginTop: '25px', textAlign: 'center', color: '#BB1A1B', marginBottom: '25px'}}>5. Primary Beneficiary Details</h6>
-    <Form style={{marginBottom: '10vh'}}>
+    <Form style={{marginBottom: '5vh'}}>
         <Form.Group className='mb-2' controlId='pbTitle'>
           <Form.Label className='Label' >*Primary Beneficiary Title</Form.Label>
           <Form.Control className='Control' type='text' placeholder={pbTitle} onChange={(e)=>setPbTitle(e.target.value)} />
@@ -120,7 +120,7 @@ const Five = ({
              />
       </Form>
 
-      <div style={{textAlign: 'center', padding: '5vw'}}><h6 style={{color: 'red', fontWeight: 'bold',textAlign: 'center'}}>{error}</h6></div>
+      <div style={{textAlign: 'center', padding: '2vw'}}><h6 style={{color: 'red', fontWeight: 'bold',textAlign: 'center'}}>{error}</h6></div>
       <div style={{textAlign: 'center'}}>
         <Link to='/4'>
           <Button variant='secondary w-25' style={{ fontWeight: '600', background: '#D0D0D0', border: 'none', float:'left', marginTop: '10vw', marginLeft: '20vw', marginBottom: '10vh'  }}>BACK</Button>
