@@ -98,11 +98,11 @@ const Four = ({
                 <Form.Control className='Control' type='text' placeholder={childSurname} onChange={(e)=>setChildSurname(e.target.value)} />
               </Form.Group>
               <Form.Group className='mb-3' controlId='childID'>
-                <Form.Label className='Label'>*Child ID</Form.Label>
+                <Form.Label className='Label'>*Child ID Number or Date of Birth</Form.Label>
                 <Form.Control className='Control' type='text' placeholder={childID} onChange={(e)=>setChildID(e.target.value)} />
               </Form.Group>
               <FileInputComponent
-                labelText="Upload IDs"
+                labelText="Upload All IDs"
                 labelStyle={{fontSize:14, marginRight: '14px', fontWeight: '600'}}
                 multiple={true}
                 callbackFunction={(file_arr)=>{setChildrenIds(file_arr[0].base64)}}
@@ -130,7 +130,7 @@ const Four = ({
                 <Form.Control className='Control' type='text' placeholder={childSurname} onChange={(e)=>setChildSurname(e.target.value)} style={{marginTop:'10px'}} />
               </Form.Group>
               <Form.Group className='mb-3' controlId='childID'>
-                <Form.Label className='Label'>*ID First Child</Form.Label>
+                <Form.Label className='Label'>*ID Number or Date of Birth First Child</Form.Label>
                 <Form.Control className='Control' type='text' placeholder={childID} onChange={(e)=>setChildID(e.target.value)} style={{marginTop:'10px'}} />
               </Form.Group>
               <Form.Group className='mb-3' controlId='childTitle2'>
@@ -146,11 +146,11 @@ const Four = ({
                 <Form.Control className='Control' type='text' placeholder={childSurname2} onChange={(e)=>setChildSurname2(e.target.value)} style={{marginTop:'10px'}} />
               </Form.Group>
               <Form.Group className='mb-3' controlId='childID2'>
-                <Form.Label className='Label'>*ID Second Child</Form.Label>
+                <Form.Label className='Label'>*ID Number or Date of Birth Second Child</Form.Label>
                 <Form.Control className='Control' type='text' placeholder={childID2} onChange={(e)=>setChildID2(e.target.value)} style={{marginTop:'10px'}} />
               </Form.Group>
               <FileInputComponent
-                labelText="Upload IDs"
+                labelText="Upload All IDs"
                 labelStyle={{fontSize:14, marginRight: '14px', fontWeight: '600'}}
                 multiple={true}
                 callbackFunction={(file_arr)=>{setChildrenIds(file_arr[0].base64)}}
@@ -178,7 +178,7 @@ const Four = ({
                 <Form.Control className='Control' type='text' placeholder={childSurname} onChange={(e)=>setChildSurname(e.target.value)} style={{marginTop:'10px'}} />
               </Form.Group>
               <Form.Group className='mb-3' controlId='childID'>
-                <Form.Label className='Label'>*ID First Child</Form.Label>
+                <Form.Label className='Label'>*ID Number or Date of Birth First Child</Form.Label>
                 <Form.Control className='Control' type='text' placeholder={childID} onChange={(e)=>setChildID(e.target.value)} style={{marginTop:'10px'}} />
               </Form.Group>
               <Form.Group className='mb-3' controlId='childTitle2'>
@@ -194,7 +194,7 @@ const Four = ({
                 <Form.Control className='Control' type='text' placeholder={childSurname2} onChange={(e)=>setChildSurname2(e.target.value)} style={{marginTop:'10px'}} />
               </Form.Group>
               <Form.Group className='mb-3' controlId='childID2'>
-                <Form.Label className='Label'>*ID Second Child</Form.Label>
+                <Form.Label className='Label'>*ID Number or Date of Birth Second Child</Form.Label>
                 <Form.Control className='Control' type='text' placeholder={childID2} onChange={(e)=>setChildID2(e.target.value)} style={{marginTop:'10px'}} />
               </Form.Group>
               <Form.Group className='mb-3' controlId='childTitle3'>
@@ -210,11 +210,11 @@ const Four = ({
               <Form.Control className='Control' type='text' placeholder={childSurname3} onChange={(e)=>setChildSurname3(e.target.value)} style={{marginTop:'10px'}} />
             </Form.Group>
             <Form.Group className='mb-3' controlId='childID3'>
-              <Form.Label className='Label'>*ID Third Child</Form.Label>
+              <Form.Label className='Label'>*ID Number or Date of Birth Third Child</Form.Label>
               <Form.Control className='Control' type='text' placeholder={childID3} onChange={(e)=>setChildID3(e.target.value)} style={{marginTop:'10px'}} />
             </Form.Group>
             <FileInputComponent
-                labelText="Upload IDs"
+                labelText="Upload All IDs"
                 labelStyle={{fontSize:14, marginRight: '14px', fontWeight: '600'}}
                 multiple={true}
                 callbackFunction={(file_arr)=>{setChildrenIds(file_arr[0].base64)}}
@@ -242,7 +242,7 @@ const Four = ({
                 <Form.Control className='Control' type='text' placeholder={childSurname} onChange={(e)=>setChildSurname(e.target.value)} style={{marginTop:'10px'}} />
               </Form.Group>
               <Form.Group className='mb-3' controlId='childID'>
-                <Form.Label className='Label'>*ID First Child</Form.Label>
+                <Form.Label className='Label'>*ID Number or Date of Birth First Child</Form.Label>
                 <Form.Control className='Control' type='text' placeholder={childID} onChange={(e)=>setChildID(e.target.value)} style={{marginTop:'10px'}} />
               </Form.Group>
               <Form.Group className='mb-3' controlId='childTitle2'>
@@ -258,7 +258,7 @@ const Four = ({
                 <Form.Control className='Control' type='text' placeholder={childSurname2} onChange={(e)=>setChildSurname2(e.target.value)} style={{marginTop:'10px'}} />
               </Form.Group>
               <Form.Group className='mb-3' controlId='childID2'>
-                <Form.Label className='Label'>*ID Second Child</Form.Label>
+                <Form.Label className='Label'>*ID Number or Date of Birth Second Child</Form.Label>
                 <Form.Control className='Control' type='text' placeholder={childID2} onChange={(e)=>setChildID2(e.target.value)} style={{marginTop:'10px'}} />
               </Form.Group>
               <Form.Group className='mb-3' controlId='childTitle3'>
@@ -274,7 +274,7 @@ const Four = ({
               <Form.Control className='Control' type='text' placeholder={childSurname3} onChange={(e)=>setChildSurname3(e.target.value)} style={{marginTop:'10px'}} />
             </Form.Group>
             <Form.Group className='mb-3' controlId='childID3'>
-              <Form.Label className='Label'>*ID Third Child</Form.Label>
+              <Form.Label className='Label'>*ID Number or Date of Birth Third Child</Form.Label>
               <Form.Control className='Control' type='text' placeholder={childID3} onChange={(e)=>setChildID3(e.target.value)} style={{marginTop:'10px'}} />
             </Form.Group>
             <Form.Group className='mb-3' controlId='childTitle4'>
@@ -290,11 +290,11 @@ const Four = ({
               <Form.Control className='Control' type='text' placeholder={childSurname4} onChange={(e)=>setChildSurname4(e.target.value)} style={{marginTop:'10px'}} />
             </Form.Group>
             <Form.Group className='mb-3' controlId='childID4'>
-              <Form.Label className='Label'>*ID Fourth Child</Form.Label>
+              <Form.Label className='Label'>*ID Number or Date of Birth Fourth Child</Form.Label>
               <Form.Control className='Control' type='text' placeholder={childID4} onChange={(e)=>setChildID4(e.target.value)} style={{marginTop:'10px'}} />
             </Form.Group>
             <FileInputComponent
-                labelText="Upload IDs"
+                labelText="Upload All IDs"
                 labelStyle={{fontSize:14, marginRight: '14px', fontWeight: '600'}}
                 multiple={true}
                 callbackFunction={(file_arr)=>{setChildrenIds(file_arr[0].base64)}}
@@ -322,7 +322,7 @@ const Four = ({
                 <Form.Control className='Control' type='text' placeholder={childSurname} onChange={(e)=>setChildSurname(e.target.value)} style={{marginTop:'10px'}} />
               </Form.Group>
               <Form.Group className='mb-3' controlId='childID'>
-                <Form.Label className='Label'>*ID First Child</Form.Label>
+                <Form.Label className='Label'>*ID Number or Date of Birth First Child</Form.Label>
                 <Form.Control className='Control' type='text' placeholder={childID} onChange={(e)=>setChildID(e.target.value)} style={{marginTop:'10px'}} />
               </Form.Group>
               <Form.Group className='mb-3' controlId='childTitle2'>
@@ -338,7 +338,7 @@ const Four = ({
                 <Form.Control className='Control' type='text' placeholder={childSurname2} onChange={(e)=>setChildSurname2(e.target.value)} style={{marginTop:'10px'}} />
               </Form.Group>
               <Form.Group className='mb-3' controlId='childID2'>
-                <Form.Label className='Label'>*ID Second Child</Form.Label>
+                <Form.Label className='Label'>*ID Number or Date of Birth Second Child</Form.Label>
                 <Form.Control className='Control' type='text' placeholder={childID2} onChange={(e)=>setChildID2(e.target.value)} style={{marginTop:'10px'}} />
               </Form.Group>
               <Form.Group className='mb-3' controlId='childTitle3'>
@@ -354,7 +354,7 @@ const Four = ({
               <Form.Control className='Control' type='text' placeholder={childSurname3} onChange={(e)=>setChildSurname3(e.target.value)} style={{marginTop:'10px'}} />
             </Form.Group>
             <Form.Group className='mb-3' controlId='childID3'>
-              <Form.Label className='Label'>*ID Third Child</Form.Label>
+              <Form.Label className='Label'>*ID Number or Date of Birth Third Child</Form.Label>
               <Form.Control className='Control' type='text' placeholder={childID3} onChange={(e)=>setChildID3(e.target.value)} style={{marginTop:'10px'}} />
             </Form.Group>
             <Form.Group className='mb-3' controlId='childTitle4'>
@@ -370,7 +370,7 @@ const Four = ({
               <Form.Control className='Control' type='text' placeholder={childSurname4} onChange={(e)=>setChildSurname4(e.target.value)} style={{marginTop:'10px'}} />
             </Form.Group>
             <Form.Group className='mb-3' controlId='childID4'>
-              <Form.Label className='Label'>*ID Fourth Child</Form.Label>
+              <Form.Label className='Label'>*ID Number or Date of Birth Fourth Child</Form.Label>
               <Form.Control className='Control' type='text' placeholder={childID4} onChange={(e)=>setChildID4(e.target.value)} style={{marginTop:'10px'}} />
             </Form.Group>
             <Form.Group className='mb-3' controlId='childTitle5'>
@@ -386,11 +386,11 @@ const Four = ({
               <Form.Control className='Control' type='text' placeholder={childSurname5} onChange={(e)=>setChildSurname5(e.target.value)} style={{marginTop:'10px'}} />
             </Form.Group>
             <Form.Group className='mb-3' controlId='childID5'>
-              <Form.Label className='Label'>*ID Fifth Child</Form.Label>
+              <Form.Label className='Label'>*ID Number or Date of Birth Fifth Child</Form.Label>
               <Form.Control className='Control' type='text' placeholder={childID5} onChange={(e)=>setChildID5(e.target.value)} style={{marginTop:'10px'}} />
             </Form.Group>
             <FileInputComponent
-                labelText="Upload IDs"
+                labelText="Upload All IDs"
                 labelStyle={{fontSize:14, marginRight: '14px', fontWeight: '600'}}
                 multiple={true}
                 callbackFunction={(file_arr)=>{setChildrenIds(file_arr[0].base64)}}
@@ -418,7 +418,7 @@ const Four = ({
                 <Form.Control className='Control' type='text' placeholder={childSurname} onChange={(e)=>setChildSurname(e.target.value)} style={{marginTop:'10px'}} />
               </Form.Group>
               <Form.Group className='mb-3' controlId='childID'>
-                <Form.Label className='Label'>*ID First Child</Form.Label>
+                <Form.Label className='Label'>*ID Number or Date of Birth First Child</Form.Label>
                 <Form.Control className='Control' type='text' placeholder={childID} onChange={(e)=>setChildID(e.target.value)} style={{marginTop:'10px'}} />
               </Form.Group>
               <Form.Group className='mb-3' controlId='childTitle2'>
@@ -434,7 +434,7 @@ const Four = ({
                 <Form.Control className='Control' type='text' placeholder={childSurname2} onChange={(e)=>setChildSurname2(e.target.value)} style={{marginTop:'10px'}} />
               </Form.Group>
               <Form.Group className='mb-3' controlId='childID2'>
-                <Form.Label className='Label'>*ID Second Child</Form.Label>
+                <Form.Label className='Label'>*ID Number or Date of Birth Second Child</Form.Label>
                 <Form.Control className='Control' type='text' placeholder={childID2} onChange={(e)=>setChildID2(e.target.value)} style={{marginTop:'10px'}} />
               </Form.Group>
               <Form.Group className='mb-3' controlId='childTitle3'>
@@ -450,7 +450,7 @@ const Four = ({
               <Form.Control className='Control' type='text' placeholder={childSurname3} onChange={(e)=>setChildSurname3(e.target.value)} style={{marginTop:'10px'}} />
             </Form.Group>
             <Form.Group className='mb-3' controlId='childID3'>
-              <Form.Label className='Label'>*ID Third Child</Form.Label>
+              <Form.Label className='Label'>*ID Number or Date of Birth Third Child</Form.Label>
               <Form.Control className='Control' type='text' placeholder={childID3} onChange={(e)=>setChildID3(e.target.value)} style={{marginTop:'10px'}} />
             </Form.Group>
             <Form.Group className='mb-3' controlId='childTitle4'>
@@ -466,7 +466,7 @@ const Four = ({
               <Form.Control className='Control' type='text' placeholder={childSurname4} onChange={(e)=>setChildSurname4(e.target.value)} style={{marginTop:'10px'}} />
             </Form.Group>
             <Form.Group className='mb-3' controlId='childID4'>
-              <Form.Label className='Label'>*ID Fourth Child</Form.Label>
+              <Form.Label className='Label'>*ID Number or Date of Birth Fourth Child</Form.Label>
               <Form.Control className='Control' type='text' placeholder={childID4} onChange={(e)=>setChildID4(e.target.value)} style={{marginTop:'10px'}} />
             </Form.Group>
             <Form.Group className='mb-3' controlId='childTitle5'>
@@ -482,7 +482,7 @@ const Four = ({
               <Form.Control className='Control' type='text' placeholder={childSurname5} onChange={(e)=>setChildSurname5(e.target.value)} style={{marginTop:'10px'}} />
             </Form.Group>
             <Form.Group className='mb-3' controlId='childID5'>
-              <Form.Label className='Label'>*ID Fifth Child</Form.Label>
+              <Form.Label className='Label'>*ID Number or Date of Birth Fifth Child</Form.Label>
               <Form.Control className='Control' type='text' placeholder={childID5} onChange={(e)=>setChildID5(e.target.value)} style={{marginTop:'10px'}} />
             </Form.Group>
             <Form.Group className='mb-3' controlId='childTitle6'>
@@ -498,11 +498,11 @@ const Four = ({
               <Form.Control className='Control' type='text' placeholder={childSurname6} onChange={(e)=>setChildSurname6(e.target.value)} style={{marginTop:'10px'}} />
             </Form.Group>
             <Form.Group className='mb-3' controlId='childID6'>
-              <Form.Label className='Label'>*ID Sixth Child</Form.Label>
+              <Form.Label className='Label'>*ID Number or Date of Birth Sixth Child</Form.Label>
               <Form.Control className='Control' type='text' placeholder={childID6} onChange={(e)=>setChildID6(e.target.value)} style={{marginTop:'10px'}} />
             </Form.Group>
             <FileInputComponent
-                labelText="Upload IDs"
+                labelText="Upload All IDs"
                 labelStyle={{fontSize:14, marginRight: '14px', fontWeight: '600'}}
                 multiple={true}
                 callbackFunction={(file_arr)=>{setChildrenIds(file_arr[0].base64)}}

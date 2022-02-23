@@ -187,7 +187,7 @@ const One = ({
         <Form.Control className='Control' type='text' placeholder={surname} onChange={(e)=>setSurname(e.target.value)} />
       </Form.Group>
       <Form.Group className='mb-2' controlId='formForceNumber'>
-        <Form.Label className='Label' >*ID Number</Form.Label>
+        <Form.Label className='Label' >*ID Number or Date of Birth</Form.Label>
         <Form.Control className='Control' type='text' placeholder={IDNumber} onChange={(e)=>setIDNumber(e.target.value)} />
       </Form.Group>
    
