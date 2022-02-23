@@ -33,6 +33,7 @@ const Two = ({
     const [province, setProvince] = useState('')
     const [TownsInProvince,setTownsInProvince] = useState('')
 
+
     // logic to make towns and suburbs collaborate with provinces
     const townsArray = []
     // towns in provided data
@@ -81,7 +82,7 @@ const Two = ({
           lp.push(<option key={i}>{TownsProvinces[i].AccentCity}</option>)
         }
       }
-    console.log(fs)
+     
     const requiredSubmitted = () =>{
       if(cellNumber != ''){
         if(streetNumber != ''){
@@ -139,6 +140,7 @@ const Two = ({
         setTownsInProvince(lp)
       }
     },[province])
+    
   return(
     <div className="page">
       <h6 style={{fontWeight: '600', marginTop: '25px', textAlign: 'center', color: '#BB1A1B', marginBottom: '25px'}}>2. Main Member Contact Details</h6>
