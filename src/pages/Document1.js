@@ -75,7 +75,9 @@ setNlIdData,
 paymentMethod,
 signature,
 base64Data,
-setBase64Data
+setBase64Data,
+bankingDetailsDO,
+setBankingDetailsDO
 }) =>{
   const date = Date.now()
   const d = new Date(parseInt(date,10))
@@ -1472,7 +1474,7 @@ useEffect(()=>{
 },[memberType,setMemberType,maritalStatus, base64Data, setBase64Data,approved,setApproved])
   return(
     <div className="page">
-      {approved &&<div className='page'>
+      {!approved &&<div className='page'>
         <h6 style={{fontWeight: '600', marginTop: '25px', textAlign: 'center', color: '#BB1A1B', marginBottom: '25px'}}>Thank you very much. We will be in contact shortly</h6>
 
         <div style={{textAlign: 'center'}}>
@@ -1482,7 +1484,7 @@ useEffect(()=>{
             </Button>
         </div>
       </div>}
-      {!approved && <div style={{overflow:'scroll',height:600}}>
+      {approved && <div style={{overflow:'scroll',height:600}}>
           <Button variant='danger w-50' style={{ fontWeight: '600', background: '#BB1A1B', border: 'none' }} onClick={(e)=>{viewPdf()}}>View Pdf</Button>
           
         </div>}

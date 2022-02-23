@@ -361,6 +361,8 @@ function App() {
           signature={signature}
           base64Data={base64Data}
           setBase64Data={setBase64Data}
+          bankingDetailsDO={bankingDetailsDO}
+          setBankingDetailsDO={setBankingDetailsDO}
           />} />
       </Routes>
     </div>
