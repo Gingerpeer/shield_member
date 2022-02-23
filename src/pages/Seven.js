@@ -25,8 +25,9 @@ const Seven = ({signature, setSignature, monthlyPremium}) =>{
     <div className="page">
     <h6 style={{fontWeight: '600', marginTop: '25px', textAlign: 'center', color: '#BB1A1B', marginBottom: '25px'}}>Your Monthly Premium is R{monthlyPremium}</h6>
     <h6 style={{fontWeight: '600', marginTop: '25px', textAlign: 'center', color: '#BB1A1B', marginBottom: '25px'}}>Do you agree? Sign below in agreement</h6>
-      <SignaturePad ref={myRef}  />
-      <Button variant='danger' onClick={clearSignature} >Clear</Button>
+    <p style={{margin: '0', textAlign: 'center'}}>Signature Box</p>
+      <div style={{border: 'black solid 2px'}}><SignaturePad ref={myRef}  /></div>
+      <Button variant='danger' onClick={clearSignature} style={{marginTop: '2vh'}} >Clear</Button>
       <div style={{textAlign: 'center'}}>
         <Link to='/6'>
           <Button variant='secondary w-25' style={{ fontWeight: '600', background: '#D0D0D0', border: 'none', float:'left', marginTop: '10vw', marginLeft: '20vw' }}>BACK</Button>
