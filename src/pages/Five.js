@@ -36,21 +36,9 @@ const Five = ({
   if(pbFullNames != ''){
     if(pbSurname != ''){
       if(pbID != ''){
-        if(nlFullNames != ''){
-          if(nlSurname != ''){
-            if(nlIDNumber != ''){
               setShowNext(true)
               setError('Please Check that all info is correct then click next')
             }else{
-              setError('You have not submitted your Next in Line Beneficiary ID Number')
-            }
-          }else{
-            setError('You have not submitted your Next in Line Beneficiary Surname')
-          }
-        }else{
-          setError('You have not submitted your Next in Line Beneficiary Names')
-        }
-      }else{
         setError('You have not submitted your Beneficiary ID Number')
       }
     }else{
