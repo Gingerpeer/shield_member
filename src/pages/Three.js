@@ -29,7 +29,7 @@ const Three = ({
     const requiredSubmitted = () =>{
                 if(maritalStatus != ''){
                   setShowNext(true)
-                  setError('Please Check that all info is correct then click next')
+                  setError('Please check that all info is correct then click next')
                 }else{
                   setError('You have not submitted your Marital Status')
                 }

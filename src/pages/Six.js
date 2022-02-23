@@ -9,7 +9,7 @@ const Six = ({paymentMethod, setPaymentMethod,monthlyPremium,armsOfService}) =>{
     const requiredSubmitted = () =>{
       if(paymentMethod != ''){
         setShowNext(true)
-        setError('Please Check that all info is correct then click next')
+        setError('Please check that all info is correct then click next')
       }else{
         setError('You have not submitted your Payment Method')
       }
