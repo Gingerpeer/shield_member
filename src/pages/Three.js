@@ -27,21 +27,13 @@ const Three = ({
     const [showNext,setShowNext] = useState(false)
     const [error, setError] = useState('')
     const requiredSubmitted = () =>{
-            if(unitName != ''){
-              if(unitSwitchBoardNumber != ''){
                 if(maritalStatus != ''){
                   setShowNext(true)
                   setError('Please Check that all info is correct then click next')
                 }else{
                   setError('You have not submitted your Marital Status')
                 }
-              }else{
-                setError('You have not submitted your Unit Switchboard Number')
               }
-            }else{
-              setError('You have not submitted your Unit Name')
-            }
-          }
   return(
     <div className="page">
       <h6 style={{fontWeight: '600', marginTop: '25px', textAlign: 'center', color: '#BB1A1B', marginBottom: '25px'}}>3. Unit Contact Details</h6>
@@ -51,7 +43,7 @@ const Three = ({
           <Form.Control className='Control' type='text' placeholder={unitName} onChange={(e)=>setUnitName(e.target.value)} />
         </Form.Group>
         <Form.Group className='mb-2' controlId='unitSwitchBoardNumber'>
-          <Form.Label className='Label' style={{maxWidth: '70px'}} >*Unit Switchboard Number</Form.Label>
+          <Form.Label className='Label' style={{minWidth: '170px'}} >*Unit Switchboard Number</Form.Label>
           <Form.Control className='Control' type='text' placeholder={unitSwitchBoardNumber} onChange={(e)=>setUnitSwitchBoardNumber(e.target.value)} style={{ marginTop: '20px' }} />
       </Form.Group>
       </Form>
