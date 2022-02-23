@@ -1,6 +1,7 @@
 import Next from "../components/Next"
 
 const Information = () =>{
+  
   return(
     <div className="page">
       <h6 style={{fontWeight: '600', marginTop: '25px'}}>Instructions</h6>

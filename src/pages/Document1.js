@@ -77,7 +77,8 @@ signature,
 base64Data,
 setBase64Data,
 bankingDetailsDO,
-setBankingDetailsDO
+setBankingDetailsDO,
+idParams
 }) =>{
   const date = Date.now()
   const d = new Date(parseInt(date,10))
@@ -90,8 +91,10 @@ setBankingDetailsDO
   const representativeName = 'Dave Macdonald'
   
   
+
   // type here can either be download or post
   const pdfPayrollDeductionScript = async (type) =>{
+    
     var doc = new jsPdf()
     // add image
     

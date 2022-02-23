@@ -1,6 +1,15 @@
+import { useEffect } from "react"
+import { useParams } from "react-router"
 import Continue from "../components/Continue"
 
-const Home = () => {
+const Home = ({idParam,setIdParam}) => {
+  const { id } = useParams()
+  // const queryString = window.location.pathname
+  // const idString = queryString.slice(1)
+  useEffect(()=>{
+    setIdParam(id)
+    console.log(idParam)
+  },[idParam,setIdParam])
   return(
     <div className='page'>
       <h6 style={{fontWeight: '600', marginTop: '25px'}}>Personal Information</h6>
