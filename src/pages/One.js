@@ -50,7 +50,7 @@ const One = ({
               setError('You have not submitted your Full Names')
             }
           }else{
-            setError('You have not submitted your Rank or Title')
+            setError('You have not submitted your Rank Title')
           }
         }else{
           setError('You have not submitted your Arms of Service')
