@@ -3,6 +3,7 @@ import axios from 'axios'
 import  jsPdf  from 'jspdf'
 // styles
 import Button from 'react-bootstrap/Button'
+import { Form } from 'react-bootstrap'
 
 const Document1 = ({
 forceNumber,
@@ -88,6 +89,8 @@ idParams
   const [numPages, setNumPages] = useState(null);
   const [pageNumber, setPageNumber] = useState(1);
   const [objData, setObjData] = useState('')
+  const [data,setData] = useState([])
+  const [sendEmail,setSendEmail] = useState('')
   const representativeName = 'Dave Macdonald'
   
   
@@ -1415,10 +1418,13 @@ idParams
     // to download pdf
     if(type == 'download'){
       doc.save('Membership_Application.pdf')
+      // view pdf
     }else if(type == 'view'){
+      window.open(doc.output('bloburl'))
+    }else if(type == 'save'){
       var output = doc.output()
       var base64 = btoa(output)
-      setBase64Data(base64)
+      setBase64Data(`data:application/pdf;base64,${base64}`)
     }else{
         // send pdf in base64
     var output = doc.output()
@@ -1447,16 +1453,20 @@ idParams
           }
     }
     
-  const postToApi = async () =>{
-    console.log('Posting to api...')
-    axios.post('localhost:5000/').then(res => console.log(res))
+  const postToApi = async (data) =>{
+    console.log('Posting to api...',data)
+    // axios.post('localhost:5000/').then(res => console.log(res))
   }
-//timeStamp
 
-const viewPdf = async ()=>{
-  setObjData(atob(base64Data))
-  console.log()
+  // if approved send state to backend
+  if(approved){
+      postToApi(data)
+  }
+// send email
+const email = async (email,data) =>{
+  console.log(`Sending email to: ${email} with the following data: ${data}`)
 }
+
 useEffect(()=>{
   if(maritalStatus == 'Married'){
     setMemberType('Married')
@@ -1468,16 +1478,93 @@ useEffect(()=>{
     setMemberType('Single + Children')
   }
   if(base64Data == ''){
-    pdfPayrollDeductionScript('view')
-    
-  }else if(base64Data != ''){
+    pdfPayrollDeductionScript('save')
     
   }
+  if(base64Data != ''){
+    if(data.length == 0){
+      setData({
+        forceNumber,
+        armsOfService,
+        rankTitle,
+        fullNames,
+        surname,
+        IDNumber,
+        mainID,
+        cellNumber,
+        altCellNumber,
+        landlineNumber,
+        emailAddress,
+        streetNumber,
+        streetName,
+        complexName,
+        unitNumber,
+        suburb,
+        town,
+        postalCode,
+        unitName,
+        unitSwitchBoardNumber,
+        maritalStatus,
+        monthlyPremium,
+        spouseTitle,
+        spouseFullNames,
+        spouseSurname,
+        spouseID,
+        spouseIdFile,
+        childrenAmount,
+        childTitle,
+        childFullNames,
+        childSurname,
+        childID,
+        childTitle2,
+        childFullNames2,
+        childSurname2,
+        childID2,
+        childTitle3,
+        childFullNames3,
+        childSurname3,
+        childID3,
+        childTitle4,
+        childFullNames4,
+        childSurname4,
+        childID4,
+        childTitle5,
+        childFullNames5,
+        childSurname5,
+        childID5,
+        childTitle6,
+        childFullNames6,
+        childSurname6,
+        childID6,
+        childrenIds,
+        pbTitle,
+        pbFullNames,
+        pbSurname,
+        pbID,
+        pbCellNumber,
+        pbIdData,
+        setPbIdData,
+        nlTitle,
+        nlFullNames,
+        nlSurname,
+        nlIDNumber,
+        nlCellNumber,
+        nlIdData,
+        setNlIdData,
+        paymentMethod,
+        signature,
+        base64Data,
+        bankingDetailsDO,
+        idParams
+      })
+  }
   
-},[memberType,setMemberType,maritalStatus, base64Data, setBase64Data,approved,setApproved])
+  }
+  
+},[memberType,setMemberType,maritalStatus,base64Data,data,setData])
   return(
     <div className="page">
-      {!approved &&<div className='page'>
+      {approved &&<div className='page'>
         <h6 style={{fontWeight: '600', marginTop: '25px', textAlign: 'center', color: '#BB1A1B', marginBottom: '25px'}}>Thank you very much. We will be in contact shortly</h6>
 
         <div style={{textAlign: 'center'}}>
@@ -1487,9 +1574,11 @@ useEffect(()=>{
             </Button>
         </div>
       </div>}
-      {approved && <div style={{overflow:'scroll',height:600}}>
-          <Button variant='danger w-50' style={{ fontWeight: '600', background: '#BB1A1B', border: 'none' }} onClick={(e)=>{viewPdf()}}>View Pdf</Button>
-          
+      {!approved && <div style={{overflow:'scroll',height:600}}>
+        <h6 style={{fontWeight: '600', marginTop: '25px', textAlign: 'center', color: '#BB1A1B', marginBottom: '25px'}}>You can view your application now by clicking the button bellow</h6>
+        <p>Please note that your application is not completed until you have clicked the "I Accept the Terms of this Agreement" button</p>
+          <Button variant='danger w-50' style={{ fontWeight: '600', background: '#BB1A1B', border: 'none' }} onClick={(e)=>pdfPayrollDeductionScript('view')}>View Pdf</Button>
+          <Button variant='danger w-75' style={{ fontWeight: '600', background: '#BB1A1B', border: 'none',marginTop: "5vh" }} onClick={(e)=>setApproved(true)}>I Accept the Terms of this Agreement</Button>
         </div>}
         <iframe src={objData} />
     </div>

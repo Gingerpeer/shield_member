@@ -72,7 +72,7 @@ const Three = ({
         <Form.Control className='Control' type='text' placeholder={spouseSurname} onChange={(e)=>setSpouseSurname(e.target.value)} />
       </Form.Group>
       <Form.Group className='mb-2' controlId='spouseID'>
-        <Form.Label className='Label' >*Spouse ID Number</Form.Label>
+        <Form.Label className='Label' >*Spouse ID Number or Date of Birth</Form.Label>
         <Form.Control className='Control' type='text' placeholder={spouseID} onChange={(e)=>setSpouseID(e.target.value)} />
       </Form.Group>
 
