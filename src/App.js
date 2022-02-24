@@ -138,6 +138,7 @@ function App() {
       <Header/>
         <Routes>
           <Route path='/:id' element={<Home idParam={idParam} setIdParam={setIdParam} />} />
+          <Route path='/' element={<Home idParam={idParam} setIdParam={setIdParam} />} />
           <Route path='/no' element={<No />} />
           <Route path='/instructions' element={<Information />} />
           <Route path='/1' element={<One 
