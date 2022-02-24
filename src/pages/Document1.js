@@ -1107,29 +1107,31 @@ closeDpipFppoDetails,
     var getReportId = window.location.href.split("=")
     var reportId = getReportId[1]
     // post base64 to server
-    var data = `<?xml version="1.0" encoding="utf-8"?><soap12:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://www.w3.org/2003/05/soap-envelope"><soap12:Header><userAuth xmlns="http://tempuri.org/"><authCode>g5q8hd563g67ja72f54snh</authCode></userAuth></soap12:Header><soap12:Body><EmailReport xmlns="http://tempuri.org/"><token>${user.token}</token><reportid>${reportId}</reportid><pdfbase64>${base64}</pdfbase64></EmailReport></soap12:Body></soap12:Envelope>`
-      
-    var config = {
-              method: 'post',
-              url: 'https://apiv2.firstcheck.co.za/firstcheck.asmx?op=EmailReport',
-              headers: {
-                'Content-Type': 'text/xml'
-              },
-              data: data
-            };
-
-  var sentReport = await this.$axios(config)
-            .catch(function (error) {
-              console.log(error);
-            });
-            console.log(sentReport)
-            
+    
           }
     }
     
   const postToApi = async (data) =>{
     console.log('Posting to api...',data)
-    // axios.post('localhost:5000/').then(res => console.log(res))
+    var soap = `<?xml version="1.0" encoding="utf-8"?><soap:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"><soap:Body><SaveData xmlns="https://msgl.ink/"><sLogin>andrisha@shieldlife.co.za</sLogin><sPassword>R1yt5t9d</sPassword><sReference>1234567</sReference><fileData><FileData><sFileName>NewApplication.json</sFileName><byteFileData>${data}</byteFileData></FileData></fileData></SaveData></soap:Body></soap:Envelope>`
+      
+    var config = {
+              method: 'post',
+              url: 'https://apiv2.msgl.ink/smsportalws.asmx?op=SaveData',
+              headers: {
+                'Content-Type': 'text/xml'
+              },
+              soap: soap
+            };
+
+  await axios(config)
+  .then(function (response) {
+    console.log(JSON.stringify(response.data));
+    })
+    .catch(function (error) {
+    console.log(error);
+    });
+            
   }
 
   // if approved send state to backend
