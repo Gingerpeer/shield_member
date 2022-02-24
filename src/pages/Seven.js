@@ -30,7 +30,7 @@ const Seven = ({signature, setSignature, monthlyPremium}) =>{
       <div style={{border: 'black solid 2px'}}><SignaturePad ref={myRef}  /></div>
       <Button variant='danger' onClick={clearSignature} style={{marginTop: '2vh'}} >Clear</Button>
       <div style={{textAlign: 'center'}}>
-        <Link to='/6'>
+        <Link to='/checkInfo'>
           <Button variant='secondary w-25' style={{ fontWeight: '600', background: '#D0D0D0', border: 'none', float:'left', marginTop: '10vw', marginLeft: '20vw' }}>BACK</Button>
         </Link>
         

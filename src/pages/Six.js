@@ -124,7 +124,7 @@ const Six = ({paymentMethod, setPaymentMethod,monthlyPremium,armsOfService,banki
         <Link to='/5'>
           <Button variant='secondary w-25' style={{ fontWeight: '600', background: '#D0D0D0', border: 'none', float:'left', marginTop: '10vw', marginLeft: '20vw' }}>BACK</Button>
         </Link>
-        {showNext && <Link to='/7'>
+        {showNext && <Link to='/checkInfo'>
           <Button variant='danger w-25' onClick={()=>console.log(bankingDetailsDO)} style={{ fontWeight: '600', background: '#BB1A1B', border: 'none', float:'right', marginTop: '10vw', marginRight: '20vw' }} >NEXT</Button>
         </Link>}
         {!showNext && <Button variant='danger w-25' style={{ fontWeight: '600', background: '#BB1A1B', border: 'none', float:'right', marginTop: '10vw', marginRight: '20vw', marginBottom: '10vh' }} onClick={requiredSubmitted} >Submit</Button>}

@@ -111,7 +111,15 @@ function App() {
   const [idParam,setIdParam] = useState('')
   // const queryString = window.location.pathname
   // const idString = queryString.slice(1)
-
+  
+  // client due diligence state
+  // due diligence details
+  const [dpip,setDpip] = useState('')
+  const [dpipDetails,setDpipDetails] = useState('')
+  const [fppo,setFppo] = useState('')
+  const [fppoDetails,setFppoDetails] = useState('')
+  const [closeDpipFppo,setCloseDpipFppo] = useState('')
+  const [closeDpipFppoDetails,setCloseDpipFppoDetails] = useState('')
   useEffect(()=>{
     if(maritalStatus != ''){
       setMonthlyPremium(153 + 111)
@@ -289,7 +297,20 @@ function App() {
             signature={signature}
             setSignature={setSignature}
             />} />
-          <Route path='/checkInfo' element={<CheckInfo />} />
+          <Route path='/checkInfo' element={<CheckInfo
+            dpip={dpip}
+            dpipDetails={dpipDetails}
+            fppo={fppo}
+            fppoDetails={fppoDetails}
+            closeDpipFppo={closeDpipFppo}
+            closeDpipFppoDetails={closeDpipFppoDetails}
+            setDpip={setDpip}
+            setDpipDetails={setDpipDetails}
+            setFppo={setFppo}
+            setFppoDetails={setFppoDetails}
+            setCloseDpipFppo={setCloseDpipFppo}
+            setCloseDpipFppoDetails={setCloseDpipFppoDetails}
+            />} />
           <Route path='/document' element={<Document1 
             forceNumber={forceNumber} 
             armsOfService={armsOfService}
@@ -369,6 +390,12 @@ function App() {
             bankingDetailsDO={bankingDetailsDO}
             setBankingDetailsDO={setBankingDetailsDO}
             idParam={idParam}
+            dpip={dpip}
+            dpipDetails={dpipDetails}
+            fppo={fppo}
+            fppoDetails={fppoDetails}
+            closeDpipFppo={closeDpipFppo}
+            closeDpipFppoDetails={closeDpipFppoDetails}
             />} />
         </Routes>
     </div>
