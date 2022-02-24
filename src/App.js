@@ -89,14 +89,18 @@ function App() {
   const [pbSurname,setPbSurname] = useState('')
   const [pbID,setPbID] = useState('')
   const [pbCellNumber,setPbCellNumber] = useState('')
-  const [pbIdData,setPbIdData] = ([])
+  const [pbIdData,setPbIdData] = useState([])
+  const [pbLandline,setPbLandline] = useState('')
+  const [pbRelationship,setPbRelationship] = useState('')
   // next in Line to beneficiary's details
   const [nlTitle,setNlTitle] = useState('')
   const [nlFullNames,setNlFullNames] = useState('')
   const [nlSurname,setNlSurname] = useState('')
   const [nlIDNumber,setNlIDNumber] = useState('')
   const [nlCellNumber,setNlCellNumber] = useState('')
-  const [nlIdData,setNlIdData] = ([])
+  const [nlIdData,setNlIdData] = useState([])
+  const [nlLandline,setNlLandline] = useState('')
+  const [nlRelationship,setNlRelationship] = useState('')
   // payment method
   const [paymentMethod,setPaymentMethod] = useState('Payroll')
   const [bankingDetailsDO,setBankingDetailsDO] = useState([])
@@ -268,7 +272,14 @@ function App() {
             setPbCellNumber={setPbCellNumber}
             pbIdData={pbIdData}
             setPbIdData={setPbIdData}
-
+            pbLandline={pbLandline}
+            setPbLandline={setPbLandline}
+            pbRelationship={pbRelationship}
+            setPbRelationship={setPbRelationship}
+            nlLandline={nlLandline}
+            setNlLandline={setNlLandline}
+            nlRelationship={nlRelationship}
+            setNlRelationship={setNlRelationship}
             nlTitle={nlTitle}
             setNlTitle={setNlTitle}
             nlFullNames={nlFullNames}
@@ -397,6 +408,10 @@ function App() {
             fppoDetails={fppoDetails}
             closeDpipFppo={closeDpipFppo}
             closeDpipFppoDetails={closeDpipFppoDetails}
+            pbLandline={pbLandline}
+            pbRelationship={pbRelationship}
+            nlLandline={nlLandline}
+            nlRelationship={nlRelationship}
             />} />
         </Routes>
     </div>

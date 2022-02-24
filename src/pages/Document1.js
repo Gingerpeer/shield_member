@@ -85,6 +85,10 @@ fppo,
 fppoDetails,
 closeDpipFppo,
 closeDpipFppoDetails,
+pbLandline,
+pbRelationship,
+nlLandline,
+nlRelationship
 }) =>{
   const date = Date.now()
   const d = new Date(parseInt(date,10))
@@ -458,11 +462,11 @@ closeDpipFppoDetails,
     doc.text('Full Names:',17.5,194)
     doc.text(pbFullNames,55,194)
     doc.text('Landline No:',93,194)
-    doc.text(landlineNumber,129,194)
+    doc.text(pbLandline,129,194)
     doc.text('Surname:',17.5,199)
     doc.text(pbSurname,55,199)
     doc.text('Relationship',93,199)
-    doc.text('',129,199)
+    doc.text(pbRelationship,129,199)
     // Details of Next-in-line Beneficiary (adult over the age of 18) *
     // header block
     doc.setFontSize(9)
@@ -489,11 +493,11 @@ closeDpipFppoDetails,
     doc.text('Full Names:',17.5,214)
     doc.text(nlFullNames,55,214)
     doc.text('Landline No:',93,214)
-    doc.text(landlineNumber,129,214)
+    doc.text(nlLandline,129,214)
     doc.text('Surname:',17.5,219)
     doc.text(nlSurname,55,219)
     doc.text('Relationship',93,219)
-    doc.text('',129,219)
+    doc.text(nlRelationship,129,219)
     doc.setFontSize(7)
     doc.setFont('Helvetica','italic')
     doc.text('* Please note:  The next-in-line beneficiary will only receive the benefit payment if the primary beneficiary is predeceased',15,223)
@@ -1231,7 +1235,11 @@ useEffect(()=>{
         signature,
         base64Data,
         bankingDetailsDO,
-        idParams
+        idParams,
+        pbLandline,
+        pbRelationship,
+        nlLandline,
+        nlRelationship
       })
   }
   

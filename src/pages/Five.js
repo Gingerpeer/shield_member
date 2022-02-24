@@ -28,7 +28,15 @@ const Five = ({
           nlCellNumber,
           setNlCellNumber,
           nlIdData,
-          setNlIdData
+          setNlIdData,
+          pbLandline,
+          setPbLandline,
+          pbRelationship,
+          setPbRelationship,
+          nlLandline,
+          setNlLandline,
+          nlRelationship,
+          setNlRelationship
 }) =>{
   const [showNext,setShowNext] = useState(false)
     const [error, setError] = useState('')
@@ -69,6 +77,15 @@ const Five = ({
           <Form.Label className='Label' >*Primary Beneficiary Cell Number</Form.Label>
           <Form.Control className='Control' type='text' placeholder={pbCellNumber} onChange={(e)=>setPbCellNumber(e.target.value)} style={{ marginTop: '20px' }} />
       </Form.Group>
+      
+      <Form.Group className='mb-2' controlId='pbLandline'>
+          <Form.Label className='Label' >*Primary Beneficiary Landline</Form.Label>
+          <Form.Control className='Control' type='text' placeholder={pbID} onChange={(e)=>setPbLandline(e.target.value)} style={{ marginTop: '20px' }} />
+      </Form.Group>
+      <Form.Group className='mb-2' controlId='pbRelationship'>
+          <Form.Label className='Label' >*Primary Beneficiary Relationship</Form.Label>
+          <Form.Control className='Control' type='text' placeholder={pbID} onChange={(e)=>pbRelationship(e.target.value)} style={{ marginTop: '20px' }} />
+      </Form.Group>
 
       <Form.Group className='mb-2' controlId='pbID'>
           <Form.Label className='Label' >*Primary Beneficiary ID or Date of Birth</Form.Label>
@@ -103,7 +120,15 @@ const Five = ({
           <Form.Label className='Label' >*Next in Line Beneficiary ID or Date of Birth</Form.Label>
           <Form.Control className='Control' type='text' placeholder={nlIDNumber} onChange={(e)=>setNlIDNumber(e.target.value)} style={{ marginTop: '20px' }} />
       </Form.Group>
-
+      
+          <Form.Group className='mb-2' controlId='nlLandline'>
+            <Form.Label className='Label' >*Next in Line Beneficiary Landline</Form.Label>
+            <Form.Control className='Control' type='text' placeholder={nlCellNumber} onChange={(e)=>setNlLandline(e.target.value)} style={{ marginTop: '20px' }} />
+          </Form.Group>
+          <Form.Group className='mb-2' controlId='nlRelationship'>
+              <Form.Label className='Label' >*Next in Line Beneficiary Relationship</Form.Label>
+              <Form.Control className='Control' type='text' placeholder={nlCellNumber} onChange={(e)=>setNlRelationship(e.target.value)} style={{ marginTop: '20px' }} />
+          </Form.Group>
       <Form.Group className='mb-2' controlId='nlCellNumber'>
           <Form.Label className='Label' >*Next in Line Beneficiary Cell Number</Form.Label>
           <Form.Control className='Control' type='text' placeholder={nlCellNumber} onChange={(e)=>setNlCellNumber(e.target.value)} style={{ marginTop: '20px' }} />
