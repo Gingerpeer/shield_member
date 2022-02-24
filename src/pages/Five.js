@@ -84,7 +84,7 @@ const Five = ({
       </Form.Group>
       <Form.Group className='mb-2' controlId='pbRelationship'>
           <Form.Label className='Label' >*Primary Beneficiary Relationship</Form.Label>
-          <Form.Control className='Control' type='text' placeholder={pbID} onChange={(e)=>pbRelationship(e.target.value)} style={{ marginTop: '20px' }} />
+          <Form.Control className='Control' type='text' placeholder={pbID} onChange={(e)=>setPbRelationship(e.target.value)} style={{ marginTop: '20px' }} />
       </Form.Group>
 
       <Form.Group className='mb-2' controlId='pbID'>
