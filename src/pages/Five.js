@@ -40,13 +40,76 @@ const Five = ({
 }) =>{
   const [showNext,setShowNext] = useState(false)
     const [error, setError] = useState('')
+
+
+    const validateID = (id) => {
+      if (id) {
+        var ex = /^(((\d{2}((0[13578]|1[02])(0[1-9]|[12]\d|3[01])|(0[13456789]|1[012])(0[1-9]|[12]\d|30)|02(0[1-9]|1\d|2[0-8])))|([02468][048]|[13579][26])0229))(( |-)(\d{4})( |-)(\d{3})|(\d{7}))/;
+      } else {
+        // some other validation here
+        var ex = /^[0-9]{1,}$/;
+      }
+    
+      let theIDnumber = id
+      if (ex.test(theIDnumber) == false) {
+        // alert code goes here
+        setError("Please supply a valid ID number");
+        return false;
+      }
+      // here you would normally obviously
+      // return true;
+      // but for the sake of this Codepen:
+      return true;
+    }
+
+
+    const checkCellNumber = (number) =>{
+      if(number.charAt(0) === '0'){
+        if(number.length > 10){
+          setError('Please give a valid cell number')
+          return false
+        }else if(number.length < 10){ 
+          setError('Please give a valid cell number')
+          return false
+      }else{
+        console.log('Your number is exactly ten')
+        return true
+    } 
+  }
+  if(number.charAt(0) === '2'){
+    if(number.length > 11){
+      setError('Please give a valid cell number')
+      return false
+    }else if(number.length < 11){ 
+      setError('Please give a valid cell number')
+      return false
+  }else{
+    console.log('Your number is exactly ten')
+    return true
+} 
+}
+}
+const checkEmail = (email)=>{
+  if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email)){
+    return (true)
+  }
+    setError("You have entered an invalid email address!")
+    return (false)
+}
+
+
+
     const requiredSubmitted = () =>{
   if(pbFullNames != ''){
     if(pbSurname != ''){
       if(pbID != ''){
-              setShowNext(true)
-              setError('Please check that all info is correct then click next')
-            }else{
+        if(checkCellNumber(pbCellNumber)){
+          if(validateID(pbID)){
+            setShowNext(true)
+            setError('Please check that all info is correct then click next')
+          }
+        }
+       }else{
         setError('You have not submitted your Beneficiary ID Number')
       }
     }else{
