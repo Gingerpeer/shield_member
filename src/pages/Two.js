@@ -44,6 +44,13 @@ const Two = ({
     // towns with provinces from https://raw.githubusercontent.com/dirkstrauss/SouthAfrica/master/SouthAfricanCities.json
     // function to see only towns in province
     // provinces
+    const TownsPerProvince = TownsProvinces.sort( function( a, b ) {
+      a = a.AccentCity.toLowerCase();
+      b = b.AccentCity.toLowerCase();
+  
+      return a < b ? -1 : a > b ? 1 : 0;
+  })
+    // console.log(TownsPerProvince)
     const wc = []
     const ec = []
     const nc = []
@@ -53,36 +60,36 @@ const Two = ({
     const lp = []
     const kzn = []
     const mp = []
-      for(let i = 0;i<TownsProvinces.length;i++){
-        if(TownsProvinces[i].ProvinceName == "Western Cape"){
-          wc.push(<option key={i}>{TownsProvinces[i].AccentCity}</option>)
+      for(let i = 0;i<TownsPerProvince.length;i++){
+        if(TownsPerProvince[i].ProvinceName == "Western Cape"){
+          wc.push(<option key={i}>{TownsPerProvince[i].AccentCity}</option>)
         }
-        if(TownsProvinces[i].ProvinceName == "Eastern Cape"){
-          ec.push(<option key={i}>{TownsProvinces[i].AccentCity}</option>)
+        if(TownsPerProvince[i].ProvinceName == "Eastern Cape"){
+          ec.push(<option key={i}>{TownsPerProvince[i].AccentCity}</option>)
         }
-        if(TownsProvinces[i].ProvinceName == "Northern Cape"){
-          nc.push(<option key={i}>{TownsProvinces[i].AccentCity}</option>)
+        if(TownsPerProvince[i].ProvinceName == "Northern Cape"){
+          nc.push(<option key={i}>{TownsPerProvince[i].AccentCity}</option>)
         }
-        if(TownsProvinces[i].ProvinceName == "North West"){
-          nw.push(<option key={i}>{TownsProvinces[i].AccentCity}</option>)
+        if(TownsPerProvince[i].ProvinceName == "North West"){
+          nw.push(<option key={i}>{TownsPerProvince[i].AccentCity}</option>)
         }
-        if(TownsProvinces[i].ProvinceName == "Free State"){
-          fs.push(<option key={i}>{TownsProvinces[i].AccentCity}</option>)
+        if(TownsPerProvince[i].ProvinceName == "Free State"){
+          fs.push(<option key={i}>{TownsPerProvince[i].AccentCity}</option>)
         }
-        if(TownsProvinces[i].ProvinceName == "Mpumalanga"){
-          mp.push(<option key={i}>{TownsProvinces[i].AccentCity}</option>)
+        if(TownsPerProvince[i].ProvinceName == "Mpumalanga"){
+          mp.push(<option key={i}>{TownsPerProvince[i].AccentCity}</option>)
         }
-        if(TownsProvinces[i].ProvinceName == "Gauteng"){
-          gp.push(<option key={i}>{TownsProvinces[i].AccentCity}</option>)
+        if(TownsPerProvince[i].ProvinceName == "Gauteng"){
+          gp.push(<option key={i}>{TownsPerProvince[i].AccentCity}</option>)
         }
-        if(TownsProvinces[i].ProvinceName == "KwaZulu Natal"){
-          kzn.push(<option key={i}>{TownsProvinces[i].AccentCity}</option>)
+        if(TownsPerProvince[i].ProvinceName == "KwaZulu Natal"){
+          kzn.push(<option key={i}>{TownsPerProvince[i].AccentCity}</option>)
         }
-        if(TownsProvinces[i].ProvinceName == "Limpopo"){
-          lp.push(<option key={i}>{TownsProvinces[i].AccentCity}</option>)
+        if(TownsPerProvince[i].ProvinceName == "Limpopo"){
+          lp.push(<option key={i}>{TownsPerProvince[i].AccentCity}</option>)
         }
       }
-     
+    
     const requiredSubmitted = () =>{
       if(cellNumber != ''){
         if(streetNumber != ''){
