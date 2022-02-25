@@ -99,11 +99,7 @@ setSourceIncomeDetails
   const timeStamp = d.toString('MM/dd/yy HH:mm:ss')
   const [memberType,setMemberType] = useState('Single')
   const [approved,setApproved] = useState(false)
-  const [numPages, setNumPages] = useState(null);
-  const [pageNumber, setPageNumber] = useState(1);
-  const [objData, setObjData] = useState('')
   const [data,setData] = useState([])
-  const [sendEmail,setSendEmail] = useState('')
   
   // rep details
   const representativeName = 'George Botha'
@@ -1107,16 +1103,7 @@ setSourceIncomeDetails
       var output = doc.output()
       var base64 = btoa(output)
       setBase64Data(`data:application/pdf;base64,${base64}`)
-    }else{
-        // send pdf in base64
-    var output = doc.output()
-    var base64 = btoa(output)
-    var user = this.$cookies.get('user')
-    var getReportId = window.location.href.split("=")
-    var reportId = getReportId[1]
-    // post base64 to server
-    
-          }
+    }
     }
     
   const postToApi = async (data) =>{
@@ -1146,10 +1133,7 @@ setSourceIncomeDetails
   if(approved){
       postToApi(data)
   }
-// send email
-const email = async (email,data) =>{
-  console.log(`Sending email to: ${email} with the following data: ${data}`)
-}
+
 
 useEffect(()=>{
   if(maritalStatus == 'Married'){
@@ -1270,7 +1254,6 @@ useEffect(()=>{
           <Button variant='danger w-50' style={{ fontWeight: '600', background: '#BB1A1B', border: 'none' }} onClick={(e)=>pdfPayrollDeductionScript('view')}>View Pdf</Button>
           <Button variant='danger w-75' style={{ fontWeight: '600', background: '#BB1A1B', border: 'none',marginTop: "5vh" }} onClick={(e)=>setApproved(true)}>I Accept the Terms of this Agreement</Button>
         </div>}
-        <iframe src={objData} />
     </div>
   ) 
 }
