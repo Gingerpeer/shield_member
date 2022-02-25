@@ -32,7 +32,6 @@ const One = ({
     const [showNext,setShowNext] = useState(false)
     const [error, setError] = useState('')
     const requiredSubmitted = () =>{
-      if(forceNumber != ''){
         if(armsOfService != ''){
           if(rankTitle != ''){
             if(fullNames != ''){
@@ -55,9 +54,6 @@ const One = ({
         }else{
           setError('You have not submitted your Arms of Service')
         }
-      }else{
-        setError('You have not submitted your force number')
-      }
     }
    
   return(
