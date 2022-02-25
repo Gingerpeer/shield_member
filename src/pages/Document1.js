@@ -88,7 +88,11 @@ closeDpipFppoDetails,
 pbLandline,
 pbRelationship,
 nlLandline,
-nlRelationship
+nlRelationship,
+sourceIncome,
+setSourceIncome,
+sourceIncomeDetails,
+setSourceIncomeDetails
 }) =>{
   const date = Date.now()
   const d = new Date(parseInt(date,10))
@@ -1239,7 +1243,9 @@ useEffect(()=>{
         pbLandline,
         pbRelationship,
         nlLandline,
-        nlRelationship
+        nlRelationship,
+        sourceIncome,
+        sourceIncomeDetails
       })
   }
   

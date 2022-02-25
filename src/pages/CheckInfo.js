@@ -4,6 +4,10 @@ import Button from 'react-bootstrap/Button'
 import { useEffect } from 'react'
 
 const CheckInfo = ({
+  sourceIncome,
+  setSourceIncome,
+  sourceIncomeDetails,
+  setSourceIncomeDetails,
   dpip,
   dpipDetails,
   fppo,
@@ -67,8 +71,19 @@ const CheckInfo = ({
             Lieutenant General; Admiral or Vice Admiral)</li>
           <li>* Senior judicial official</li>
         </ul>
+        <p>As part of our responsibilities as an Accountable Institution in terms of the Financial Intelligence Centre Act 38 of 2001, we are required to gather the following client information prior to concluding the transaction.</p>
       </div>
       <Form>
+        <Form.Group className='mb-2' controlId='sourceIncome'>
+          <Form.Label className='Label' style={{fontSize: '12px'}}>What is the source of Funds?</Form.Label>
+          <Form.Select onChange={(e)=>setSourceIncome(e.target.value)} >
+            <option>Choose Salary or Other</option>
+            <option>Salary</option>
+            <option>Other</option>
+          </Form.Select>
+          {sourceIncome == 'Other' &&<Form.Control className='Control' type='text' placeholder='Please provide details:' onChange={(e)=>setSourceIncomeDetails(e.target.value)} style={{ marginTop: '20px' }} />}
+        </Form.Group>      
+        
         <Form.Group className='mb-2' controlId='dpip'>
           <Form.Label className='Label' style={{fontSize: '12px'}}>Are you a Domestic Prominent Influential Persons (DPIP)?</Form.Label>
           <Form.Select onChange={(e)=>setDpip(e.target.value)} >

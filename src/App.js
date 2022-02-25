@@ -118,6 +118,8 @@ function App() {
   
   // client due diligence state
   // due diligence details
+  const [sourceIncome,setSourceIncome] = useState('')
+  const [sourceIncomeDetails,setSourceIncomeDetails] = useState('')
   const [dpip,setDpip] = useState('')
   const [dpipDetails,setDpipDetails] = useState('')
   const [fppo,setFppo] = useState('')
@@ -310,6 +312,10 @@ function App() {
             setSignature={setSignature}
             />} />
           <Route path='/checkInfo' element={<CheckInfo
+            sourceIncome={sourceIncome}
+            setSourceIncome={setSourceIncome}
+            sourceIncomeDetails={sourceIncomeDetails}
+            setSourceIncomeDetails={setSourceIncomeDetails}
             dpip={dpip}
             dpipDetails={dpipDetails}
             fppo={fppo}
@@ -392,10 +398,6 @@ function App() {
             nlIdData={nlIdData}
             setNlIdData={setNlIdData}
             paymentMethod={paymentMethod}
-            monthlyPremium={monthlyPremium}
-            armsOfService={armsOfService}
-            maritalStatus={maritalStatus}
-            childrenAmount={childrenAmount}
             signature={signature}
             base64Data={base64Data}
             setBase64Data={setBase64Data}
@@ -412,6 +414,10 @@ function App() {
             pbRelationship={pbRelationship}
             nlLandline={nlLandline}
             nlRelationship={nlRelationship}
+            sourceIncome={sourceIncome}
+            setSourceIncome={setSourceIncome}
+            sourceIncomeDetails={sourceIncomeDetails}
+            setSourceIncomeDetails={setSourceIncomeDetails}
             />} />
         </Routes>
     </div>
