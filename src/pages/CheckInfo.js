@@ -31,11 +31,11 @@ const CheckInfo = ({
       setFppoDetails('N/A')
       setFppo('')
     }
-    if(closeDpipFppoDetails === 'No'){
+    if(closeDpipFppo === 'No'){
       setCloseDpipFppoDetails('N/A')
       setCloseDpipFppo('')
     }
-  },[dpip,fppo,closeDpipFppoDetails,setDpipDetails,setDpip,setFppoDetails,setFppo,setCloseDpipFppoDetails,setCloseDpipFppo])
+  },[dpip,fppo,setDpipDetails,setDpip,setFppoDetails,setFppo,closeDpipFppo,closeDpipFppoDetails,setCloseDpipFppoDetails,setCloseDpipFppo])
   return(
     <div className='page'>
       <div id='clientDueDiligence'>
@@ -83,7 +83,7 @@ const CheckInfo = ({
           </Form.Select>
           {sourceIncome == 'Other' &&<Form.Control className='Control' type='text' placeholder='Please provide details:' onChange={(e)=>setSourceIncomeDetails(e.target.value)} style={{ marginTop: '20px' }} />}
         </Form.Group>      
-        
+
         <Form.Group className='mb-2' controlId='dpip'>
           <Form.Label className='Label' style={{fontSize: '12px'}}>Are you a Domestic Prominent Influential Persons (DPIP)?</Form.Label>
           <Form.Select onChange={(e)=>setDpip(e.target.value)} >
