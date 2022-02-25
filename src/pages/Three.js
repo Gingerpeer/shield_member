@@ -50,10 +50,8 @@ const Three = ({
 
     const requiredSubmitted = () =>{
                 if(maritalStatus != ''){
-                  if(validateID(spouseID)){
                     setShowNext(true)
                     setError('Please check that all info is correct then click next')
-                  }
                 }else{
                   setError('You have not submitted your Marital Status')
                 }
