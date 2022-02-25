@@ -2,7 +2,7 @@ import Button from 'react-bootstrap/Button';
 import Form  from 'react-bootstrap/Form'
 import { Link } from 'react-router-dom';
 import FileInputComponent from 'react-file-input-previews-base64'
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 
 
@@ -31,7 +31,31 @@ const One = ({
     ]
     const [showNext,setShowNext] = useState(false)
     const [error, setError] = useState('')
+
+    const validateID = (id) => {
+      if (id) {
+        var ex = /^(((\d{2}((0[13578]|1[02])(0[1-9]|[12]\d|3[01])|(0[13456789]|1[012])(0[1-9]|[12]\d|30)|02(0[1-9]|1\d|2[0-8])))|([02468][048]|[13579][26])0229))(( |-)(\d{4})( |-)(\d{3})|(\d{7}))/;
+      } else {
+        // some other validation here
+        var ex = /^[0-9]{1,}$/;
+      }
+    
+      let theIDnumber = id
+      if (ex.test(theIDnumber) == false) {
+        // alert code goes here
+        setError("Please supply a valid ID number");
+        return false;
+      }
+      // here you would normally obviously
+      // return true;
+      // but for the sake of this Codepen:
+      return true;
+    }
+
     const requiredSubmitted = () =>{
+      if(!validateID(IDNumber)){
+        setShowNext(false)
+      }else{
         if(armsOfService != ''){
           if(rankTitle != ''){
             if(fullNames != ''){
@@ -54,8 +78,11 @@ const One = ({
         }else{
           setError('You have not submitted your Arms of Service')
         }
+      }
     }
-   
+
+    
+    
   return(
     <div className="page">
       <h6 style={{fontWeight: '600', marginTop: '25px', textAlign: 'center', color: '#BB1A1B', marginBottom: '25px'}}>1. Compulsory Personal Information</h6>
