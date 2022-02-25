@@ -89,7 +89,39 @@ const Two = ({
           lp.push(<option key={i}>{TownsPerProvince[i].AccentCity}</option>)
         }
       }
-    
+    const checkCellNumber = (number) =>{
+      if(cellNumber.charAt(0) === '0'){
+        if(cellNumber.length > 10){
+          setError('Please give a valid cell number')
+          return false
+        }else if(cellNumber.length < 10){ 
+          setError('Please give a valid cell number')
+          return false
+      }else{
+        console.log('Your number is exactly ten')
+        return true
+    } 
+  }
+  if(cellNumber.charAt(0) === '2'){
+    if(cellNumber.length > 11){
+      setError('Please give a valid cell number')
+      return false
+    }else if(cellNumber.length < 11){ 
+      setError('Please give a valid cell number')
+      return false
+  }else{
+    console.log('Your number is exactly ten')
+    return true
+} 
+}
+}
+const checkEmail = (email)=>{
+  if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email)){
+    return (true)
+  }
+    setError("You have entered an invalid email address!")
+    return (false)
+}
     const requiredSubmitted = () =>{
       if(cellNumber != ''){
         if(streetNumber != ''){
@@ -97,8 +129,14 @@ const Two = ({
             if(suburb != ''){
               if(town != ''){
                 if(postalCode != ''){
-                  setShowNext(true)
-                  setError('Please check that all info is correct then click next')
+                  if(checkCellNumber(cellNumber)){
+                      if(checkCellNumber(altCellNumber)){
+                        if(checkEmail(emailAddress)){
+                          setShowNext(true)
+                          setError('Please check that all info is correct then click next')
+                        }
+                      }
+                  }
                 }else{
                   setError('You have not submitted your Postal Code')
                 }
@@ -166,7 +204,7 @@ const Two = ({
       </Form.Group>
       <Form.Group className='mb-2' controlId='emailAddress'>
         <Form.Label className='Label' >Email Address</Form.Label>
-        <Form.Control className='Control' type='text' placeholder={emailAddress} onChange={(e)=>setEmailAddress(e.target.value)} />
+        <Form.Control className='Control' type='email' placeholder={emailAddress} onChange={(e)=>setEmailAddress(e.target.value)} />
       </Form.Group>
       <Form.Group className='mb-2' controlId='streetNumber'>
         <Form.Label className='Label' >*Street Number</Form.Label>
