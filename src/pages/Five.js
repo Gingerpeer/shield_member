@@ -105,32 +105,32 @@ const Five = ({
       <h6 style={{fontWeight: '600', marginTop: '25px', textAlign: 'center', color: '#BB1A1B', marginBottom: '25px'}}>6. Next in Line Beneficiary Details</h6>
 
         <Form.Group className='mb-2' controlId='nlTitle'>
-          <Form.Label className='Label' >*Next in Line Beneficiary Title</Form.Label>
+          <Form.Label className='Label' >Next in Line Beneficiary Title</Form.Label>
           <Form.Control className='Control' type='text' placeholder={nlTitle} onChange={(e)=>setNlTitle(e.target.value)} />
         </Form.Group>
         <Form.Group className='mb-2' controlId='nlFullNames'>
-          <Form.Label className='Label' >*Next in Line Beneficiary Full Names</Form.Label>
+          <Form.Label className='Label' >Next in Line Beneficiary Full Names</Form.Label>
           <Form.Control className='Control' type='text' placeholder={nlFullNames} onChange={(e)=>setNlFullNames(e.target.value)} style={{ marginTop: '20px' }} />
       </Form.Group>
       <Form.Group className='mb-2' controlId='nlSurname'>
-          <Form.Label className='Label' >*Next in Line Beneficiary Surname</Form.Label>
+          <Form.Label className='Label' >Next in Line Beneficiary Surname</Form.Label>
           <Form.Control className='Control' type='text' placeholder={nlSurname} onChange={(e)=>setNlSurname(e.target.value)} style={{ marginTop: '20px' }} />
       </Form.Group>
       <Form.Group className='mb-2' controlId='nlIDNumber'>
-          <Form.Label className='Label' >*Next in Line Beneficiary ID or Date of Birth</Form.Label>
+          <Form.Label className='Label' >Next in Line Beneficiary ID or Date of Birth</Form.Label>
           <Form.Control className='Control' type='text' placeholder={nlIDNumber} onChange={(e)=>setNlIDNumber(e.target.value)} style={{ marginTop: '20px' }} />
       </Form.Group>
       
           <Form.Group className='mb-2' controlId='nlLandline'>
-            <Form.Label className='Label' >*Next in Line Beneficiary Landline</Form.Label>
+            <Form.Label className='Label' >Next in Line Beneficiary Landline</Form.Label>
             <Form.Control className='Control' type='text' placeholder={nlCellNumber} onChange={(e)=>setNlLandline(e.target.value)} style={{ marginTop: '20px' }} />
           </Form.Group>
           <Form.Group className='mb-2' controlId='nlRelationship'>
-              <Form.Label className='Label' >*Next in Line Beneficiary Relationship</Form.Label>
+              <Form.Label className='Label' >Next in Line Beneficiary Relationship</Form.Label>
               <Form.Control className='Control' type='text' placeholder={nlCellNumber} onChange={(e)=>setNlRelationship(e.target.value)} style={{ marginTop: '20px' }} />
           </Form.Group>
       <Form.Group className='mb-2' controlId='nlCellNumber'>
-          <Form.Label className='Label' >*Next in Line Beneficiary Cell Number</Form.Label>
+          <Form.Label className='Label' >Next in Line Beneficiary Cell Number</Form.Label>
           <Form.Control className='Control' type='text' placeholder={nlCellNumber} onChange={(e)=>setNlCellNumber(e.target.value)} style={{ marginTop: '20px' }} />
       </Form.Group>
       <FileInputComponent

@@ -31,10 +31,10 @@ const Seven = ({signature, setSignature, monthlyPremium}) =>{
       <Button variant='danger' onClick={clearSignature} style={{marginTop: '2vh'}} >Clear</Button>
       <div style={{textAlign: 'center'}}>
         <Link to='/checkInfo'>
-          <Button variant='secondary w-25' style={{ fontWeight: '600', background: '#D0D0D0', border: 'none', float:'left', marginTop: '10vw', marginLeft: '20vw' }}>BACK</Button>
+          <Button variant='secondary w-25' style={{ fontWeight: '600', background: '#D0D0D0', border: 'none', float:'left', marginTop: '3vw', marginLeft: '20vw' }}>BACK</Button>
         </Link>
         
-          <Button variant='danger w-25' onClick={saveCanvasToState} style={{ fontWeight: '600', background: '#BB1A1B', border: 'none', float:'right', marginTop: '10vw', marginRight: '20vw' }} >Submit</Button>
+          <Button variant='danger w-25' onClick={saveCanvasToState} style={{ fontWeight: '600', background: '#BB1A1B', border: 'none', float:'right', marginTop: '3vw', marginRight: '20vw' }} >Submit</Button>
           </div>
           
         

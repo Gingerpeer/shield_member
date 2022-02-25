@@ -1,6 +1,7 @@
 import Form  from 'react-bootstrap/Form'
 import { Link } from 'react-router-dom'
 import Button from 'react-bootstrap/Button'
+import { useEffect } from 'react'
 
 const CheckInfo = ({
   dpip,
@@ -16,6 +17,21 @@ const CheckInfo = ({
   setCloseDpipFppo,
   setCloseDpipFppoDetails
 }) => {
+
+  useEffect(()=>{
+    if(dpip === 'No'){
+      setDpipDetails('N/A')
+      setDpip('')
+    }
+    if(fppo === 'No'){
+      setFppoDetails('N/A')
+      setFppo('')
+    }
+    if(closeDpipFppoDetails === 'No'){
+      setCloseDpipFppoDetails('N/A')
+      setCloseDpipFppo('')
+    }
+  },[dpip,fppo,closeDpipFppoDetails,setDpipDetails,setDpip,setFppoDetails,setFppo,setCloseDpipFppoDetails,setCloseDpipFppo])
   return(
     <div className='page'>
       <div id='clientDueDiligence'>
@@ -85,10 +101,10 @@ const CheckInfo = ({
       </Form>
         <div>
         <Link to='/6'>
-        <Button variant='secondary w-25' style={{ fontWeight: '600', background: '#D0D0D0', border: 'none', float:'left', marginTop: '10vw', marginLeft: '20vw' }}>BACK</Button>
+        <Button variant='secondary w-25' style={{ fontWeight: '600', background: '#D0D0D0', border: 'none', float:'left', marginTop: '3vw', marginLeft: '20vw' }}>BACK</Button>
       </Link>
       <Link to='/7'>
-        <Button variant='danger w-25' style={{ fontWeight: '600', background: '#BB1A1B', border: 'none', float:'right', marginTop: '10vw', marginRight: '20vw' }} >NEXT</Button>
+        <Button variant='danger w-25' style={{ fontWeight: '600', background: '#BB1A1B', border: 'none', float:'right', marginTop: '3vw', marginRight: '20vw' }} >NEXT</Button>
       </Link>
         </div>
    </div>
