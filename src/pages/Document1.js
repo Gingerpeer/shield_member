@@ -1110,16 +1110,15 @@ setSourceIncomeDetails
     console.log('Posting to api...',data)
     let b64 = btoa(JSON.stringify(data))
     console.log(b64)
-    var soap = `<?xml version="1.0" encoding="utf-8"?>
-    <soap:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"><soap:Body><SaveData xmlns="https://msgl.ink/"><sLogin>andrisha@shieldlife.co.za</sLogin><sPassword>R1yt5t9d</sPassword><sReference>1234567</sReference><fileData><FileData><sFileName>ApplicationMarkTest.json</sFileName><byteFileData>${b64}</byteFileData></FileData></fileData></SaveData></soap:Body></soap:Envelope>`
+    
       
     var config = {
               method: 'post',
-              url: 'https://apiv2.msgl.ink/smsportalws.asmx?op=SaveData',
+              url: 'https://apiv2.msgl.ink/',
               headers: {
-                'Content-Type': 'text/xml'
+                'content-type': 'application/json'
               },
-              soap: soap
+              data: data
             };
 
   await axios(config)

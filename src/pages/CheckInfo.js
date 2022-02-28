@@ -77,7 +77,6 @@ const CheckInfo = ({
         <Form.Group className='mb-2' controlId='sourceIncome'>
           <Form.Label className='Label' style={{fontSize: '12px'}}>What is the source of Funds?</Form.Label>
           <Form.Select onChange={(e)=>setSourceIncome(e.target.value)} >
-            <option>Choose Salary or Other</option>
             <option>Salary</option>
             <option>Other</option>
           </Form.Select>

@@ -118,7 +118,7 @@ function App() {
   
   // client due diligence state
   // due diligence details
-  const [sourceIncome,setSourceIncome] = useState('')
+  const [sourceIncome,setSourceIncome] = useState('Salary')
   const [sourceIncomeDetails,setSourceIncomeDetails] = useState('')
   const [dpip,setDpip] = useState('')
   const [dpipDetails,setDpipDetails] = useState('')

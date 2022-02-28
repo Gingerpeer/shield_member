@@ -98,7 +98,6 @@ const Two = ({
           setError('Please give a valid cell number')
           return false
       }else{
-        console.log('Your number is exactly ten')
         return true
     } 
   }
