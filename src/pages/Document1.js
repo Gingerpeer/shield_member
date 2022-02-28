@@ -1109,7 +1109,6 @@ setSourceIncomeDetails
   const postToApi = async (data) =>{
     console.log('Posting to api...',data)
     let b64 = btoa(JSON.stringify(data))
-    console.log(b64)
     
       
     var config = {
@@ -1118,7 +1117,7 @@ setSourceIncomeDetails
               headers: {
                 'content-type': 'application/json'
               },
-              data: data
+              data: `${data}`
             };
 
   await axios(config)
@@ -1237,7 +1236,90 @@ useEffect(()=>{
   
   }
   
-},[memberType,setMemberType,maritalStatus,base64Data,data,setData])
+},[memberType,
+  setMemberType,
+  maritalStatus,
+  base64Data,
+  data,
+  setData,
+  forceNumber,
+  armsOfService,
+  rankTitle,
+  fullNames,
+  surname,
+  IDNumber,
+  mainID,
+  cellNumber,
+  altCellNumber,
+  landlineNumber,
+  emailAddress,
+  streetNumber,
+  streetName,
+  complexName,
+  unitNumber,
+  suburb,
+  town,
+  postalCode,
+  unitName,
+  unitSwitchBoardNumber,
+  monthlyPremium,
+  spouseTitle,
+  spouseFullNames,
+  spouseSurname,
+  spouseID,
+  spouseIdFile,
+  childrenAmount,
+  childTitle,
+  childFullNames,
+  childSurname,
+  childID,
+  childTitle2,
+  childFullNames2,
+  childSurname2,
+  childID2,
+  childTitle3,
+  childFullNames3,
+  childSurname3,
+  childID3,
+  childTitle4,
+  childFullNames4,
+  childSurname4,
+  childID4,
+  childTitle5,
+  childFullNames5,
+  childSurname5,
+  childID5,
+  childTitle6,
+  childFullNames6,
+  childSurname6,
+  childID6,
+  childrenIds,
+  pbTitle,
+  pbFullNames,
+  pbSurname,
+  pbID,
+  pbCellNumber,
+  pbIdData,
+  setPbIdData,
+  nlTitle,
+  nlFullNames,
+  nlSurname,
+  nlIDNumber,
+  nlCellNumber,
+  nlIdData,
+  setNlIdData,
+  paymentMethod,
+  signature,
+  bankingDetailsDO,
+  idParams,
+  pbLandline,
+  pbRelationship,
+  nlLandline,
+  nlRelationship,
+  sourceIncome,
+  sourceIncomeDetails
+
+])
   return(
     <div className="page">
       {approved &&<div className='page'>
