@@ -107,6 +107,8 @@ const checkEmail = (email)=>{
           
             setShowNext(true)
             setError('Please check that all info is correct then click next')
+        }else{
+          setError('Please give a valid cell number')
         }
        }else{
         setError('You have not submitted your Beneficiary ID Number')
