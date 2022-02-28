@@ -202,7 +202,7 @@ const checkEmail = (email)=>{
         <Form.Control className='Control' type='text' placeholder={landlineNumber} onChange={(e)=>setLandlineNumber(e.target.value)} />
       </Form.Group>
       <Form.Group className='mb-2' controlId='emailAddress'>
-        <Form.Label className='Label' >Email Address</Form.Label>
+        <Form.Label className='Label' >*Email Address</Form.Label>
         <Form.Control className='Control' type='email' placeholder={emailAddress} onChange={(e)=>setEmailAddress(e.target.value)} />
       </Form.Group>
       <Form.Group className='mb-2' controlId='streetNumber'>
