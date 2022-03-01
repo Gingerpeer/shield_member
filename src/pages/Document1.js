@@ -437,6 +437,9 @@ spouseCell
     doc.text(suburb,129,144)
     doc.rect(90,140,24,5,'S')
     doc.rect(15,145,166,5,'S')
+    doc.rect(90,145,24,5,'S')
+    doc.text('Complex:',93,149)
+    doc.text(complexName,120,149)
     doc.text('Street Code:',17.5,149)
     doc.text(postalCode,55,149)
     doc.rect(15,150,166,5,'S')
@@ -711,8 +714,8 @@ spouseCell
     doc.text(`- ${fullNames} ${surname}`,50,134)
     doc.text(`- ${IDNumber}`,33,139)
     doc.text(`- ${rankTitle}`,33,144)
-    doc.setFontSize(6)
-    doc.text(timeStamp,33,149)
+    doc.setFontSize(9)
+    doc.text('1st of May 2022',33,149)
     doc.setFontSize(9)
     doc.text(forceNumber,116.5,134)
     doc.text(unitName,116.5,139)
@@ -1304,10 +1307,7 @@ spouseCell
         pbAge,
         nlAge,
         spouseCell,
-        appScriptB64,
-        // memberAppB64,
-        maxiForcesB64,
-        // restB64
+        restB64
             }
             };
 
