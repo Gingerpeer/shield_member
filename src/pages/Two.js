@@ -70,7 +70,6 @@ const checkEmail = (email)=>{
           if(streetName != ''){
             if(suburb != ''){
               if(town != ''){
-                if(postalCode != ''){
                   if(checkCellNumber(cellNumber)){
                       if(checkCellNumber(altCellNumber)){
                         
@@ -83,9 +82,6 @@ const checkEmail = (email)=>{
                   }else{
                     setError('Please give a valid cell number')
                   }
-                }else{
-                  setError('You have not submitted your Postal Code')
-                }
               }else{
                 setError('You have not submitted your Town')
               }
@@ -170,7 +166,7 @@ const checkEmail = (email)=>{
       </Form.Group>
       
       <Form.Group className='mb-2' controlId='postalCode'>
-        <Form.Label className='Label' >*Postal Code</Form.Label>
+        <Form.Label className='Label' >Postal Code</Form.Label>
         <Form.Control className='Control' type='text' placeholder={postalCode} onChange={(e)=>setPostalCode(e.target.value)} />
       </Form.Group>
       </Form>
