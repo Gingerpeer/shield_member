@@ -94,6 +94,10 @@ const CheckInfo = ({
           <Form.Label className='Label' style={{fontSize: '12px'}}>* What is the source of Funds?</Form.Label>
           <Form.Select onChange={(e)=>setSourceIncome(e.target.value)} >
             <option>Salary</option>
+            <option>Pension</option>
+            <option>Business Income</option>
+            <option>Dividend</option>
+            <option>Savings</option>
             <option>Other</option>
           </Form.Select>
           {sourceIncome == 'Other' &&<Form.Control className='Control' type='text' placeholder='Please provide details:' onChange={(e)=>setSourceIncomeDetails(e.target.value)} style={{ marginTop: '20px' }} />}
