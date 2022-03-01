@@ -63,26 +63,32 @@ function App() {
         const [childFullNames,setChildFullNames] = useState('')
         const [childSurname,setChildSurname] = useState('')
         const [childID,setChildID] = useState('')
+        const [childAge,setChildAge] = useState('')
       const [childTitle2,setChildTitle2] = useState('')
       const [childFullNames2,setChildFullNames2] = useState('')
       const [childSurname2,setChildSurname2] = useState('')
       const [childID2,setChildID2] = useState('')
+      const [childAge2,setChildAge2] = useState('')
       const [childTitle3,setChildTitle3] = useState('')
       const [childFullNames3,setChildFullNames3] = useState('')
       const [childSurname3,setChildSurname3] = useState('')
       const [childID3,setChildID3] = useState('')
+      const [childAge3,setChildAge3] = useState('')
     const [childTitle4,setChildTitle4] = useState('')
     const [childFullNames4,setChildFullNames4] = useState('')
     const [childSurname4,setChildSurname4] = useState('')
     const [childID4,setChildID4] = useState('')
+    const [childAge4,setChildAge4] = useState('')
     const [childTitle5,setChildTitle5] = useState('')
     const [childFullNames5,setChildFullNames5] = useState('')
     const [childSurname5,setChildSurname5] = useState('')
     const [childID5,setChildID5] = useState('')
+    const [childAge5,setChildAge5] = useState('')
     const [childTitle6,setChildTitle6] = useState('')
     const [childFullNames6,setChildFullNames6] = useState('')
     const [childSurname6,setChildSurname6] = useState('')
     const [childID6,setChildID6] = useState('')
+    const [childAge6,setChildAge6] = useState('')
     const [childrenIds,setChildrenIds] = useState([])
   
   // Primary Beneficiary;s Details
@@ -224,6 +230,8 @@ function App() {
             setChildSurname={setChildSurname}
             childID={childID}
             setChildID={setChildID}
+            childAge={childAge}
+            setChildAge={setChildAge}
             childTitle2={childTitle2}
             setChildTitle2={setChildTitle2}
             childFullNames2={childFullNames2}
@@ -231,6 +239,8 @@ function App() {
             childSurname2={childSurname2}
             setChildSurname2={setChildSurname2}
             childID2={childID2}
+            childAge2={childAge2}
+            setChildAge2={setChildAge2}
             setChildID2={setChildID2}
             childTitle3={childTitle3}
             setChildTitle3={setChildTitle3}
@@ -240,6 +250,8 @@ function App() {
             setChildSurname3={setChildSurname3}
             childID3={childID3}
             setChildID3={setChildID3}
+            childAge3={childAge3}
+            setChildAge3={setChildAge3}
             childTitle4={childTitle4}
             setChildTitle4={setChildTitle4}
             childFullNames4={childFullNames4}
@@ -248,6 +260,8 @@ function App() {
             setChildSurname4={setChildSurname4}
             childID4={childID4}
             setChildID4={setChildID4}
+            childAge4={childAge4}
+            setChildAge4={setChildAge4}
             childTitle5={childTitle5}
             setChildTitle5={setChildTitle5}
             childFullNames5={childFullNames5}
@@ -256,6 +270,8 @@ function App() {
             setChildSurname5={setChildSurname5}
             childID5={childID5}
             setChildID5={setChildID5}
+            childAge5={childAge5}
+            setChildAge5={setChildAge5}
             childTitle6={childTitle6}
             setChildTitle6={setChildTitle6}
             childFullNames6={childFullNames6}
@@ -264,6 +280,8 @@ function App() {
             setChildSurname6={setChildSurname6}
             childID6={childID6}
             setChildID6={setChildID6}
+            childAge6={childAge6}
+            setChildAge6={setChildAge6}
             childrenIds={childrenIds}
             setChildrenIds={setChildrenIds}
             />} />
