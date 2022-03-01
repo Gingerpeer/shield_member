@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 import Button from 'react-bootstrap/Button';
 import {Form, Row, Col}  from 'react-bootstrap'
 import FileInputComponent from 'react-file-input-previews-base64'
-
+import { useEffect } from 'react';
 
 const Four = ({
   childrenAmount,
@@ -69,6 +69,38 @@ const Four = ({
   setChildAge6,
   setChildrenIds
 }) =>{
+  useEffect(()=>{
+    if(childTitle === 'Mr'){
+      setChildTitle('Male')
+    }else if(childTitle === 'Miss'){
+      setChildTitle('Female')
+    }
+    if(childTitle2 === 'Mr'){
+      setChildTitle2('Male')
+    }else if(childTitle2 === 'Miss'){
+      setChildTitle2('Female')
+    }
+    if(childTitle3 === 'Mr'){
+      setChildTitle3('Male')
+    }else if(childTitle3 === 'Miss'){
+      setChildTitle3('Female')
+    }
+    if(childTitle4 === 'Mr'){
+      setChildTitle4('Male')
+    }else if(childTitle4 === 'Miss'){
+      setChildTitle4('Female')
+    }
+    if(childTitle5 === 'Mr'){
+      setChildTitle5('Male')
+    }else if(childTitle5 === 'Miss'){
+      setChildTitle5('Female')
+    }
+    if(childTitle6 === 'Mr'){
+      setChildTitle6('Male')
+    }else if(childTitle6 === 'Miss'){
+      setChildTitle6('Female')
+    }
+  },[childTitle,childTitle2,childTitle3,childTitle4,childTitle5,childTitle6])
   return(
     <div className="page">
     <h6 style={{fontWeight: '600', marginTop: '25px', textAlign: 'center', color: '#BB1A1B', marginBottom: '25px'}}>4. Dependant Children U21</h6>
