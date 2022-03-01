@@ -30,65 +30,8 @@ const Two = ({
   })=>{
     const [showNext,setShowNext] = useState(false)
     const [error, setError] = useState('')
-    const [province, setProvince] = useState('')
-    const [TownsInProvince,setTownsInProvince] = useState('')
-
-
-    // logic to make towns and suburbs collaborate with provinces
-    const townsArray = []
-    // towns in provided data
-    for(let i = 0; i < Suburbs.length; i++){
-      townsArray.push(Suburbs[i].Town)
-    }
-    const uniqueTowns = Array.from(new Set(townsArray))
-    // towns with provinces from https://raw.githubusercontent.com/dirkstrauss/SouthAfrica/master/SouthAfricanCities.json
-    // function to see only towns in province
-    // provinces
-    const TownsPerProvince = TownsProvinces.sort( function( a, b ) {
-      a = a.AccentCity.toLowerCase();
-      b = b.AccentCity.toLowerCase();
-  
-      return a < b ? -1 : a > b ? 1 : 0;
-  })
-    // console.log(TownsPerProvince)
-    const wc = []
-    const ec = []
-    const nc = []
-    const nw = []
-    const fs = []
-    const gp = []
-    const lp = []
-    const kzn = []
-    const mp = []
-      for(let i = 0;i<TownsPerProvince.length;i++){
-        if(TownsPerProvince[i].ProvinceName == "Western Cape"){
-          wc.push(<option key={i}>{TownsPerProvince[i].AccentCity}</option>)
-        }
-        if(TownsPerProvince[i].ProvinceName == "Eastern Cape"){
-          ec.push(<option key={i}>{TownsPerProvince[i].AccentCity}</option>)
-        }
-        if(TownsPerProvince[i].ProvinceName == "Northern Cape"){
-          nc.push(<option key={i}>{TownsPerProvince[i].AccentCity}</option>)
-        }
-        if(TownsPerProvince[i].ProvinceName == "North West"){
-          nw.push(<option key={i}>{TownsPerProvince[i].AccentCity}</option>)
-        }
-        if(TownsPerProvince[i].ProvinceName == "Free State"){
-          fs.push(<option key={i}>{TownsPerProvince[i].AccentCity}</option>)
-        }
-        if(TownsPerProvince[i].ProvinceName == "Mpumalanga"){
-          mp.push(<option key={i}>{TownsPerProvince[i].AccentCity}</option>)
-        }
-        if(TownsPerProvince[i].ProvinceName == "Gauteng"){
-          gp.push(<option key={i}>{TownsPerProvince[i].AccentCity}</option>)
-        }
-        if(TownsPerProvince[i].ProvinceName == "KwaZulu Natal"){
-          kzn.push(<option key={i}>{TownsPerProvince[i].AccentCity}</option>)
-        }
-        if(TownsPerProvince[i].ProvinceName == "Limpopo"){
-          lp.push(<option key={i}>{TownsPerProvince[i].AccentCity}</option>)
-        }
-      }
+    const [province,setProvince] = useState('')
+    
     const checkCellNumber = (number) =>{
       if(cellNumber.charAt(0) === '0'){
         if(cellNumber.length > 10){
@@ -159,35 +102,6 @@ const checkEmail = (email)=>{
         setError('You have not submitted your Cell Number')
       }
     }
-    useEffect(()=>{
-      if(province == 'Western Cape'){
-        setTownsInProvince(wc)
-      }
-      if(province == 'Eastern Cape'){
-        setTownsInProvince(ec)
-      }
-      if(province == 'Northern Cape'){
-        setTownsInProvince(nc)
-      }
-      if(province == 'North West'){
-        setTownsInProvince(nw)
-      }
-      if(province == 'Free State'){
-        setTownsInProvince(fs)
-      }
-      if(province == 'Mpumalanga'){
-        setTownsInProvince(mp)
-      }
-      if(province == 'Gauteng'){
-        setTownsInProvince(gp)
-      }
-      if(province == 'KwaZulu Natal'){
-        setTownsInProvince(kzn)
-      }
-      if(province == 'Limpopo'){
-        setTownsInProvince(lp)
-      }
-    },[province])
     
   return(
     <div className="page">
@@ -247,10 +161,7 @@ const checkEmail = (email)=>{
         <Form.Label className='Label' style={{
           
         }} >*Town</Form.Label>
-        <Form.Select onChange={(e)=>setTown(e.target.value)}>
-          <option>Choose Town</option>
-          {TownsInProvince}
-        </Form.Select>
+        <Form.Control className='Control' type='text' placeholder={town} onChange={(e)=>setTown(e.target.value)} />
       </Form.Group>
 
       <Form.Group className='mb-2' controlId='suburb'>
