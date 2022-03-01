@@ -17,6 +17,8 @@ const Five = ({
           setPbCellNumber,
           pbIdData,
           setPbIdData,
+          pbAge,
+          setPbAge,
           nlTitle,
           setNlTitle,
           nlFullNames,
@@ -36,7 +38,9 @@ const Five = ({
           nlLandline,
           setNlLandline,
           nlRelationship,
-          setNlRelationship
+          setNlRelationship,
+          nlAge,
+          setNlAge
 }) =>{
   const [showNext,setShowNext] = useState(false)
     const [error, setError] = useState('')
@@ -155,6 +159,10 @@ const checkEmail = (email)=>{
           <Form.Label className='Label' >*Primary Beneficiary ID or Date of Birth</Form.Label>
           <Form.Control className='Control' type='text' placeholder={pbID} onChange={(e)=>setPbID(e.target.value)} style={{ marginTop: '20px' }} />
       </Form.Group>
+      <Form.Group className='mb-2' controlId='pbAge'>
+          <Form.Label className='Label' >*Primary Beneficiary Age</Form.Label>
+          <Form.Control className='Control' type='text' placeholder={pbAge} onChange={(e)=>setPbAge(e.target.value)} style={{ marginTop: '20px' }} />
+      </Form.Group>
       <FileInputComponent
                 labelText="Upload ID"
                 labelStyle={{fontSize:14, marginRight: '14px', fontWeight: '600'}}
@@ -183,6 +191,10 @@ const checkEmail = (email)=>{
       <Form.Group className='mb-2' controlId='nlIDNumber'>
           <Form.Label className='Label' >Next in Line Beneficiary ID or Date of Birth</Form.Label>
           <Form.Control className='Control' type='text' placeholder={nlIDNumber} onChange={(e)=>setNlIDNumber(e.target.value)} style={{ marginTop: '20px' }} />
+      </Form.Group>
+      <Form.Group className='mb-2' controlId='nlAge'>
+          <Form.Label className='Label' >Next in Line Beneficiary Age</Form.Label>
+          <Form.Control className='Control' type='text' placeholder={nlAge} onChange={(e)=>setNlAge(e.target.value)} style={{ marginTop: '20px' }} />
       </Form.Group>
       
           <Form.Group className='mb-2' controlId='nlLandline'>

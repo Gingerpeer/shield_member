@@ -100,6 +100,7 @@ function App() {
   const [pbIdData,setPbIdData] = useState([])
   const [pbLandline,setPbLandline] = useState('')
   const [pbRelationship,setPbRelationship] = useState('')
+  const [pbAge,setPbAge] = useState('')
   // next in Line to beneficiary's details
   const [nlTitle,setNlTitle] = useState('')
   const [nlFullNames,setNlFullNames] = useState('')
@@ -109,6 +110,7 @@ function App() {
   const [nlIdData,setNlIdData] = useState([])
   const [nlLandline,setNlLandline] = useState('')
   const [nlRelationship,setNlRelationship] = useState('')
+  const [nlAge,setNlAge] = useState('')
   // payment method
   const [paymentMethod,setPaymentMethod] = useState('Payroll')
   const [bankingDetailsDO,setBankingDetailsDO] = useState([])
@@ -302,6 +304,8 @@ function App() {
             setPbLandline={setPbLandline}
             pbRelationship={pbRelationship}
             setPbRelationship={setPbRelationship}
+            pbAge={pbAge}
+            setPbAge={setPbAge}
             nlLandline={nlLandline}
             setNlLandline={setNlLandline}
             nlRelationship={nlRelationship}
@@ -318,6 +322,8 @@ function App() {
             setNlCellNumber={setNlCellNumber}
             nlIdData={nlIdData}
             setNlIdData={setNlIdData}
+            nlAge={nlAge}
+            setNlAge={setNlAge}
             />} />
           <Route path='/6' element={<Six
             paymentMethod={paymentMethod}
@@ -386,31 +392,45 @@ function App() {
             childFullNames={childFullNames}
             childSurname={childSurname}
             childID={childID}
+            childAge={childAge}
+            setChildAge={setChildAge}
             childTitle2={childTitle2}
             childFullNames2={childFullNames2}
             childSurname2={childSurname2}
             childID2={childID2}
+            childAge2={childAge2}
+            setChildAge2={setChildAge2}
             childTitle3={childTitle3}
             childFullNames3={childFullNames3}
             childSurname3={childSurname3}
             childID3={childID3}
+            childAge3={childAge3}
+            setChildAge3={setChildAge3}
             childTitle4={childTitle4}
             childFullNames4={childFullNames4}
             childSurname4={childSurname4}
             childID4={childID4}
+            childAge4={childAge4}
+            setChildAge4={setChildAge4}
             childTitle5={childTitle5}
             childFullNames5={childFullNames5}
             childSurname5={childSurname5}
             childID5={childID5}
+            childAge5={childAge5}
+            setChildAge5={setChildAge5}
             childTitle6={childTitle6}
             childFullNames6={childFullNames6}
             childSurname6={childSurname6}
             childID6={childID6}
+            childAge6={childAge6}
+            setChildAge6={setChildAge6}
             childrenIds={childrenIds}
             pbTitle={pbTitle}
             pbFullNames={pbFullNames}
             pbSurname={pbSurname}
             pbID={pbID}
+            pbAge={pbAge}
+            setPbAge={setPbAge}
             pbCellNumber={pbCellNumber}
             pbIdData={pbIdData}
             setPbIdData={setPbIdData}
@@ -421,6 +441,8 @@ function App() {
             nlCellNumber={nlCellNumber}
             nlIdData={nlIdData}
             setNlIdData={setNlIdData}
+            nlAge={nlAge}
+            setNlAge={setNlAge}
             paymentMethod={paymentMethod}
             signature={signature}
             base64Data={base64Data}
