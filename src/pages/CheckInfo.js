@@ -28,30 +28,18 @@ const CheckInfo = ({
 
 
   const checkAll = () =>{
-    if(dpipDetails == ''){
+    if(dpip == ''){
       setError('You have not indicated if you are a DPIP')
-    }else if(fppoDetails == ''){
+    }else if(fppo == ''){
       setError('You have not indicated if you are a FPPO')
-    }else if(closeDpipFppoDetails == ''){
+    }else if(closeDpipFppo == ''){
       setError('You have not indicated if you are a close family member or have any association with a DPIP or FPPO')
     }else{
       setShowNext(true)
+      setError('')
     }
   }
-  useEffect(()=>{
-    if(dpip === 'No'){
-      setDpipDetails('No')
-      setDpip('')
-    }
-    if(fppo === 'No'){
-      setFppoDetails('No')
-      setFppo('')
-    }
-    if(closeDpipFppo === 'No'){
-      setCloseDpipFppoDetails('No')
-      setCloseDpipFppo('')
-    }
-  },[dpip,fppo,setDpipDetails,setDpip,setFppoDetails,setFppo,closeDpipFppo,closeDpipFppoDetails,setCloseDpipFppoDetails,setCloseDpipFppo])
+
   return(
     <div className='page'>
       <div id='clientDueDiligence'>
