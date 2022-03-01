@@ -92,7 +92,9 @@ nlRelationship,
 sourceIncome,
 setSourceIncome,
 sourceIncomeDetails,
-setSourceIncomeDetails
+setSourceIncomeDetails,
+mainAge,
+setMainAge
 }) =>{
   const date = Date.now()
   const d = new Date(parseInt(date,10))
@@ -1235,6 +1237,7 @@ useEffect(()=>{
         surname,
         IDNumber,
         mainID,
+        mainAge,
         cellNumber,
         altCellNumber,
         landlineNumber,

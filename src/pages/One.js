@@ -19,7 +19,9 @@ const One = ({
   setSurname,
   IDNumber,
   setIDNumber,
-  setMainId
+  setMainId,
+  mainAge,
+  setMainAge
   })=>{
     const armsOfServiceType = [
       'SA Army', 
@@ -210,15 +212,19 @@ const One = ({
         <Form.Label className='Label' >*Full Names</Form.Label>
         <Form.Control className='Control' type='text' placeholder={fullNames} onChange={(e)=>setFullNames(e.target.value)} />
       </Form.Group>
-      <Form.Group className='mb-2' controlId='formForceNumber'>
+      <Form.Group className='mb-2' controlId='surname'>
         <Form.Label className='Label' >*Surname</Form.Label>
         <Form.Control className='Control' type='text' placeholder={surname} onChange={(e)=>setSurname(e.target.value)} />
       </Form.Group>
-      <Form.Group className='mb-2' controlId='formForceNumber'>
-        <Form.Label className='Label' >*ID Number or Date of Birth</Form.Label>
+      <Form.Group className='mb-2' controlId='mainAge'>
+        <Form.Label className='Label' >*Age</Form.Label>
+        <Form.Control className='Control' type='text' placeholder={mainAge} onChange={(e)=>setMainAge(e.target.value)} />
+      </Form.Group>
+      <Form.Group className='mb-2' controlId='IDNumber'>
+        <Form.Label className='Label' >*ID Number</Form.Label>
         <Form.Control className='Control' type='text' placeholder={IDNumber} onChange={(e)=>setIDNumber(e.target.value)} />
       </Form.Group>
-   
+            
 
         <FileInputComponent
             labelText="Upload ID"

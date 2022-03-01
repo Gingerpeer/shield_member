@@ -30,6 +30,7 @@ function App() {
   const [surname, setSurname] = useState('')
   const [IDNumber, setIDNumber] = useState('')
   const [mainId, setMainId] = useState([])
+  const [mainAge,setMainAge] = useState('')
   // Page Two
   const [cellNumber, setCellNumber] = useState('')
   const [altCellNumber, setAltCellNumber] = useState('')
@@ -162,6 +163,8 @@ function App() {
             setIDNumber={setIDNumber}
             mainID={mainId}
             setMainId={setMainId}
+            mainAge={mainAge}
+            setMainAge={setMainAge}
             />} />
           <Route path='/2' element={<Two
             cellNumber={cellNumber}
@@ -418,6 +421,8 @@ function App() {
             setSourceIncome={setSourceIncome}
             sourceIncomeDetails={sourceIncomeDetails}
             setSourceIncomeDetails={setSourceIncomeDetails}
+            mainAge={mainAge}
+            setMainAge={setMainAge}
             />} />
         </Routes>
     </div>
