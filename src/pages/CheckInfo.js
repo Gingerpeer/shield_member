@@ -1,7 +1,8 @@
 import Form  from 'react-bootstrap/Form'
 import { Link } from 'react-router-dom'
 import Button from 'react-bootstrap/Button'
-import { useEffect } from 'react'
+import { useEffect,useState } from 'react'
+import FormCheckLabel from 'react-bootstrap/esm/FormCheckLabel'
 
 const CheckInfo = ({
   sourceIncome,
@@ -21,7 +22,22 @@ const CheckInfo = ({
   setCloseDpipFppo,
   setCloseDpipFppoDetails
 }) => {
+  const [error, setError] = useState('')
+  const [showNext,setShowNext] = useState(false)
 
+
+
+  const checkAll = () =>{
+    if(dpipDetails == ''){
+      setError('You have not indicated if you are a DPIP')
+    }else if(fppoDetails == ''){
+      setError('You have not indicated if you are a FPPO')
+    }else if(closeDpipFppoDetails == ''){
+      setError('You have not indicated if you are a close family member or have any association with a DPIP or FPPO')
+    }else{
+      setShowNext(true)
+    }
+  }
   useEffect(()=>{
     if(dpip === 'No'){
       setDpipDetails('No')
@@ -113,13 +129,15 @@ const CheckInfo = ({
           {closeDpipFppo == 'Yes' &&<Form.Control className='Control' type='text' placeholder='Please provide details:' onChange={(e)=>setCloseDpipFppoDetails(e.target.value)} style={{ marginTop: '20px' }} />}
         </Form.Group>
       </Form>
+      <div style={{textAlign: 'center', padding: '5vw'}}><h6 style={{color: 'red', fontWeight: 'bold',textAlign: 'center'}}>{error}</h6></div>
         <div>
         <Link to='/6'>
-        <Button variant='secondary w-25' style={{ fontWeight: '600', background: '#D0D0D0', border: 'none', float:'left', marginTop: '3vw', marginLeft: '20vw' }}>BACK</Button>
+        <Button variant='secondary w-25' style={{ fontWeight: '600', background: '#D0D0D0', border: 'none', float:'left', marginLeft: '20vw' }}>BACK</Button>
       </Link>
-      <Link to='/7'>
-        <Button variant='danger w-25' style={{ fontWeight: '600', background: '#BB1A1B', border: 'none', float:'right', marginTop: '3vw', marginRight: '20vw' }} >NEXT</Button>
-      </Link>
+      {showNext &&  <Link to='/7'>
+          <Button variant='danger w-25' style={{ fontWeight: '600', background: '#BB1A1B', border: 'none', float:'right', marginRight: '20vw', marginBottom: '5vw' }} >NEXT</Button>
+        </Link>}
+        {!showNext && <Button variant='danger w-25' style={{ fontWeight: '600', background: '#BB1A1B', border: 'none', float:'right', marginRight: '20vw', marginBottom: '5vh' }} onClick={checkAll} >Submit</Button>}
         </div>
    </div>
   )

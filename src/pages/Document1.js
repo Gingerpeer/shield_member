@@ -1373,9 +1373,9 @@ useEffect(()=>{
         </div>
       </div>}
       {!approved && <div style={{overflow:'scroll',height:600}}>
-        <h6 style={{fontWeight: '600', marginTop: '25px', textAlign: 'center', color: '#BB1A1B', marginBottom: '25px'}}>You can view your application now by clicking the button bellow</h6>
+        <h6 style={{fontWeight: '600', marginTop: '25px', textAlign: 'center', color: '#BB1A1B', marginBottom: '25px'}}>You can view your application now by clicking the button below</h6>
         <p>Please note that your application is not completed until you have clicked the "I Accept the Terms of this Agreement" button</p>
-          <Button variant='danger w-50' style={{ fontWeight: '600', background: '#BB1A1B', border: 'none' }} onClick={(e)=>pdfPayrollDeductionScript('view')}>View Pdf</Button>
+          <Button variant='danger w-50' style={{ fontWeight: '600', background: '#BB1A1B', border: 'none' }} onClick={(e)=>pdfPayrollDeductionScript('view')}>View Pdf and Terms and Conditions</Button>
           <Button variant='danger w-75' style={{ fontWeight: '600', background: '#BB1A1B', border: 'none',marginTop: "5vh" }} onClick={(e)=>setApproved(true)}>I Accept the Terms of this Agreement</Button>
         </div>}
     </div>
