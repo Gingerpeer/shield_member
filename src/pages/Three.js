@@ -22,7 +22,9 @@ const Three = ({
   setSpouseSurname,
   spouseID,
   setSpouseID,
-  setSpouseIdFile
+  setSpouseIdFile,
+  spouseAge,
+  setSpouseAge
   })=>{
     const [showNext,setShowNext] = useState(false)
     const [error, setError] = useState('')
@@ -96,6 +98,10 @@ const Three = ({
       <Form.Group className='mb-2' controlId='spouseID'>
         <Form.Label className='Label' >*Spouse ID Number or Date of Birth</Form.Label>
         <Form.Control className='Control' type='text' placeholder={spouseID} onChange={(e)=>setSpouseID(e.target.value)} />
+      </Form.Group>
+      <Form.Group className='mb-2' controlId='spouseAge'>
+        <Form.Label className='Label' >*Spouse Age</Form.Label>
+        <Form.Control className='Control' type='text' placeholder={spouseAge} onChange={(e)=>setSpouseAge(e.target.value)} />
       </Form.Group>
 
           <FileInputComponent

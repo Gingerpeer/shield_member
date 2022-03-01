@@ -94,7 +94,9 @@ setSourceIncome,
 sourceIncomeDetails,
 setSourceIncomeDetails,
 mainAge,
-setMainAge
+setMainAge,
+spouseAge,
+setSpouseAge
 }) =>{
   const date = Date.now()
   const d = new Date(parseInt(date,10))
@@ -1308,7 +1310,9 @@ useEffect(()=>{
         nlLandline,
         nlRelationship,
         sourceIncome,
-        sourceIncomeDetails
+        sourceIncomeDetails,
+        spouseAge,
+        setSpouseAge
       })
   }
   
