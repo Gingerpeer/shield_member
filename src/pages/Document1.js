@@ -1108,8 +1108,7 @@ setSourceIncomeDetails
     
   const postToApi = async (data1) =>{
     console.log('Posting to api...',data1)
-    let b64 = btoa(JSON.stringify(data1))
-    console.log('This is the data', signature)
+    console.log('This is the data',)
     var config = {
               method: 'post',
               url: 'https://apiv2.msgl.ink/',
