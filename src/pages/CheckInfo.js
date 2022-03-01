@@ -24,15 +24,15 @@ const CheckInfo = ({
 
   useEffect(()=>{
     if(dpip === 'No'){
-      setDpipDetails('N/A')
+      setDpipDetails('No')
       setDpip('')
     }
     if(fppo === 'No'){
-      setFppoDetails('N/A')
+      setFppoDetails('No')
       setFppo('')
     }
     if(closeDpipFppo === 'No'){
-      setCloseDpipFppoDetails('N/A')
+      setCloseDpipFppoDetails('No')
       setCloseDpipFppo('')
     }
   },[dpip,fppo,setDpipDetails,setDpip,setFppoDetails,setFppo,closeDpipFppo,closeDpipFppoDetails,setCloseDpipFppoDetails,setCloseDpipFppo])
@@ -75,7 +75,7 @@ const CheckInfo = ({
       </div>
       <Form>
         <Form.Group className='mb-2' controlId='sourceIncome'>
-          <Form.Label className='Label' style={{fontSize: '12px'}}>What is the source of Funds?</Form.Label>
+          <Form.Label className='Label' style={{fontSize: '12px'}}>* What is the source of Funds?</Form.Label>
           <Form.Select onChange={(e)=>setSourceIncome(e.target.value)} >
             <option>Salary</option>
             <option>Other</option>
@@ -84,7 +84,7 @@ const CheckInfo = ({
         </Form.Group>      
 
         <Form.Group className='mb-2' controlId='dpip'>
-          <Form.Label className='Label' style={{fontSize: '12px'}}>Are you a Domestic Prominent Influential Persons (DPIP)?</Form.Label>
+          <Form.Label className='Label' style={{fontSize: '12px'}}>* Are you a Domestic Prominent Influential Persons (DPIP)?</Form.Label>
           <Form.Select onChange={(e)=>setDpip(e.target.value)} >
             <option>Choose Yes or No</option>
             <option>Yes</option>
@@ -94,7 +94,7 @@ const CheckInfo = ({
         </Form.Group>
 
         <Form.Group className='mb-2' controlId='fppo'>
-          <Form.Label className='Label' style={{fontSize: '12px'}}>Are you a Foreign Prominent Public Officials (FPPO),?</Form.Label>
+          <Form.Label className='Label' style={{fontSize: '12px'}}>* Are you a Foreign Prominent Public Officials (FPPO),?</Form.Label>
           <Form.Select onChange={(e)=>setFppo(e.target.value)} >
             <option>Choose Yes or No</option>
             <option>Yes</option>
@@ -104,7 +104,7 @@ const CheckInfo = ({
         </Form.Group>
 
         <Form.Group className='mb-2' controlId='closeDpipFppo'>
-          <Form.Label className='Label' style={{fontSize: '12px'}}>Is a close family member or any associates of yours a DPIP or FPPO?</Form.Label>
+          <Form.Label className='Label' style={{fontSize: '12px'}}>* Is a close family member or any associates of yours a DPIP or FPPO?</Form.Label>
           <Form.Select onChange={(e)=>setCloseDpipFppo(e.target.value)} >
             <option>Choose Yes or No</option>
             <option>Yes</option>
