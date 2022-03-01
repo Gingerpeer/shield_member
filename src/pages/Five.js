@@ -106,7 +106,6 @@ const checkEmail = (email)=>{
     const requiredSubmitted = () =>{
   if(pbFullNames != ''){
     if(pbSurname != ''){
-      if(pbID != ''){
         if(checkCellNumber(pbCellNumber)){
           
             setShowNext(true)
@@ -114,9 +113,6 @@ const checkEmail = (email)=>{
         }else{
           setError('Please give a valid cell number')
         }
-       }else{
-        setError('You have not submitted your Beneficiary ID Number')
-      }
     }else{
       setError('You have not submitted your Beneficiary Surname')
     }
@@ -142,25 +138,25 @@ const checkEmail = (email)=>{
       </Form.Group>
 
       <Form.Group className='mb-2' controlId='pbCellNumber'>
-          <Form.Label className='Label' >*Primary Beneficiary Cell Number</Form.Label>
+          <Form.Label className='Label' >Primary Beneficiary Cell Number</Form.Label>
           <Form.Control className='Control' type='text' placeholder={pbCellNumber} onChange={(e)=>setPbCellNumber(e.target.value)} style={{ marginTop: '20px' }} />
       </Form.Group>
       
       <Form.Group className='mb-2' controlId='pbLandline'>
-          <Form.Label className='Label' >*Primary Beneficiary Landline</Form.Label>
+          <Form.Label className='Label' >Primary Beneficiary Landline</Form.Label>
           <Form.Control className='Control' type='text' placeholder={pbID} onChange={(e)=>setPbLandline(e.target.value)} style={{ marginTop: '20px' }} />
       </Form.Group>
       <Form.Group className='mb-2' controlId='pbRelationship'>
-          <Form.Label className='Label' >*Primary Beneficiary Relationship</Form.Label>
+          <Form.Label className='Label' >Primary Beneficiary Relationship</Form.Label>
           <Form.Control className='Control' type='text' placeholder={pbID} onChange={(e)=>setPbRelationship(e.target.value)} style={{ marginTop: '20px' }} />
       </Form.Group>
 
       <Form.Group className='mb-2' controlId='pbID'>
-          <Form.Label className='Label' >*Primary Beneficiary ID or Date of Birth</Form.Label>
+          <Form.Label className='Label' >Primary Beneficiary ID or Date of Birth</Form.Label>
           <Form.Control className='Control' type='text' placeholder={pbID} onChange={(e)=>setPbID(e.target.value)} style={{ marginTop: '20px' }} />
       </Form.Group>
       <Form.Group className='mb-2' controlId='pbAge'>
-          <Form.Label className='Label' >*Primary Beneficiary Age</Form.Label>
+          <Form.Label className='Label' >Primary Beneficiary Age</Form.Label>
           <Form.Control className='Control' type='text' placeholder={pbAge} onChange={(e)=>setPbAge(e.target.value)} style={{ marginTop: '20px' }} />
       </Form.Group>
       <FileInputComponent
