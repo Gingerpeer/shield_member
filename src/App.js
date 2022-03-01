@@ -56,6 +56,7 @@ function App() {
   const [spouseID,setSpouseID] = useState('')
   const [spouseIdFile,setSpouseIdFile] = useState([])
   const [spouseAge,setSpouseAge] = useState('')
+  const [spouseCell,setSpouseCell] = useState('')
   // Dependents under 21
   const [childrenAmount,setChildrenAmount] = useState(0)
         // needs to loop over the amount of children and add to state
@@ -220,6 +221,8 @@ function App() {
             setSpouseIdFile={setSpouseIdFile}
             spouseAge={spouseAge}
             setSpouseAge={setSpouseAge}
+            spouseCell={spouseCell}
+            setSpouseCell={setSpouseCell}
             />} />
           <Route path='/4' element={<Four
             childrenAmount={childrenAmount}
@@ -468,6 +471,7 @@ function App() {
             setMainAge={setMainAge}
             spouseAge={spouseAge}
             setSpouseAge={setSpouseAge}
+            spouseCell={spouseCell}
             />} />
         </Routes>
     </div>

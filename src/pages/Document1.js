@@ -112,7 +112,8 @@ setChildAge6,
 pbAge,
 setPbAge,
 nlAge,
-setNlAge
+setNlAge,
+spouseCell
 }) =>{
   const date = Date.now()
   const d = new Date(parseInt(date,10))
@@ -136,7 +137,7 @@ setNlAge
     
     var doc = new jsPdf()
     // add image
-    
+    // *********** Payroll Deduction Member Application Form Script
     doc.setFont('Helvetica','bold')
     doc.setTextColor('#444')
     doc.setFontSize(16)
@@ -337,6 +338,7 @@ setNlAge
     doc.setFillColor('#FFEFED')
     doc.rect(15,15,166,5, 'FD')
     doc.setFont('Helvetica','bold')
+    // Member due diligence 1
     doc.text('Member Due Diligence',75,18.5)
     doc.rect(15,20,166,60,'S')
     doc.setFont('Helvetica','normal')
@@ -553,7 +555,7 @@ setNlAge
     doc.text('Contact Number',17.5,254)
     doc.text(`${spouseFullNames} ${spouseSurname}`,55,244)
     doc.text(spouseID,55,249)
-    doc.text(altCellNumber,55,254)
+    doc.text(spouseCell,55,254)
     doc.text('Name & Surname:',93,244)
     doc.text('ID Number:',93,249)
     doc.text('Contact Number',93,254)
@@ -1225,7 +1227,8 @@ setNlAge
         childAge5,
         childAge6,
         pbAge,
-        nlAge
+        nlAge,
+        spouseCell
             }
             };
 
@@ -1349,7 +1352,8 @@ useEffect(()=>{
         childAge5,
         childAge6,
         pbAge,
-        nlAge
+        nlAge,
+        spouseCell
       })
   }
   

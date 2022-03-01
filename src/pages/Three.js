@@ -24,11 +24,39 @@ const Three = ({
   setSpouseID,
   setSpouseIdFile,
   spouseAge,
-  setSpouseAge
+  setSpouseAge,
+  spouseCell,
+  setSpouseCell
   })=>{
     const [showNext,setShowNext] = useState(false)
     const [error, setError] = useState('')
 
+
+    const checkCellNumber = (number) =>{
+      if(number.charAt(0) === '0'){
+        if(number.length > 10){
+          setError('Please give a valid cell number')
+          return false
+        }else if(number.length < 10){ 
+          setError('Please give a valid cell number')
+          return false
+      }else{
+        return true
+    } 
+  }
+  if(number.charAt(0) === '2'){
+    if(number.length > 11){
+      setError('Please give a valid cell number')
+      return false
+    }else if(number.length < 11){ 
+      setError('Please give a valid cell number')
+      return false
+  }else{
+    console.log('Your number is exactly ten')
+    return true
+} 
+}
+}
     const validateID = (id) => {
 
       if (id) {
@@ -52,12 +80,18 @@ const Three = ({
 
     const requiredSubmitted = () =>{
                 if(maritalStatus != ''){
+                  if(checkCellNumber(spouseCell)){
                     setShowNext(true)
                     setError('Please check that all info is correct then click next')
                 }else{
+                  setError('Please give a valid cell number')
+                }
+            }else{
                   setError('You have not submitted your Marital Status')
                 }
+
               }
+              
   return(
     <div className="page">
       <h6 style={{fontWeight: '600', marginTop: '25px', textAlign: 'center', color: '#BB1A1B', marginBottom: '25px'}}>3. Unit Contact Details</h6>
@@ -102,6 +136,10 @@ const Three = ({
       <Form.Group className='mb-2' controlId='spouseAge'>
         <Form.Label className='Label' >*Spouse Age</Form.Label>
         <Form.Control className='Control' type='text' placeholder={spouseAge} onChange={(e)=>setSpouseAge(e.target.value)} />
+      </Form.Group>
+      <Form.Group className='mb-2' controlId='spouseCell'>
+        <Form.Label className='Label' >*Spouse Number</Form.Label>
+        <Form.Control className='Control' type='text' placeholder={spouseCell} onChange={(e)=>setSpouseCell(e.target.value)} />
       </Form.Group>
 
           <FileInputComponent
