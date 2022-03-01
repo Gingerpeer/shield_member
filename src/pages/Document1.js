@@ -264,6 +264,7 @@ setNlAge
     doc.text('Fax: 086 502 7142',15,95)
     doc.text('Email: queries@sa-armyfoundation.co.za',15,100)
     doc.addPage()
+    // *******************************************Payroll Deduction Member Application Form
     doc.setFont('Helvetica','bold')
     doc.setTextColor('#444')
     doc.setFontSize(16)
@@ -344,7 +345,8 @@ setNlAge
     doc.text('the transaction. The nature and purpose of this transaction is to secure Group Life and Funeral cover.',17,35)
     doc.text('What is the source of Funds?',17,40)
     doc.setFont('Helvetica','bold')
-    doc.text('Other: _____________',140,40)
+    doc.text(sourceIncome,70,40)
+    if(sourceIncome == 'Other'){doc.text('Other: _____________',140,40)}
     doc.setFont('Helvetica','normal')
     doc.text('I do hereby declare that the source of the funds that I expect to use in concluding transactions with',17,45)
     doc.text('Shield Life® Ltd originates from the sources indicated above. I further confirm that these funds are',17,50)
