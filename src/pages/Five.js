@@ -160,11 +160,11 @@ const checkEmail = (email)=>{
       </Form.Group>
 
       <Form.Group className='mb-2' controlId='pbID'>
-          <Form.Label className='Label' >Primary Beneficiary ID or Date of Birth</Form.Label>
+          <Form.Label className='Label' >*Primary Beneficiary ID or Date of Birth</Form.Label>
           <Form.Control className='Control' type='text' placeholder={pbID} onChange={(e)=>setPbID(e.target.value)} style={{ marginTop: '20px' }} />
       </Form.Group>
       <Form.Group className='mb-2' controlId='pbAge'>
-          <Form.Label className='Label' >Primary Beneficiary Age</Form.Label>
+          <Form.Label className='Label' >*Primary Beneficiary Age</Form.Label>
           <Form.Control className='Control' type='text' placeholder={pbAge} onChange={(e)=>setPbAge(e.target.value)} style={{ marginTop: '20px' }} />
       </Form.Group>
       <FileInputComponent
