@@ -35,7 +35,7 @@ const Six = ({paymentMethod, setPaymentMethod,monthlyPremium,armsOfService,banki
          if(bankName == 'ABSA'){
             branch = '632005'
           }
-          if(bankName == 'Captitec'){
+          if(bankName == 'Capitec'){
             branch = '470010'
           }
           if(bankName == 'Bidvest'){
