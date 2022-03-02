@@ -104,20 +104,28 @@ const checkEmail = (email)=>{
 
 
     const requiredSubmitted = () =>{
-  if(pbFullNames != ''){
-    if(pbSurname != ''){
-        if(checkCellNumber(pbCellNumber)){
-          
-            setShowNext(true)
-            setError('Please check that all info is correct then click next')
+      if(pbAge != ''){
+      if(pbID != ''){
+      if(pbFullNames != ''){
+        if(pbSurname != ''){
+            if(checkCellNumber(pbCellNumber)){
+              
+                setShowNext(true)
+                setError('Please check that all info is correct then click next')
+            }else{
+              setError('Please give a valid cell number')
+            }
         }else{
-          setError('Please give a valid cell number')
+          setError('You have not submitted your Beneficiary Surname')
         }
+      }else{
+        setError('You have not submitted your Primary Beneficiary Names')
+      }
     }else{
-      setError('You have not submitted your Beneficiary Surname')
+      setError('You have not submitted your Primary Beneficiary ID or Date of Birth')
     }
   }else{
-    setError('You have not submitted your Primary Beneficiary Names')
+    setError('You have not submitted your Primary Beneficiary Age')
   }
     }
   return(

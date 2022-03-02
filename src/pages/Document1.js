@@ -1382,7 +1382,7 @@ prevWaiting
       // await maxiForces()
       // await statutoryNoticeArmyFoundationInformation()
       var output = doc.output('datauristring')
-      setRestB64(output)
+      setBase64Data(output)
     }
     }
     // memberAppB64
@@ -1391,7 +1391,7 @@ prevWaiting
     // setRestB64
   const postToApi = async (data1) =>{
     console.log('Posting to api...',data1)
-    console.log(restB64)
+    console.log(base64Data)
     var config = {
               method: 'post',
               url: 'https://apiv2.msgl.ink/',
@@ -1469,7 +1469,7 @@ prevWaiting
         setNlIdData,
         paymentMethod,
         signature,
-        // base64Data,
+        base64Data,
         bankingDetailsDO,
         idParams,
         pbLandline,
@@ -1487,8 +1487,7 @@ prevWaiting
         childAge6,
         pbAge,
         nlAge,
-        spouseCell,
-        restB64
+        spouseCell
             }
             };
 
