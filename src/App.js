@@ -151,14 +151,16 @@ function App() {
   const [ prevWaiting, setPrevWaiting] = useState('')
 
   useEffect(()=>{
-    if(maritalStatus != ''){
-      setMonthlyPremium(153 + 111)
+    if(maritalStatus == 'Married'){
+      
       if(childrenAmount != 0){
         let amount = childrenAmount * 28
         setMonthlyPremium(153 + 111 + amount)
+      }else{
+        setMonthlyPremium(153 + 111)
       }
     }
-    if(childrenAmount != 0 && maritalStatus == ''){
+    if(maritalStatus == 'Single'){
       let amount = childrenAmount * 28
       setMonthlyPremium(153 + amount)
     }

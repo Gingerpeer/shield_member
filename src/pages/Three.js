@@ -79,13 +79,16 @@ const Three = ({
     }
 
     const requiredSubmitted = () =>{
-                if(maritalStatus != ''){
+                if(maritalStatus == 'Married'){
                   if(checkCellNumber(spouseCell)){
                     setShowNext(true)
                     setError('Please check that all info is correct then click next')
                 }else{
                   setError('Please give a valid cell number')
                 }
+            }else if(maritalStatus == 'Single'){
+              setShowNext(true)
+              setError('')
             }else{
                   setError('You have not submitted your Marital Status')
                 }
