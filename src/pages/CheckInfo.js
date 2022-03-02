@@ -35,7 +35,7 @@ const CheckInfo = ({
       setError('You have not indicated if you are a close family member or have any association with a DPIP or FPPO')
     }else{
       setShowNext(true)
-      setError('')
+      setError('Please check that all info is correct then click next')
     }
   }
 

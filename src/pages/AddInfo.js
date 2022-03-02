@@ -28,6 +28,7 @@ const AddInfo = ({
   const checkAll = () =>{
     console.log(agsb,rhcb,cgsb,asb,other,otherDetails,prevCancelation,prevWaiting)
     setShowNext(true)
+    setError('Please check that all info is correct then click next')
   }
   return(
     <div className="page">
@@ -78,6 +79,7 @@ const AddInfo = ({
          {prevCanYes &&<Form.Control onChange={(e)=>setPrevCancelation(e.target.value)} />}
          <Form.Label style={{fontWeight: 'bold'}}>Waiver of waiting period only applicable on claim stage, if proper evidence of pre-existing funeral cover where the waiting periods have been completed, can be provided.</Form.Label>
       </Form>
+      <div style={{textAlign: 'center', padding: '5vw'}}><h6 style={{color: 'red', fontWeight: 'bold',textAlign: 'center'}}>{error}</h6></div>
       <div>
         <Link to='/checkInfo'>
         <Button variant='secondary w-25' style={{ fontWeight: '600', background: '#D0D0D0', border: 'none', float:'left', marginLeft: '20vw' }}>BACK</Button>
