@@ -113,7 +113,15 @@ pbAge,
 setPbAge,
 nlAge,
 setNlAge,
-spouseCell
+spouseCell,
+agsb,
+rhcb,
+cgsb,
+asb,
+other,
+otherDetails,
+prevCancelation,
+prevWaiting
 }) =>{
   const date = Date.now()
   const d = new Date(parseInt(date,10))
@@ -904,7 +912,12 @@ spouseCell
     doc.setFont('Helvetica','normal')
     doc.rect(15,80,166,15,'S')
     doc.setFontSize(8)
-    doc.text('Other: _______________________',110,90)
+    doc.text(agsb,20,85)
+    doc.text(rhcb,20,90)
+    doc.text(cgsb,100,85)
+    doc.text(asb,100,90)
+    doc.text(other,80,93)
+    doc.text(otherDetails,90,93)
     // pre-existing funeral cover
     doc.setFillColor('#FFEFED')
     doc.rect(15,95,166,5, 'FD')
@@ -915,9 +928,9 @@ spouseCell
     doc.rect(15,100,166,30,'S')
     doc.text('In order for the Insurer to determine whether a waiting period is applicable, you the potential member',20,105)
     doc.text('must confirm the following: Have you recently, more than 31 days before signature date, cancelled a',20,110)
-    doc.text('funeral policy with another Insurer? If yes, did you complete a waiting period under that previous',20,115)
-    doc.text('funeral policy? Waiver of waiting period only applicable on claim stage, if proper evidence of',20,120)
-    doc.text('pre-existing funeral cover where the waiting periods have been completed, can be provided.',20,125)
+    doc.text(`funeral policy with another Insurer?`,20,115)
+    doc.text(prevCancelation,20,120)
+    doc.text(prevWaiting,20,125)
     doc.setFillColor('#FFEFED')
     doc.rect(15,135,166,5, 'FD')
     doc.setFont('Helvetica','bold')

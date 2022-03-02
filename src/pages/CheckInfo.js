@@ -1,8 +1,7 @@
 import Form  from 'react-bootstrap/Form'
 import { Link } from 'react-router-dom'
 import Button from 'react-bootstrap/Button'
-import { useEffect,useState } from 'react'
-import FormCheckLabel from 'react-bootstrap/esm/FormCheckLabel'
+import { useState } from 'react'
 
 const CheckInfo = ({
   sourceIncome,
@@ -126,7 +125,7 @@ const CheckInfo = ({
         <Link to='/6'>
         <Button variant='secondary w-25' style={{ fontWeight: '600', background: '#D0D0D0', border: 'none', float:'left', marginLeft: '20vw' }}>BACK</Button>
       </Link>
-      {showNext &&  <Link to='/7'>
+      {showNext &&  <Link to='/addinfo'>
           <Button variant='danger w-25' style={{ fontWeight: '600', background: '#BB1A1B', border: 'none', float:'right', marginRight: '20vw', marginBottom: '5vw' }} >NEXT</Button>
         </Link>}
         {!showNext && <Button variant='danger w-25' style={{ fontWeight: '600', background: '#BB1A1B', border: 'none', float:'right', marginRight: '20vw', marginBottom: '5vh' }} onClick={checkAll} >Submit</Button>}

@@ -16,6 +16,7 @@ import Six from './pages/Six';
 import Seven from './pages/Seven';
 import Document1 from './pages/Document1';
 import CheckInfo from './pages/CheckInfo';
+import AddInfo from './pages/AddInfo';
 // Styles
 import './App.css';
 
@@ -137,6 +138,18 @@ function App() {
   const [fppoDetails,setFppoDetails] = useState('')
   const [closeDpipFppo,setCloseDpipFppo] = useState('')
   const [closeDpipFppoDetails,setCloseDpipFppoDetails] = useState('')
+
+  // additional information
+  const [agsb,setAgsb] = useState('')
+  const [rhcb,setRhcb] = useState('')
+  const [cgsb,setCgsb] = useState('')
+  const [asb,setAsb] = useState('')
+  const [other,setOther] = useState('')
+  const [otherDetails, setOtherDetails] = useState('')
+  // pre-existing funeral cover
+  const [prevCancelation, setPrevCancelation] = useState('')
+  const [ prevWaiting, setPrevWaiting] = useState('')
+
   useEffect(()=>{
     if(maritalStatus != ''){
       setMonthlyPremium(153 + 111)
@@ -362,6 +375,24 @@ function App() {
             setCloseDpipFppo={setCloseDpipFppo}
             setCloseDpipFppoDetails={setCloseDpipFppoDetails}
             />} />
+          <Route path='/addinfo' element={<AddInfo
+                agsb={agsb}
+                setAgsb={setAgsb}
+                rhcb={rhcb}
+                setRhcb={setRhcb}
+                cgsb={cgsb}
+                setCgsb={setCgsb}
+                asb={asb}
+                setAsb={setAsb}
+                other={other}
+                setOther={setOther}
+                otherDetails={otherDetails}
+                setOtherDetails={setOtherDetails}
+                prevCancelation={prevCancelation}
+                setPrevCancelation={setPrevCancelation}
+                prevWaiting={prevWaiting}
+                setPrevWaiting={setPrevWaiting}
+            />} />
           <Route path='/document' element={<Document1 
             forceNumber={forceNumber} 
             armsOfService={armsOfService}
@@ -472,6 +503,14 @@ function App() {
             spouseAge={spouseAge}
             setSpouseAge={setSpouseAge}
             spouseCell={spouseCell}
+            agsb={agsb}
+            rhcb={rhcb}
+            cgsb={cgsb}
+            asb={asb}
+            other={other}
+            otherDetails={otherDetails}
+            prevCancelation={prevCancelation}
+            prevWaiting={prevWaiting}
             />} />
         </Routes>
     </div>
