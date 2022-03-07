@@ -153,16 +153,14 @@ function App() {
   useEffect(()=>{
     if(maritalStatus == 'Married'){
       
-      if(childrenAmount != 0){
-        let amount = childrenAmount * 28
-        setMonthlyPremium(153 + 111 + amount)
-      }else{
-        setMonthlyPremium(153 + 111)
-      }
+        setMonthlyPremium(264)
+      
     }
     if(maritalStatus == 'Single'){
-      let amount = childrenAmount * 28
-      setMonthlyPremium(153 + amount)
+      if(childrenAmount > 0){
+        setMonthlyPremium(181)
+      }else{setMonthlyPremium(153)}
+      
     }
   },[monthlyPremium,setMonthlyPremium,setChildrenAmount,childrenAmount,maritalStatus,setMaritalStatus])
   return (
