@@ -2,7 +2,8 @@ import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import Form  from 'react-bootstrap/Form'
 import Button from 'react-bootstrap/Button'
-
+// styles
+import '../App.css'
 const AddInfo = ({
   agsb,
   setAgsb,
@@ -36,31 +37,31 @@ const AddInfo = ({
       <Form>
         <Form.Label>I have selected this plan for the following reasons:</Form.Label>
         <Form.Check 
-        type="switch"
+        type="checkbox"
         id="custom-switch"
         label="Affordable Group Scheme Benefits"
         onChange={()=>setAgsb('Affordable Group Scheme Benefits')}
          />
          <Form.Check 
-        type="switch"
+        type="checkbox"
         id="custom-switch"
         label="Rainbow Holiday Club Benefits"
         onChange={()=>setRhcb('Rainbow Holiday Club Benefits')}
          />
          <Form.Check 
-        type="switch"
+        type="checkbox"
         id="custom-switch"
         label="Compulsory Group Scheme Benefits"
         onChange={()=>setCgsb('Compulsory Group Scheme Benefits')}
          />
          <Form.Check 
-        type="switch"
+        type="checkbox"
         id="custom-switch"
         label="Adopt - a - Student Benefits"
         onChange={()=>setAsb('Adopt - a - Student Benefits')}
          />
          <Form.Check 
-        type="switch"
+        type="checkbox"
         id="custom-switch"
         label="Other"
         onChange={()=>setOther('Other')}
@@ -70,7 +71,7 @@ const AddInfo = ({
          <Form.Label style={{fontWeight: "bold"}}>In order for the Insurer to determine whether a waiting period is applicable, you the potential member must confirm the following:</Form.Label>
          <Form.Label>Have you recently, more than 31 days before signature date, cancelled a funeral policy with another Insurer?</Form.Label>
          <Form.Check 
-        type="switch"
+        type="checkbox"
         id="custom-switch"
         label="Yes or No"
         onChange={()=>setPrevCanYes(true)}
