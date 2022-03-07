@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 import Button from 'react-bootstrap/Button';
 import {Form, Row, Col}  from 'react-bootstrap'
 import FileInputComponent from 'react-file-input-previews-base64'
-import { useEffect } from 'react';
+import { useState,useEffect } from 'react';
 
 const Four = ({
   childrenAmount,
@@ -69,6 +69,65 @@ const Four = ({
   setChildAge6,
   setChildrenIds
 }) =>{
+  const [showNext,setShowNext] = useState(false)
+  const [error, setError] = useState('')
+
+  const validateID = (id) => {
+    if (id) {
+      return typeof(id) != "boolean" && !isNaN(id)
+    }
+  }
+  const requiredSubmitted = ()=>{
+    if(childrenAmount === '1'){
+      if(!validateID(childID)){
+        setError('You have not given a valid numerical value for your child ID or Date of Birth')
+        setShowNext(false)
+      }else{
+        setShowNext(true)
+        setError('Please check that all info is correct then click next')
+      }}else if(childrenAmount === '2'){
+        if(!validateID(childID),!validateID(childID2)){
+          setError('You have not given a valid numerical value for your child ID or Date of Birth')
+          setShowNext(false)
+        }else{
+          setShowNext(true)
+          setError('Please check that all info is correct then click next')
+        }}else if(childrenAmount === '3'){
+          if(!validateID(childID),!validateID(childID2),!validateID(childID3)){
+            setError('You have not given a valid numerical value for your child ID or Date of Birth')
+            setShowNext(false)
+          }else{
+            setShowNext(true)
+            setError('Please check that all info is correct then click next')
+          }}else if(childrenAmount === '4'){
+            if(!validateID(childID),!validateID(childID2),!validateID(childID3),!validateID(childID4)){
+              setError('You have not given a valid numerical value for your child ID or Date of Birth')
+              setShowNext(false)
+            }else{
+              setShowNext(true)
+              setError('Please check that all info is correct then click next')
+            }}else if(childrenAmount === '5'){
+              if(!validateID(childID),!validateID(childID2),!validateID(childID3),!validateID(childID4),!validateID(childID5)){
+                setError('You have not given a valid numerical value for your child ID or Date of Birth')
+                setShowNext(false)
+              }else{
+                setShowNext(true)
+                setError('Please check that all info is correct then click next')
+              }}else if(childrenAmount === '6'){
+                if(!validateID(childID),!validateID(childID2),!validateID(childID3),!validateID(childID4),!validateID(childID5),!validateID(childID6)){
+                  setError('You have not given a valid numerical value for your child ID or Date of Birth')
+                  setShowNext(false)
+                }else{
+                  setShowNext(true)
+                  setError('Please check that all info is correct then click next')
+                }
+    }else if(childrenAmount === '0'){
+      setError('You have selected that you have no children')
+      setShowNext(true)
+    }else{
+      setError('You have not made a selection')
+    }
+  }
   useEffect(()=>{
     if(childTitle === 'Mr'){
       setChildTitle('Male')
@@ -124,7 +183,7 @@ const Four = ({
         {/*
             Children Details to follow
         */}
-        {childrenAmount == 1 && 
+        {childrenAmount == '1' && 
           <div style={{marginTop: '10vh'}}>
             <Form className='Form'>
               <Form.Group as={Row} className='mb-3' controlId='childTitle'>
@@ -166,7 +225,7 @@ const Four = ({
             </Form>
           </div>
         }
-        {childrenAmount == 2 && 
+        {childrenAmount == '2' && 
           <div style={{marginTop: '10vh'}}>
             <Form className='Form'>
               <Form.Group as={Row} className='mb-3' controlId='childTitle'>
@@ -231,7 +290,7 @@ const Four = ({
             </Form>
             </div>
         }
-        {childrenAmount == 3 && 
+        {childrenAmount == '3' && 
           <div style={{marginTop: '10vh'}}>
           <Form className='Form'>
           <Form.Group as={Row} className='mb-3' controlId='childTitle'>
@@ -319,7 +378,7 @@ const Four = ({
             </Form>
             </div>
         }
-        {childrenAmount == 4 && 
+        {childrenAmount == '4' && 
           <div style={{marginTop: '10vh'}}>
           <Form className='Form'>
           <Form.Group as={Row} className='mb-3' controlId='childTitle'>
@@ -430,7 +489,7 @@ const Four = ({
             </Form>
             </div>
         }
-        {childrenAmount == 5 && 
+        {childrenAmount == '5' && 
           <div style={{marginTop: '10vh'}}>
           <Form className='Form'>
           <Form.Group as={Row} className='mb-3' controlId='childTitle'>
@@ -564,7 +623,7 @@ const Four = ({
             </Form>
             </div>
         }
-        {childrenAmount == 6 && 
+        {childrenAmount == '6' && 
           <div style={{marginTop: '10vh'}}>
           <Form className='Form'>
           <Form.Group as={Row} className='mb-3' controlId='childTitle'>
@@ -708,6 +767,8 @@ const Four = ({
             <Form.Label className='Label'>*Child Age</Form.Label>
             <Form.Control className='Control' type='text' placeholder={childAge6} onChange={(e)=>setChildAge6(e.target.value)} />
           </Form.Group>
+          
+          
             <FileInputComponent
                 labelText="Upload All IDs"
                 labelStyle={{fontSize:14, marginRight: '14px', fontWeight: '600'}}
@@ -722,15 +783,16 @@ const Four = ({
             </div>
         }
         
-      
-      
+        <div style={{textAlign: 'center', padding: '5vw'}}><h6 style={{color: 'red', fontWeight: 'bold',textAlign: 'center'}}>{error}</h6></div>
+        
       <div style={{textAlign: 'center'}}>
         <Link to='/3'>
-          <Button variant='secondary w-25' style={{ fontWeight: '600', background: '#D0D0D0', border: 'none', float:'left', marginTop: '3vw', marginLeft: '20vw' }}>BACK</Button>
+          <Button variant='secondary w-25' style={{ fontWeight: '600', background: '#D0D0D0', border: 'none', float:'left', marginLeft: '20vw', marginTop: '2vh' }}>BACK</Button>
         </Link>
-        <Link to='/5'>
-          <Button variant='danger w-25' style={{ fontWeight: '600', background: '#BB1A1B', border: 'none', float:'right', marginTop: '3vw', marginRight: '20vw' }} >NEXT</Button>
-        </Link>
+        {showNext &&<Link to='/5'>
+          <Button variant='danger w-25' style={{ fontWeight: '600', background: '#BB1A1B', border: 'none', float:'right', marginRight: '20vw', marginBottom: '10vh', marginTop: '2vh' }}>NEXT</Button>
+        </Link>}
+        {!showNext && <Button variant='danger w-25' style={{ fontWeight: '600', background: '#BB1A1B', border: 'none', float:'right', marginRight: '20vw', marginBottom: '10vh', marginTop: '2vh' }} onClick={requiredSubmitted} >Submit</Button>}
     </div>
     </div>
   )

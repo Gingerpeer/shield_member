@@ -36,26 +36,13 @@ const One = ({
 
     const validateID = (id) => {
       if (id) {
-        var ex = /^(((\d{2}((0[13578]|1[02])(0[1-9]|[12]\d|3[01])|(0[13456789]|1[012])(0[1-9]|[12]\d|30)|02(0[1-9]|1\d|2[0-8])))|([02468][048]|[13579][26])0229))(( |-)(\d{4})( |-)(\d{3})|(\d{7}))/;
-      } else {
-        // some other validation here
-        var ex = /^[0-9]{1,}$/;
+        return typeof(id) != "boolean" && !isNaN(id)
       }
-    
-      let theIDnumber = id
-      if (ex.test(theIDnumber) == false) {
-        // alert code goes here
-        setError("Please supply a valid ID number");
-        return false;
-      }
-      // here you would normally obviously
-      // return true;
-      // but for the sake of this Codepen:
-      return true;
     }
 
     const requiredSubmitted = () =>{
       if(!validateID(IDNumber)){
+        setError('You have not given a valid Id number')
         setShowNext(false)
       }else{
         if(armsOfService != ''){

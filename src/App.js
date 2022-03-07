@@ -59,7 +59,7 @@ function App() {
   const [spouseAge,setSpouseAge] = useState('')
   const [spouseCell,setSpouseCell] = useState('')
   // Dependents under 21
-  const [childrenAmount,setChildrenAmount] = useState(0)
+  const [childrenAmount,setChildrenAmount] = useState('')
         // needs to loop over the amount of children and add to state
         const [childTitle,setChildTitle] = useState('Male')
         const [childFullNames,setChildFullNames] = useState('')
