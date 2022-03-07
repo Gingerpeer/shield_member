@@ -68,7 +68,6 @@ const checkEmail = (email)=>{
       if(cellNumber != ''){
         if(streetNumber != ''){
           if(streetName != ''){
-            if(suburb != ''){
               if(town != ''){
                   if(checkCellNumber(cellNumber)){
                       if(checkCellNumber(altCellNumber)){
@@ -85,9 +84,6 @@ const checkEmail = (email)=>{
               }else{
                 setError('You have not submitted your Town')
               }
-            }else{
-              setError('You have not submitted your Suburb')
-            }
           }else{
             setError('You have not submitted your Street Name')
           }
