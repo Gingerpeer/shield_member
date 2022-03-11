@@ -45,34 +45,34 @@ const CheckInfo = ({
         <h6 style={{fontWeight: '600', marginTop: '25px', textAlign: 'center', color: '#BB1A1B', marginBottom: '25px'}}>Client Due Diligence:</h6>
         <p>DPIP refers to a Domestic Prominent Influential Person that is an individual who holds, including in an acting position for a period exceeding 6 months, or who has held at any time in the proceeding 12 months in the Republic the following positions:</p>
         <ul>
-          <li>* President or Deputy Present</li>
-          <li>* Government minister or Deputy minister</li>
-          <li>* Member of a royal family or senior traditional 
+          <li>President or Deputy Present</li>
+          <li>Government minister or Deputy minister</li>
+          <li>Member of a royal family or senior traditional 
           leader</li>
-          <li>* Premier of a Province</li>
-          <li>* Executive Council member of a Province</li>
-          <li>* Leader of a political party</li>
-          <li>* Executive mayor of a municipality</li>
-          <li>* Municipal manager or CFO of a municipality</li>
-          <li>* Head, accounting officer of CFO of a national / 
+          <li>Premier of a Province</li>
+          <li>Executive Council member of a Province</li>
+          <li>Leader of a political party</li>
+          <li>Executive mayor of a municipality</li>
+          <li>Municipal manager or CFO of a municipality</li>
+          <li>Head, accounting officer of CFO of a national / 
           provincial department or government 
            component</li>
-          <li>* Chairperson of the board of directors</li>
-          <li>* Chairperson of the audit committee</li>
-          <li>* Executive Officer</li>
-          <li>* Chief Financial Officer (CFO)</li>
+          <li>Chairperson of the board of directors</li>
+          <li>Chairperson of the audit committee</li>
+          <li>Executive Officer</li>
+          <li>Chief Financial Officer (CFO)</li>
         </ul>
         <p>FPPO refers to a Foreign Prominent Influential Person that is an individual who holds, or who has held at any time in the proceeding 12 months, in a foreign country, a prominent public function:</p>
         <ul>
-          <li>* Head of State / Head of a Country or 
+          <li>Head of State / Head of a Country or 
           Government</li>
-          <li>* Member of a foreign Royal family</li>
-          <li>* Government Minister or equivalent senior 
+          <li>Member of a foreign Royal family</li>
+          <li>Government Minister or equivalent senior 
           politician or leader of a political party</li>
-          <li>* Senior executive of a state-owned corporation</li>
-          <li>* High ranking member of the military (General; 
+          <li>Senior executive of a state-owned corporation</li>
+          <li>High ranking member of the military (General; 
             Lieutenant General; Admiral or Vice Admiral)</li>
-          <li>* Senior judicial official</li>
+          <li>Senior judicial official</li>
         </ul>
         <p>As part of our responsibilities as an Accountable Institution in terms of the Financial Intelligence Centre Act 38 of 2001, we are required to gather the following client information prior to concluding the transaction.</p>
       </div>
