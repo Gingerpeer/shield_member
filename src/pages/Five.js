@@ -90,17 +90,22 @@ const checkEmail = (email)=>{
 
 
     const requiredSubmitted = () =>{
+      if(pbTitle != ''){
       if(pbAge != ''){
       if(pbID != ''){
         if(validateID(pbID)){
       if(pbFullNames != ''){
         if(pbSurname != ''){
+          if(pbCellNumber != ''){
             if(checkCellNumber(pbCellNumber)){
               
                 setShowNext(true)
                 setError('Please check that all info is correct then click next')
             }else{
               setError('Please give a valid cell number')
+            }}else{
+              setShowNext(true)
+                setError('Please check that all info is correct then click next')
             }
         }else{
           setError('You have not submitted your Beneficiary Surname')
@@ -117,7 +122,9 @@ const checkEmail = (email)=>{
   }else{
     setError('You have not submitted your Primary Beneficiary Age')
   }
-    }
+    }else{
+      setError('You have not submitted your Primary Beneficiary Title')
+    }}
   return(
     <div className="page">
     <h6 style={{fontWeight: '600', marginTop: '25px', textAlign: 'center', color: '#BB1A1B', marginBottom: '25px'}}>5. Primary Beneficiary Details</h6>
