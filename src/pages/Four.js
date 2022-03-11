@@ -209,7 +209,7 @@ const Four = ({
                 <Form.Control className='Control' type='text' placeholder={childID} onChange={(e)=>setChildID(e.target.value)} />
               </Form.Group>
               <Form.Group className='mb-3' controlId='childAge'>
-                <Form.Label className='Label'>*Child Age</Form.Label>
+                <Form.Label className='Label'>*Child Age (yymmdd)</Form.Label>
                 <Form.Control className='Control' type='text' placeholder={childAge} onChange={(e)=>setChildAge(e.target.value)} />
               </Form.Group>
               <FileInputComponent
@@ -251,7 +251,7 @@ const Four = ({
                 <Form.Control className='Control' type='text' placeholder={childID} onChange={(e)=>setChildID(e.target.value)} />
               </Form.Group>
               <Form.Group className='mb-3' controlId='childAge'>
-                <Form.Label className='Label'>*Child Age</Form.Label>
+                <Form.Label className='Label'>*Child Age (yymmdd)</Form.Label>
                 <Form.Control className='Control' type='text' placeholder={childAge} onChange={(e)=>setChildAge(e.target.value)} />
               </Form.Group>
               <Form.Group className='mb-3' controlId='childTitle2'>
@@ -274,7 +274,7 @@ const Four = ({
                 <Form.Control className='Control' type='text' placeholder={childID2} onChange={(e)=>setChildID2(e.target.value)} style={{marginTop:'10px'}} />
               </Form.Group>
               <Form.Group className='mb-3' controlId='childAge2'>
-                <Form.Label className='Label'>*Child Age</Form.Label>
+                <Form.Label className='Label'>*Child Age (yymmdd)</Form.Label>
                 <Form.Control className='Control' type='text' placeholder={childAge2} onChange={(e)=>setChildAge2(e.target.value)} />
               </Form.Group>
               <FileInputComponent
@@ -316,7 +316,7 @@ const Four = ({
             <Form.Control className='Control' type='text' placeholder={childID} onChange={(e)=>setChildID(e.target.value)} />
           </Form.Group>
           <Form.Group className='mb-3' controlId='childAge'>
-            <Form.Label className='Label'>*Child Age</Form.Label>
+            <Form.Label className='Label'>*Child Age (yymmdd)</Form.Label>
             <Form.Control className='Control' type='text' placeholder={childAge} onChange={(e)=>setChildAge(e.target.value)} />
           </Form.Group>
           <Form.Group className='mb-3' controlId='childTitle2'>
@@ -339,7 +339,7 @@ const Four = ({
             <Form.Control className='Control' type='text' placeholder={childID2} onChange={(e)=>setChildID2(e.target.value)} style={{marginTop:'10px'}} />
           </Form.Group>
           <Form.Group className='mb-3' controlId='childAge2'>
-            <Form.Label className='Label'>*Child Age</Form.Label>
+            <Form.Label className='Label'>*Child Age (yymmdd)</Form.Label>
             <Form.Control className='Control' type='text' placeholder={childAge2} onChange={(e)=>setChildAge2(e.target.value)} />
           </Form.Group>
               <Form.Group className='mb-3' controlId='childTitle3'>
@@ -362,7 +362,7 @@ const Four = ({
               <Form.Control className='Control' type='text' placeholder={childID3} onChange={(e)=>setChildID3(e.target.value)} style={{marginTop:'10px'}} />
             </Form.Group>
             <Form.Group className='mb-3' controlId='childAge3'>
-            <Form.Label className='Label'>*Child Age</Form.Label>
+            <Form.Label className='Label'>*Child Age (yymmdd)</Form.Label>
             <Form.Control className='Control' type='text' placeholder={childAge3} onChange={(e)=>setChildAge3(e.target.value)} />
           </Form.Group>
             <FileInputComponent
@@ -404,7 +404,7 @@ const Four = ({
             <Form.Control className='Control' type='text' placeholder={childID} onChange={(e)=>setChildID(e.target.value)} />
           </Form.Group>
           <Form.Group className='mb-3' controlId='childAge'>
-            <Form.Label className='Label'>*Child Age</Form.Label>
+            <Form.Label className='Label'>*Child Age (yymmdd)</Form.Label>
             <Form.Control className='Control' type='text' placeholder={childAge} onChange={(e)=>setChildAge(e.target.value)} />
           </Form.Group>
           <Form.Group className='mb-3' controlId='childTitle2'>
@@ -427,7 +427,7 @@ const Four = ({
             <Form.Control className='Control' type='text' placeholder={childID2} onChange={(e)=>setChildID2(e.target.value)} style={{marginTop:'10px'}} />
           </Form.Group>
           <Form.Group className='mb-3' controlId='childAge2'>
-            <Form.Label className='Label'>*Child Age</Form.Label>
+            <Form.Label className='Label'>*Child Age (yymmdd)</Form.Label>
             <Form.Control className='Control' type='text' placeholder={childAge2} onChange={(e)=>setChildAge2(e.target.value)} />
           </Form.Group>
               <Form.Group className='mb-3' controlId='childTitle3'>
@@ -450,7 +450,7 @@ const Four = ({
               <Form.Control className='Control' type='text' placeholder={childID3} onChange={(e)=>setChildID3(e.target.value)} style={{marginTop:'10px'}} />
             </Form.Group>
             <Form.Group className='mb-3' controlId='childAge3'>
-            <Form.Label className='Label'>*Child Age</Form.Label>
+            <Form.Label className='Label'>*Child Age (yymmdd)</Form.Label>
             <Form.Control className='Control' type='text' placeholder={childAge3} onChange={(e)=>setChildAge3(e.target.value)} />
           </Form.Group>
             <Form.Group className='mb-3' controlId='childTitle4'>
@@ -473,7 +473,7 @@ const Four = ({
               <Form.Control className='Control' type='text' placeholder={childID4} onChange={(e)=>setChildID4(e.target.value)} style={{marginTop:'10px'}} />
             </Form.Group>
             <Form.Group className='mb-3' controlId='childAge4'>
-            <Form.Label className='Label'>*Child Age</Form.Label>
+            <Form.Label className='Label'>*Child Age (yymmdd)</Form.Label>
             <Form.Control className='Control' type='text' placeholder={childAge4} onChange={(e)=>setChildAge4(e.target.value)} />
           </Form.Group>
             <FileInputComponent
@@ -515,7 +515,7 @@ const Four = ({
             <Form.Control className='Control' type='text' placeholder={childID} onChange={(e)=>setChildID(e.target.value)} />
           </Form.Group>
           <Form.Group className='mb-3' controlId='childAge'>
-            <Form.Label className='Label'>*Child Age</Form.Label>
+            <Form.Label className='Label'>*Child Age (yymmdd)</Form.Label>
             <Form.Control className='Control' type='text' placeholder={childAge} onChange={(e)=>setChildAge(e.target.value)} />
           </Form.Group>
           <Form.Group className='mb-3' controlId='childTitle2'>
@@ -538,7 +538,7 @@ const Four = ({
             <Form.Control className='Control' type='text' placeholder={childID2} onChange={(e)=>setChildID2(e.target.value)} style={{marginTop:'10px'}} />
           </Form.Group>
           <Form.Group className='mb-3' controlId='childAge2'>
-            <Form.Label className='Label'>*Child Age</Form.Label>
+            <Form.Label className='Label'>*Child Age (yymmdd)</Form.Label>
             <Form.Control className='Control' type='text' placeholder={childAge2} onChange={(e)=>setChildAge2(e.target.value)} />
           </Form.Group>
               <Form.Group className='mb-3' controlId='childTitle3'>
@@ -561,7 +561,7 @@ const Four = ({
               <Form.Control className='Control' type='text' placeholder={childID3} onChange={(e)=>setChildID3(e.target.value)} style={{marginTop:'10px'}} />
             </Form.Group>
             <Form.Group className='mb-3' controlId='childAge3'>
-            <Form.Label className='Label'>*Child Age</Form.Label>
+            <Form.Label className='Label'>*Child Age (yymmdd)</Form.Label>
             <Form.Control className='Control' type='text' placeholder={childAge3} onChange={(e)=>setChildAge3(e.target.value)} />
           </Form.Group>
             <Form.Group className='mb-3' controlId='childTitle4'>
@@ -584,7 +584,7 @@ const Four = ({
               <Form.Control className='Control' type='text' placeholder={childID4} onChange={(e)=>setChildID4(e.target.value)} style={{marginTop:'10px'}} />
             </Form.Group>
             <Form.Group className='mb-3' controlId='childAge4'>
-            <Form.Label className='Label'>*Child Age</Form.Label>
+            <Form.Label className='Label'>*Child Age (yymmdd)</Form.Label>
             <Form.Control className='Control' type='text' placeholder={childAge4} onChange={(e)=>setChildAge4(e.target.value)} />
           </Form.Group>
             <Form.Group className='mb-3' controlId='childTitle5'>
@@ -607,7 +607,7 @@ const Four = ({
               <Form.Control className='Control' type='text' placeholder={childID5} onChange={(e)=>setChildID5(e.target.value)} style={{marginTop:'10px'}} />
             </Form.Group>
             <Form.Group className='mb-3' controlId='childAge5'>
-            <Form.Label className='Label'>*Child Age</Form.Label>
+            <Form.Label className='Label'>*Child Age (yymmdd)</Form.Label>
             <Form.Control className='Control' type='text' placeholder={childAge5} onChange={(e)=>setChildAge5(e.target.value)} />
           </Form.Group>
             <FileInputComponent
@@ -649,7 +649,7 @@ const Four = ({
             <Form.Control className='Control' type='text' placeholder={childID} onChange={(e)=>setChildID(e.target.value)} />
           </Form.Group>
           <Form.Group className='mb-3' controlId='childAge'>
-            <Form.Label className='Label'>*Child Age</Form.Label>
+            <Form.Label className='Label'>*Child Age (yymmdd)</Form.Label>
             <Form.Control className='Control' type='text' placeholder={childAge} onChange={(e)=>setChildAge(e.target.value)} />
           </Form.Group>
           <Form.Group className='mb-3' controlId='childTitle2'>
@@ -672,7 +672,7 @@ const Four = ({
             <Form.Control className='Control' type='text' placeholder={childID2} onChange={(e)=>setChildID2(e.target.value)} style={{marginTop:'10px'}} />
           </Form.Group>
           <Form.Group className='mb-3' controlId='childAge2'>
-            <Form.Label className='Label'>*Child Age</Form.Label>
+            <Form.Label className='Label'>*Child Age (yymmdd)</Form.Label>
             <Form.Control className='Control' type='text' placeholder={childAge2} onChange={(e)=>setChildAge2(e.target.value)} />
           </Form.Group>
               <Form.Group className='mb-3' controlId='childTitle3'>
@@ -695,7 +695,7 @@ const Four = ({
               <Form.Control className='Control' type='text' placeholder={childID3} onChange={(e)=>setChildID3(e.target.value)} style={{marginTop:'10px'}} />
             </Form.Group>
             <Form.Group className='mb-3' controlId='childAge3'>
-            <Form.Label className='Label'>*Child Age</Form.Label>
+            <Form.Label className='Label'>*Child Age (yymmdd)</Form.Label>
             <Form.Control className='Control' type='text' placeholder={childAge3} onChange={(e)=>setChildAge3(e.target.value)} />
           </Form.Group>
             <Form.Group className='mb-3' controlId='childTitle4'>
@@ -718,7 +718,7 @@ const Four = ({
               <Form.Control className='Control' type='text' placeholder={childID4} onChange={(e)=>setChildID4(e.target.value)} style={{marginTop:'10px'}} />
             </Form.Group>
             <Form.Group className='mb-3' controlId='childAge4'>
-            <Form.Label className='Label'>*Child Age</Form.Label>
+            <Form.Label className='Label'>*Child Age (yymmdd)</Form.Label>
             <Form.Control className='Control' type='text' placeholder={childAge4} onChange={(e)=>setChildAge4(e.target.value)} />
           </Form.Group>
             <Form.Group className='mb-3' controlId='childTitle5'>
@@ -741,7 +741,7 @@ const Four = ({
               <Form.Control className='Control' type='text' placeholder={childID5} onChange={(e)=>setChildID5(e.target.value)} style={{marginTop:'10px'}} />
             </Form.Group>
             <Form.Group className='mb-3' controlId='childAge5'>
-            <Form.Label className='Label'>*Child Age</Form.Label>
+            <Form.Label className='Label'>*Child Age (yymmdd)</Form.Label>
             <Form.Control className='Control' type='text' placeholder={childAge5} onChange={(e)=>setChildAge5(e.target.value)} />
           </Form.Group>
             <Form.Group className='mb-3' controlId='childTitle6'>
@@ -764,7 +764,7 @@ const Four = ({
               <Form.Control className='Control' type='text' placeholder={childID6} onChange={(e)=>setChildID6(e.target.value)} style={{marginTop:'10px'}} />
             </Form.Group>
             <Form.Group className='mb-3' controlId='childAge6'>
-            <Form.Label className='Label'>*Child Age</Form.Label>
+            <Form.Label className='Label'>*Child Age (yymmdd)</Form.Label>
             <Form.Control className='Control' type='text' placeholder={childAge6} onChange={(e)=>setChildAge6(e.target.value)} />
           </Form.Group>
           

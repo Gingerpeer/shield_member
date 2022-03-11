@@ -154,7 +154,7 @@ const checkEmail = (email)=>{
           <Form.Control className='Control' type='text' placeholder={pbID} onChange={(e)=>setPbID(e.target.value)} style={{ marginTop: '20px' }} />
       </Form.Group>
       <Form.Group className='mb-2' controlId='pbAge'>
-          <Form.Label className='Label' >*Primary Beneficiary Age</Form.Label>
+          <Form.Label className='Label' >*Primary Beneficiary Age (yymmdd)</Form.Label>
           <Form.Control className='Control' type='text' placeholder={pbAge} onChange={(e)=>setPbAge(e.target.value)} style={{ marginTop: '20px' }} />
       </Form.Group>
       <FileInputComponent
@@ -187,7 +187,7 @@ const checkEmail = (email)=>{
           <Form.Control className='Control' type='text' placeholder={nlIDNumber} onChange={(e)=>setNlIDNumber(e.target.value)} style={{ marginTop: '20px' }} />
       </Form.Group>
       <Form.Group className='mb-2' controlId='nlAge'>
-          <Form.Label className='Label' >Next in Line Beneficiary Age</Form.Label>
+          <Form.Label className='Label' >Next in Line Beneficiary Age (yymmdd)</Form.Label>
           <Form.Control className='Control' type='text' placeholder={nlAge} onChange={(e)=>setNlAge(e.target.value)} style={{ marginTop: '20px' }} />
       </Form.Group>
       

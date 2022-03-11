@@ -142,7 +142,7 @@ const validateID = (id) => {
         <Form.Control className='Control' type='text' placeholder={spouseID} onChange={(e)=>setSpouseID(e.target.value)} />
       </Form.Group>
       <Form.Group className='mb-2' controlId='spouseAge'>
-        <Form.Label className='Label' >*Spouse Age</Form.Label>
+        <Form.Label className='Label' >*Spouse Age (yymmdd)</Form.Label>
         <Form.Control className='Control' type='text' placeholder={spouseAge} onChange={(e)=>setSpouseAge(e.target.value)} />
       </Form.Group>
       <Form.Group className='mb-2' controlId='spouseCell'>
