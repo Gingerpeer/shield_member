@@ -65,17 +65,33 @@ const validateID = (id) => {
 
     const requiredSubmitted = () =>{
                 if(maritalStatus == 'Married'){
+                  if(spouseTitle == ''){
+                    setError('You have not submitted a Title for your spouse')
+                    setShowNext(false)
+                  }else{
+                    if(spouseFullNames == ''){
+                      setError('You have not submitted Full Names for your spouse')
+                      setShowNext(false)
+                    }else{
+                      if(spouseSurname == ''){
+                        setError('You have not submitted a Surname for your spouse')
+                        setShowNext(false)
+                      }else{
                   if(!validateID(spouseID)){
                     setError('You have not given a valid Id number')
                     setShowNext(false)
                   }else{
+                    if(spouseAge == ''){
+                      setError('You have not submitted a Age for your spouse')
+                      setShowNext(false)
+                    }else{
                   if(checkCellNumber(spouseCell)){
                     setShowNext(true)
                     setError('Please check that all info is correct then click next')
               }else{
                   setError('Please give a valid cell number')
                 }
-            }}else if(maritalStatus == 'Single'){
+              }}}}}}else if(maritalStatus == 'Single'){
               setShowNext(true)
               setError('Please check that all info is correct then click next')
             }else{

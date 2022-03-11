@@ -14,7 +14,7 @@ const Information = () =>{
       <h6 style={{fontWeight: '600', marginTop: '25px'}}>Documentation that may be required</h6>
       <ol type='a'>
         <li>Your Identification.</li>
-        <li>Your Beneficiaries Identification.</li>
+        <li>Your Beneficiary’s Identification.</li>
         <li>Your spouse’s Identification.</li>
         <li>Marriage Certificate or Equivalent.</li>
         <li>Your Children’s Identification or Unabridged Birth Certificate.</li>
