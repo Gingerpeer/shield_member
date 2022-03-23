@@ -45,7 +45,7 @@ const CheckInfo = ({
         <h6 style={{fontWeight: '600', marginTop: '25px', textAlign: 'center', color: '#BB1A1B', marginBottom: '25px'}}>Client Due Diligence:</h6>
         <p>DPIP refers to a Domestic Prominent Influential Person that is an individual who holds, including in an acting position for a period exceeding 6 months, or who has held at any time in the proceeding 12 months in the Republic the following positions:</p>
         <ul>
-          <li>President or Deputy Present</li>
+          <li>President or Deputy President</li>
           <li>Government minister or Deputy minister</li>
           <li>Member of a royal family or senior traditional 
           leader</li>
