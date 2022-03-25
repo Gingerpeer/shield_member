@@ -1,4 +1,5 @@
 import Next from "../components/Next"
+import { Link } from 'react-router-dom';
 
 const Information = () =>{
   
@@ -19,7 +20,7 @@ const Information = () =>{
         <li>Marriage Certificate or Equivalent.</li>
         <li>Your Children’s Identification or Unabridged Birth Certificate.</li>
       </ol>
-      <p style={{fontWeight: '600 '}}>Note: The above mentioned documentation can be uploaded at any time after you have uploaded your information, by using this <a href='/upload'>link:</a></p>
+      <p style={{fontWeight: '600 '}}>Note: The above mentioned documentation can be uploaded at any time after you have uploaded your information, by using this <Link to='/upload'>link:</Link></p>
       <Next/>
     </div>
   )
