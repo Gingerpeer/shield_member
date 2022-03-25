@@ -19,7 +19,7 @@ const Information = () =>{
         <li>Marriage Certificate or Equivalent.</li>
         <li>Your Children’s Identification or Unabridged Birth Certificate.</li>
       </ol>
-      <p style={{fontWeight: '600 '}}>Note: The above mentioned documentation can be uploaded at any time after you have uploaded your information, by using this link: *insert link here*</p>
+      <p style={{fontWeight: '600 '}}>Note: The above mentioned documentation can be uploaded at any time after you have uploaded your information, by using this <a href='/upload'>link:</a></p>
       <Next/>
     </div>
   )

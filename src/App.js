@@ -17,6 +17,7 @@ import Seven from './pages/Seven';
 import Document1 from './pages/Document1';
 import CheckInfo from './pages/CheckInfo';
 import AddInfo from './pages/AddInfo';
+import Upload from './pages/upload';
 // Styles
 import './App.css';
 
@@ -512,6 +513,7 @@ function App() {
             prevCancelation={prevCancelation}
             prevWaiting={prevWaiting}
             />} />
+            <Route path='/upload' element={<Upload />} />
         </Routes>
     </div>
   );
