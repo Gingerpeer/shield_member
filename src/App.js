@@ -147,6 +147,8 @@ function App() {
   const [asb,setAsb] = useState('')
   const [other,setOther] = useState('')
   const [otherDetails, setOtherDetails] = useState('')
+  const [prevCanYes, setPrevCanYes] = useState(false)
+  const [marketingConsent, setMarketingConsent] = useState('')
   // pre-existing funeral cover
   const [prevCancelation, setPrevCancelation] = useState('')
   const [ prevWaiting, setPrevWaiting] = useState('')
@@ -393,6 +395,10 @@ function App() {
                 setPrevCancelation={setPrevCancelation}
                 prevWaiting={prevWaiting}
                 setPrevWaiting={setPrevWaiting}
+                prevCanYes={prevCanYes}
+                setPrevCanYes={setPrevCanYes}
+                marketingConsent={marketingConsent}
+                setMarketingConsent={setMarketingConsent}
             />} />
           <Route path='/document' element={<Document1 
             forceNumber={forceNumber} 
@@ -512,6 +518,10 @@ function App() {
             otherDetails={otherDetails}
             prevCancelation={prevCancelation}
             prevWaiting={prevWaiting}
+            prevCanYes={prevCanYes}
+                setPrevCanYes={setPrevCanYes}
+                marketingConsent={marketingConsent}
+                setMarketingConsent={setMarketingConsent}
             />} />
             <Route path='/upload' element={<Upload />} />
         </Routes>

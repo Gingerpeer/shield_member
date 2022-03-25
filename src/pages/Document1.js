@@ -121,7 +121,9 @@ asb,
 other,
 otherDetails,
 prevCancelation,
-prevWaiting
+prevWaiting,
+prevCanYes,
+marketingConsent
 }) =>{
   const date = Date.now()
   const d = new Date(parseInt(date,10))
@@ -1443,7 +1445,10 @@ prevWaiting
         childAge6,
         pbAge,
         nlAge,
-        spouseCell
+        spouseCell,
+        prevCanYes,
+        marketingConsent
+        
             }
             };
 

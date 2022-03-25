@@ -20,12 +20,14 @@ const AddInfo = ({
   prevCancelation,
   setPrevCancelation,
   prevWaiting,
-  setPrevWaiting
+  setPrevWaiting,
+  prevCanYes,
+  setPrevCanYes,
+  marketingConsent,
+  setMarketingConsent
 })=>{
   const [error, setError] = useState('')
   const [showNext,setShowNext] = useState(false)
-  const [prevCanYes, setPrevCanYes] = useState(false)
-  const [marketingConsent, setMarketingConsent] = useState('')
 
   const checkAll = () =>{
     console.log(agsb,rhcb,cgsb,asb,other,otherDetails,prevCancelation,prevWaiting,marketingConsent)
