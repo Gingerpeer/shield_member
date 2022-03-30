@@ -1,6 +1,7 @@
 // Imports
 import { useState, useEffect } from 'react';
 import { Routes, Route } from 'react-router';
+import { BrowserRouter } from 'react-router-dom';
 // Components
 import Header from './components/Header';
 // Pages
@@ -169,9 +170,10 @@ function App() {
   return (
     <div className="App">
       <Header/>
+      <BrowserRouter>
         <Routes>
           <Route path='/:id' element={<Home idParam={idParam} setIdParam={setIdParam} />} />
-          <Route path='/' element={<Home idParam={idParam} setIdParam={setIdParam} />} />
+          <Route exact path='/' element={<Home idParam={idParam} setIdParam={setIdParam} />} />
           <Route path='/no' element={<No />} />
           <Route path='/instructions' element={<Information />} />
           <Route path='/1' element={<One 
@@ -525,6 +527,7 @@ function App() {
             />} />
             <Route path='/upload' element={<Upload />} />
         </Routes>
+        </BrowserRouter>
     </div>
   );
 }
