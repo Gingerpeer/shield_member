@@ -1,0 +1,48 @@
+[
+    {
+        "type": "Children (Own)",
+        "filename": "own_children.json",
+        "relation": [
+            { "type": "Daughter" },
+            { "type": "Daughter in Law" },
+            { "type": "Son" },
+            { "type": "Son in Law" }
+        ]
+    },
+    {
+        "type": "Parents",
+        "filename": "parents.json",
+        "relation": [
+            { "type": "Father" },
+            { "type": "Father in Law" },
+            { "type": "Mother" },
+            { "type": "Mother in Law" }
+        ]
+    },
+    {
+        "type": "Grandparents",
+        "filename": "grandparents.json",
+        "relation": [
+            { "type": "Grandfather" },
+            { "type": "Grandmother" }
+        ]
+    },
+    {
+        "type": "Other Extend",
+        "filename": "other.json",
+        "relation": [
+            { "type": "Aunt" },
+            { "type": "Brother" },
+            { "type": "Brother in Law" },
+            { "type": "Cousin" },
+            { "type": "Former Spouse" },
+            { "type": "Grandchild" },
+            { "type": "Nephew" },
+            { "type": "Niece" },
+            { "type": "Sister" },
+            { "type": "Sister in Law" },
+            { "type": "Uncle" }
+        ]
+    }
+]
+

@@ -1,0 +1,68 @@
+[
+    {
+        "agemin":21,
+        "agemax":39,
+        "benefits":[
+            {
+                "amount":"R 10000",
+                "premium":24
+            },
+            {
+                "amount":"R 15000",
+                "premium":36
+            },
+            {
+                "amount":"R 20000",
+                "premium":48
+            },
+            {
+                "amount":"R 30000",
+                "premium":72
+            }
+            ]
+    },
+    {
+        "agemin":40,
+        "agemax":54,
+        "benefits":[
+            {
+                "amount":"R 10000",
+                "premium":35
+            },
+            {
+                "amount":"R 15000",
+                "premium":53
+            },
+            {
+                "amount":"R 20000",
+                "premium":70
+            },
+            {
+                "amount":"R 30000",
+                "premium":105
+            }
+        ]
+    },
+    {
+        "agemin":55,
+        "agemax":64,
+        "benefits":[
+            {
+                "amount":"R 10000",
+                "premium":74
+            },
+            {
+                "amount":"R 15000",
+                "premium":111
+            },
+            {
+                "amount":"R 20000",
+                "premium":148
+            },
+            {
+                "amount":"R 30000",
+                "premium":222
+            }
+        ]
+    }
+]
