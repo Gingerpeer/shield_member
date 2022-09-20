@@ -22,12 +22,36 @@ const Seven = ({ signature, setSignature, monthlyPremium, extendedMonthlyPremium
   }, [myRef, saveCanvasToState, setSignature, signature, clearSignature])
 
   return (
-    <div className="page">
-      <h6 style={{ fontWeight: '600', marginTop: '25px', textAlign: 'center', color: '#BB1A1B', marginBottom: '25px' }}>Your Monthly Premium is R{monthlyPremium + extendedMonthlyPremium}</h6>
-      <h6 style={{ fontWeight: '600', marginTop: '25px', textAlign: 'center', color: '#BB1A1B', marginBottom: '25px' }}>Do you agree? Sign below in agreement</h6>
-      <p style={{ margin: '0', textAlign: 'center' }}>*Please sign Here</p>
-      <div style={{ border: 'black solid 2px' }}><SignaturePad ref={myRef} /></div>
-      <Button variant='danger' onClick={clearSignature} style={{ marginTop: '2vh' }} >Clear</Button>
+    <div className="page" style={{
+      
+    }}>
+      <h6 style={{ 
+        fontWeight: '600',
+        marginTop: '25px', 
+        textAlign: 'center', 
+        color: '#BB1A1B', 
+        marginBottom: '25px', 
+      }}>Your Monthly Premium is R{monthlyPremium + extendedMonthlyPremium}</h6>
+      <h6 style={{ 
+        fontWeight: '600', 
+        marginTop: '25px', 
+        textAlign: 'center', 
+        color: '#BB1A1B', 
+        marginBottom: '25px',
+      }}>Do you agree? Sign below in agreement</h6>
+      <p style={{ 
+        margin: '0', 
+        textAlign: 'center',
+      }}>*Please sign Here</p>
+      <div style={{ 
+        display: "grid",
+        justifyContent: "center",
+        textAlign: "center", 
+        
+       }}><SignaturePad ref={myRef} /></div>
+      <Button variant='danger' onClick={clearSignature} style={{ 
+        marginTop: '2vh',
+      }} >Clear</Button>
       <div style={{ textAlign: 'center' }}>
         <Link to='/checkInfo'>
           <Button variant='secondary w-25' style={{ fontWeight: '600', background: '#D0D0D0', border: 'none', float: 'left', marginTop: '3vw', marginLeft: '20vw' }}>BACK</Button>

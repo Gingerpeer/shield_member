@@ -291,6 +291,7 @@ function App() {
   const [prevWaiting, setPrevWaiting] = useState('')
 
   useEffect(() => {
+    console.log('This version has the smaller signature canvas')
     if (maritalStatus == 'Married') {
 
       setMonthlyPremium(264)
